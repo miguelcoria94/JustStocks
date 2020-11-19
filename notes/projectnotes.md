@@ -1,0 +1,1 @@
+<h1 align="center">Solo React Project Notes</h1>
