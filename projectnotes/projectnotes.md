@@ -10,7 +10,7 @@ Use the "create-react-app" command from inside the 'frontend' folder to initiali
 command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
 <h3 align="center">3</h3>
-Connect my local repo to my github repo
+I created a repo on github and connected it to my local repo
 
 <h3 align="center">4</h3>
 Cd into the frontend folder and "npm install" all your dependencies:
