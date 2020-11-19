@@ -12,7 +12,7 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
 4. Cd into the frontend folder and "npm install" all your dependencies:
 - `js-cookie` - a simple, lightweight JS api for handling cookies
-- `react-redux` - Official React bindings for REdux
+- `react-redux` - Official React bindings for Redux
 - `react-router-dom` - routing for React
 - `redux` - Redux
 - `redux-thunk` - add Redux thunk, thunk middlerware for redux
@@ -24,9 +24,12 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
 7. import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package
 
+NOTE:
+ * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app.
+
 8. import 'thunk' from 'redux-thunk'
 
-
+9. create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
 
 
 5. All the Backend is inside the backend folder.
