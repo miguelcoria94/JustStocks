@@ -26,7 +26,15 @@ Cd into the frontend folder and "npm install" all your dependencies:
 
 - `react-router-dom` - This is a frontend routing library to create routes that allows you to control which components to display using the browsers location. Since this will be a single page app you do not want to have to refresh the page each time the browser changes location. You want to be able to update the browers location and your app's response using JS. This is known as client-side routing.
 
-- `redux` - Redux
+- `redux` - Redux is a JavaScript Framework for managing the frontend state of a web application. Redux allows you to store information in an organized manner in a web app.Redux also allows you to quickly retrieve that information from anywhere in the app
+
+Advantages of using Redux
+
+    * Redux simplifies some of the more complicated aspects of flux
+    * Redux is very lightweight; the library only takes up 2kbs
+    * Redux is very fast(the time to insert and retrieve data)
+    * Redux is very predictable
+    
 - `redux-thunk` - add Redux thunk, thunk middlerware for redux
 
 5. Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
