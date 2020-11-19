@@ -2,7 +2,9 @@
 
 1. The repo we were provided has the skeleton for the backend and an empty frontend folder.
 
-2. use the "create-react-app" command from inside the 'frontend' folder to initialize React inside of the 'frontend' folder. I am using the simple app academy template.
+2. use the "create-react-app" command from inside the 'frontend' folder to initialize React inside of the 'frontend' folder. 
+
+command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
 3. All the Frontend is inside the frontend folder.
 
