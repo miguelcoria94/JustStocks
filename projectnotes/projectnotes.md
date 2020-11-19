@@ -9,11 +9,11 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 3. Connect my local repo to my github repo
 
 4. Cd into the fontend folder and npm install all your dependencies:
-- `js-cookie` - extracts cookies
-- `react-redux` - React components and hooks for Redux
+- `js-cookie` - a simple, lightweight JS api for handling cookies
+- `react-redux` - Official React bindings for REdux
 - `react-router-dom` - routing for React
 - `redux` - Redux
-- `redux-thunk` - add Redux thunk
+- `redux-thunk` - add Redux thunk, thunk middlerware for redux
 
 
 5. All the Backend is inside the backend folder.
