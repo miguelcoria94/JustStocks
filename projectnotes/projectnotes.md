@@ -6,7 +6,9 @@
 
 command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
-3. Cd into the fontend folder and npm install all your dependencies:
+3. Connect my local repo to my github repo
+
+4. Cd into the fontend folder and npm install all your dependencies:
 - `js-cookie` - extracts cookies
 - `react-redux` - React components and hooks for Redux
 - `react-router-dom` - routing for React
@@ -14,11 +16,11 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 - `redux-thunk` - add Redux thunk
 
 
-4. All the Backend is inside the backend folder.
+5. All the Backend is inside the backend folder.
 
-5. I also created a folder to test and experiment with css, I could use figma but I find testing with live server is better. Espcecially since I'm only going to be working with vanilla css.
+6. I also created a folder to test and experiment with css, I could use figma but I find testing with live server is better. Espcecially since I'm only going to be working with vanilla css.
 
-6. In order to connect the frontend with the backend you have to "npm start" on both the root directory and cd into the "client" folder and "npm start" there too. Don't worry about doing it now. You have to setup the DB first. They are two seperate things and need to both be on to talk to each other.
+7. In order to connect the frontend with the backend you have to "npm start" on both the root directory and cd into the "client" folder and "npm start" there too. Don't worry about doing it now. You have to setup the DB first. They are two seperate things and need to both be on to talk to each other.
 
 7. Dont touch anything on the ./bin/www file - remember the bin folder is a common Unix convention for naming a folder that contains executable code. Even though it is lacking the .js file extension, the www file is actually a JS module that contains code to start up the express app.
 
