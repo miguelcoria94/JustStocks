@@ -24,7 +24,7 @@ Cd into the frontend folder and "npm install" all your dependencies:
 
 - `react-redux` - React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also use React Redux to bind these two libraries.
 
-- `react-router-dom` - This is a frontend routing library to create routes that allows you to control which components to display using the browser location. Since this will be a single page app you do not want to have to refresh the page each time the browser changes location. You want to be able to update the browswers location and your app's response using JS. This is known as client-side routing.
+- `react-router-dom` - This is a frontend routing library to create routes that allows you to control which components to display using the browsers location. Since this will be a single page app you do not want to have to refresh the page each time the browser changes location. You want to be able to update the browers location and your app's response using JS. This is known as client-side routing.
 
 - `redux` - Redux
 - `redux-thunk` - add Redux thunk, thunk middlerware for redux
