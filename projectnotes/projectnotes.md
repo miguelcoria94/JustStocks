@@ -12,7 +12,8 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 <h3 align="center">3</h3>
 Connect my local repo to my github repo
 
-4. Cd into the frontend folder and "npm install" all your dependencies:
+<h3 align="center">4</h3>
+Cd into the frontend folder and "npm install" all your dependencies:
 - `js-cookie` - a simple, lightweight JS api for handling cookies
 - `react-redux` - Official React bindings for Redux
 - `react-router-dom` - routing for React
