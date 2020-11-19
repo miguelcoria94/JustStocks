@@ -20,6 +20,8 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 5. Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
 - `redux-logger` - Log Redux actions in the browers's dev tools console
 
+6. Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
+
 
 5. All the Backend is inside the backend folder.
 
