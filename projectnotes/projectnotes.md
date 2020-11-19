@@ -1,5 +1,5 @@
 <h1 align="center">Solo React Project Notes</h1>
-<h3 align="center">Personal notes while building JustStocks</h3>
+<h3 >Personal notes while building JustStocks</h3>
 
 
 1. The repo we were provided has the skeleton for the backend and an empty frontend folder.
