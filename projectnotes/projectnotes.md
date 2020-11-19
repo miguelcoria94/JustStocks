@@ -1,8 +1,8 @@
 <h1 align="center">Solo React Project Notes</h1>
-<h3 >Personal notes while building JustStocks</h3>
+<h2 >Personal notes while building JustStocks</h2>
 
-
-1. The repo we were provided has the skeleton for the backend and an empty frontend folder.
+<h3 align="center">1</h3>
+The repo we were provided has the skeleton for the backend and an empty frontend folder.
 
 2. use the "create-react-app" command from inside the 'frontend' folder to initialize React inside of the 'frontend' folder. 
 
@@ -26,6 +26,8 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
 NOTE:
  * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app.
+
+ * combineReducers
 
 8. import 'thunk' from 'redux-thunk'
 
