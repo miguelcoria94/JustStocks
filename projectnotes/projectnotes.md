@@ -9,7 +9,8 @@ use the "create-react-app" command from inside the 'frontend' folder to initiali
 
 command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
-3. Connect my local repo to my github repo
+<h3 align="center">3</h3>
+Connect my local repo to my github repo
 
 4. Cd into the frontend folder and "npm install" all your dependencies:
 - `js-cookie` - a simple, lightweight JS api for handling cookies
