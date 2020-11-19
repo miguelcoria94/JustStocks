@@ -14,7 +14,12 @@ I created a repo on github and connected it to my local repo
 
 <h3 align="center">4</h3>
 Cd into the frontend folder and "npm install" all your dependencies:
-- `js-cookie` - a simple, lightweight JS api for handling cookies
+- `js-cookie` - JsCookies is a simple, lightweight JS API for handling cookies.
+    - it works in all browsers
+    - accepts any characters
+    - heavily tested
+    - no dependency
+    - supports ES modules
 - `react-redux` - Official React bindings for Redux
 - `react-router-dom` - routing for React
 - `redux` - Redux
