@@ -6,7 +6,13 @@
 
 command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 
-3. All the Frontend is inside the frontend folder.
+3. Cd into the fontend folder and npm install all your dependencies:
+- `js-cookie` - extracts cookies
+- `react-redux` - React components and hooks for Redux
+- `react-router-dom` - routing for React
+- `redux` - Redux
+- `redux-thunk` - add Redux thunk
+
 
 4. All the Backend is inside the backend folder.
 
