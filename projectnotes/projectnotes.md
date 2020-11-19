@@ -1,6 +1,6 @@
 <h1 align="center">Solo React Project Notes</h1>
 
-1. This repo has the backend and frontend - All the npm packages you need are already installed.
+1. The repo we were provided has the skeleton for the backend and an empty frontend folder.
 
 2. use the "create-react-app" command from inside the 'frontend' folder to initialize React inside of the 'frontend' folder. I am using the simple app academy template.
 
