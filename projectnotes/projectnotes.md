@@ -34,8 +34,8 @@ Advantages of using Redux
     * Redux is very lightweight; the library only takes up 2kbs
     * Redux is very fast(the time to insert and retrieve data)
     * Redux is very predictable
-    
-- `redux-thunk` - add Redux thunk, thunk middlerware for redux
+
+- `redux-thunk` - Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the function's body once the asynchronous operations have been completed.
 
 5. Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
 - `redux-logger` - Log Redux actions in the browers's dev tools console
