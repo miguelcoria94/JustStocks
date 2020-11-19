@@ -15,13 +15,13 @@ I created a repo on github and connected it to my local repo
 <h3 align="center">4</h3>
 Cd into the frontend folder and "npm install" all your dependencies:
 
-- `js-cookie` JsCookies is a simple, lightweight JS API for handling cookies.
+- `js-cookie` - JsCookies is a simple, lightweight JS API for handling cookies.
     * it works in all browsers
     * accepts any characters
     * heavily tested
     * no dependency
     * supports ES modules
-- `react-redux` - Official React bindings for Redux
+- `react-redux` - React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also use React Redux to bind these two libraries.
 - `react-router-dom` - routing for React
 - `redux` - Redux
 - `redux-thunk` - add Redux thunk, thunk middlerware for redux
