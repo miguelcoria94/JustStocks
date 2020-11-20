@@ -1,9 +1,3 @@
-If you cannot dispatch an action or if you cannot see the action in the Redux
-dev tools, check the syntax in your `frontend/src/store/index.js` and in your
-`frontend/src/index.js`.
-
-**Now is a good time to commit your initial set up!**
-
 ### Wrapping `fetch` requests with CSRF
 
 Your Express backend server is configured to be CSRF protected and will only

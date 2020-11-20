@@ -537,6 +537,9 @@ If you did everything right your redux dev tools should look like this:
 
 <h3 align="center">33</h3>
 
+If you cannot dispatch an action or if you cannot see the action in the
+Redux dev tools, check the syntax in your `frontend/src/store/index.js` and in your `frontend/src/index.js`.
+
 
 
 
