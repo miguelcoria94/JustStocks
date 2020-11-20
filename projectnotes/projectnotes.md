@@ -331,7 +331,7 @@ ReactDOM.render(
 
 <h3 align="center">24</h3>
 
-It should not be exposed in production, be sure this is only set in development. At this point your 'frontend/src/index.js' should look liek this:
+It should not be exposed in production, be sure this is only set in development. At this point your 'frontend/src/index.js' should look like this:
 
 ```js
 // frontend/src/index.js
