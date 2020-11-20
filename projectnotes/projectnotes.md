@@ -1309,6 +1309,35 @@ if (process.env.NODE_ENV !== 'production') {
 // ...
 ```
 
+Navigate to [http://localhost:3000] and in the browser's dev tools console, try
+dispatching the login thunk action with the demo user login credentials.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "demo@appacademy.io",
+      id: 1,
+      updatedAt: "<Some date time format>",
+      username: "Demo-lition",
+    }
+  }
+}
+```
+
 <h3 align="center">60</h3>
 
 
