@@ -99,6 +99,7 @@ input {
 input:focus {
     border-bottom: 3px solid #FFFB7D;
     outline: none;
+    background-color: #ffffff;
 
 }
 
@@ -133,4 +134,17 @@ input:focus {
 
 label {
     font-weight: 400;
+}
+
+.form-signin {
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: #1d5236;
+}
+
+a:hover {
+    font-size: 15px;
 }
