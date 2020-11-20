@@ -1,5 +1,5 @@
 .loginform_container {
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,6 +20,19 @@
     flex-direction: column;
     align-content: center;
     width: 80%;
+}
+
+.home_content-form {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
 }
 
 .form_input-container {
