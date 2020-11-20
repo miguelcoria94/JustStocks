@@ -803,7 +803,7 @@ export async function fetch(url, options = {}) {
   return res;
 }
 ```
-
+<h1 align="center">RESTORE THE XSRF-TOKEN COOKIE</h1>
 <h3 align="center">46</h3>
 
 
