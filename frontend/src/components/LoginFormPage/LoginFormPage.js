@@ -24,14 +24,14 @@ const LoginFormPage = () => {
   };
 
   return (
-    <div class="loginform_container" >
+    <div class="loginform_container">
       <form class="form" onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
         </ul>
-        <div>
+        <div class="form_input-container">
           <label>
             Username or Email
             <input
@@ -42,7 +42,7 @@ const LoginFormPage = () => {
             />
           </label>
         </div>
-        <div>
+        <div class="form_input-container">
           <label>
             Password
             <input
