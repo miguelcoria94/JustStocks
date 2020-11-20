@@ -124,6 +124,8 @@ let enhancer;
 
 NOTE: The enchancer will change depending on if the Node environment is in development or production.
 
+What is and enchancer ? Store enhancers are a formal mechanism for adding capabilities to Redux itself. Most people will never need to write one. To use middleware in Redux, we use the applyMiddleware() function exported by the Redux library. applyMiddleware is itself a store enhancer that lets us change how dispatch() works.
+
 <h3 align="center">15</h3>
 
 In production, the `enhancer` should only apply the `thunk` middleware.
@@ -146,6 +148,21 @@ if (process.env.NODE_ENV === 'production') {
 ```
 
 <h3 align="center">16</h3>
+
+In development, the `logger` middleware and Redux dev tools compose enhancer as
+well.
+
+To use these tools, create a `logger` variable that uses the default
+export of `redux-logger`. 
+
+Then, grab the Redux dev tools compose enhancer with
+`window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__` and store it in a variable called
+`composeEnhancers`.
+
+You can use an __or__ `||` to keep the Redux's original `compose` as a fallback. Then set the `enhancer` variable to the return of the `composeEnhancers` function passing in `applyMiddleware` invoked with `thunk`
+then `logger`.
+
+
 
 
 
