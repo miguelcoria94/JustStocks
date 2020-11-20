@@ -82,9 +82,15 @@ NOTE:
  
 Inside "frontend/src/store/index.js" also import 'thunk' from the redux-thunk package.
 
+```js
+    import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+    import thunk from 'redux-thunk';
+```
+
 <h3 align="center">11</h3>
 
 NOTE:
+ * thunk - Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the function's body once the asynchronous operations have been completed. https://daveceddia.com/what-is-a-thunk/
 
 <h3 align="center">12</h3>
 
