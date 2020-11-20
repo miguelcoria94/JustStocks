@@ -453,6 +453,9 @@ ReactDOM.render(
 <h1 align="center">TEST THE REDUX STORE SETUP</h1>
 <h3 align="center">27</h3>
 
+Test your Redux store setup by starting your React frontend server (run `npm start` in your `frontend` folder) and navigate to [http://localhost:3000].
+
+
 
 
 
