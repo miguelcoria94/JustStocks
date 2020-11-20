@@ -362,6 +362,47 @@ ReactDOM.render(
 
 <h3 align="center">25</h3>
 
+Next, define a `Root` React functional component.
+
+It should the `App` component wrapped in Redux's `Provider` and React Router DOM's `BrowserRouter` provider components.
+
+```js
+// frontend/src/index.js
+import React from 'react';
+
+import './index.css';
+
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+import configureStore from './store';
+
+const store = configureStore();
+
+if (process.env.NODE_ENV !== 'production') {
+  window.store = store;
+}
+
+function Root() {
+  return (
+    <Provider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  );
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
 
 
 
