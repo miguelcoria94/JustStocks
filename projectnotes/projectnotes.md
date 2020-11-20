@@ -1340,6 +1340,10 @@ The `next state` in the console should look something like this:
 <h1 align="center">LOGINFORMPAGE COMPONENT</h1>
 <h3 align="center">60</h3>
 
+After finishing the Redux actions and the reducer for the login feature, the React components are next.
+
+Create a `components` folder in the `frontend/src` folder. This is where all your components besides `App` will live.
+
 
 
 
