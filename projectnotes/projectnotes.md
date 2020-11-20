@@ -812,6 +812,8 @@ In production though, the backend also serves up all the frontend assets, includ
 
 In production, the `XSRF-TOKEN` will be attached to the `index.html` file in the `frontend/build` folder.
 
+<h3 align="center">47</h3>
+
 In the `backend/routes/index.js` file, serve the `index.html` file at the `/` route and any routes that don't start with `/api`.
 
 Along with it, attach the `XSRF-TOKEN` cookie to the response.
