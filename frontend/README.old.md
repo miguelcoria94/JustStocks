@@ -1,39 +1,3 @@
-**Commit after testing!**
-
-### Example Restore Session User Thunk Action
-
-Again, there is no absolute "right" way of doing this. As long as your React
-application is behaving as expected, then you don't need to make your code look
-exactly like the example code.
-Here's an example for how `App.js` could look like now:
-
-```js
-// frontend/src/App.js
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
-import LoginFormPage from "./components/LoginFormPage";
-import * as sessionActions from "./store/session";
-
-function App() {
-  const dispatch = useDispatch();
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-  }, [dispatch]);
-
-  return isLoaded && (
-    <Switch>
-      <Route path="/login">
-        <LoginFormPage />
-      </Route>
-    </Switch>
-  );
-}
-
-export default App;
-```
-
 ## Phase 2: Signup Form Page
 
 The Signup Form Page is the second page that you will add to your frontend
