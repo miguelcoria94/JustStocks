@@ -1,8 +1,4 @@
-### Wrapping `fetch` requests with CSRF
 
-Your Express backend server is configured to be CSRF protected and will only
-accept requests that have the right CSRF secret token in a header and the right
-CSRF token value in a cookie.
 
 First, you need to add a `"proxy"` in your `frontend/package.json`. Add a
 `"proxy"` key with the value of `http://localhost:5000` or wherever you are

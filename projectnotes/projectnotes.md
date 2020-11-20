@@ -541,7 +541,12 @@ If you cannot dispatch an action or if you cannot see the action in the
 Redux dev tools, check the syntax in your `frontend/src/store/index.js` and in your `frontend/src/index.js`.
 
 <h1 align="center">WRAPPING 'FETCH' REQUESTS WITH CSRF</h1>
+
 <h3 align="center">34</h3>
+
+Your Express backend server is configured to be CSRF protected and will only accept requests that have the right CSRF secret token in a header and the right CSRF token value in a cookie.
+
+<h3 align="center">35</h3>
 
 
 
