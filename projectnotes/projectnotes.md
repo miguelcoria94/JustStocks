@@ -122,7 +122,9 @@ let enhancer;
 
 <h3 align="center">14</h3>
 
-NOTE: it will change depending on if the Node environment is in development or production.
+NOTE: The enchancer will change depending on if the Node environment is in development or production.
+
+<h3 align="center">15</h3>
 
 
 
