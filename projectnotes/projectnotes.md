@@ -53,7 +53,7 @@ Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
 
 <h3 align="center">7</h3>
 
-Create an 'index.js' file inside 'frontend/src'.
+Create an 'index.js' file inside 'frontend/src/store'.
 
 <h3 align="center">8</h3>
 
