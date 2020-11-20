@@ -473,6 +473,8 @@ Open up your console
 
 You can ignore the "Store does not have a valid reducer" error. This error is a result of not passing in anything into the rootReducer's combineReducer.
 
+<h3 align="center">30</h3>
+
 Check to see if your Redux dev tools was successfully connected and if there is
 a `store` on the `window` in your browser's dev tools console.
 
