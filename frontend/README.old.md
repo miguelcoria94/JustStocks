@@ -1,7 +1,3 @@
-Define all your CSS styling rules for the `LoginFormPage` component in the
-`LoginForm.css` file. Practice doing some CSS now to make your login page
-look better. Make sure to **commit your code afterwards**!
-
 ## Restore the Session User
 
 Right now, if you login successfully, you get redirected to the `"/"` route. If
