@@ -5,26 +5,6 @@
 Again, there is no absolute "right" way of doing this. As long as your React
 application is behaving as expected, then you don't need to make your code look
 exactly like the example code.
-
-Here's an example of the restore session user thunk action:
-
-```js
-// frontend/src/store/session.js
-// ...
-export const restoreUser = () => async dispatch => {
-  const res = await fetch('/api/session');
-  dispatch(setUser(res.data.user));
-  return res;
-};
-// ...
-```
-
-Here's an example of how to test the `restoreUser` thunk action:
-
-```js
-window.store.dispatch(window.sessionActions.restoreUser());
-```
-
 Here's an example for how `App.js` could look like now:
 
 ```js
