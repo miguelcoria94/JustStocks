@@ -1169,7 +1169,7 @@ After the response from the AJAX call comes back, dispatch the action for settin
 Export the login thunk action, and export the reducer as the default export.
 
 ```js
-import fetch from "./csrf";
+import { fetch } from "./csrf";
 
 const LOGIN_USER = "LOGIN_USER";
 const SET_SESSION = "SET_SESSION";
