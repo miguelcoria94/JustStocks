@@ -36,7 +36,6 @@ const LoginFormPage = () => {
           <h2 className="loginform_subheading">Signin</h2>
           <div className="form_input-container">
             <label>Username or Email</label>
-            <br />
             <input
               placeholder="Enter Username or Email"
               type="text"
@@ -47,7 +46,6 @@ const LoginFormPage = () => {
           </div>
           <div className="form_input-container">
             <label>Password</label>
-            <br />
             <input
               placeholder="Enter Password"
               type="password"
