@@ -82,3 +82,9 @@ input:focus {
     border: 1px solid #1d5236;
     box-shadow: none;
 }
+
+::placeholder {
+  color: rgb(200, 194, 194);
+  opacity: 1;
+  font-weight: 400;
+}
