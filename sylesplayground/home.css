@@ -11,14 +11,26 @@ background-image: linear-gradient(45deg, #1d5236 0%, #FFFB7D 100%);
 }
 
 .home_content {
-    
     height: 100%;
     display: flex;
 }
 
-.card_container
+.card_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card {
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+    padding: 10px;
+    margin: 10px;
+}
 
 .home_content-title {
+    flex-direction: column;
     height: auto;
     display: flex;
     width: 50%;
