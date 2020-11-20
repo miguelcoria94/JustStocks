@@ -38,9 +38,12 @@ Advantages of using Redux
 - `redux-thunk` - Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the function's body once the asynchronous operations have been completed.
 
 <h3 align="center">5</h3>
-5. Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
-- `redux-logger` - Log Redux actions in the browers's dev tools console
+Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
 
+- `redux-logger` - This library logs actions in the Developer Console, giving traceable stack of user actions.
+
+
+<h3 align="center">6</h3>
 6. Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
 
 7. import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package
