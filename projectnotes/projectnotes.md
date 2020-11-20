@@ -1,6 +1,7 @@
 <h1 align="center">Solo React Project Notes</h1>
 <h2 align="center">Personal notes while building JustStocks</h2>
 
+<h1 align="center">CREATE-REACT-APP</h1>
 <h3 align="center">1</h3>
 The repo we were provided has the skeleton for the backend and an empty frontend folder.
 
