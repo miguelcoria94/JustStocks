@@ -450,6 +450,8 @@ ReactDOM.render(
 );
 ```
 
+<h1 align="center">TEST THE REDUX STORE SETUP</h1>
+
 
 
 
