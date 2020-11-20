@@ -47,6 +47,7 @@ const LoginFormPage = () => {
           </div>
           <div className="form_input-container">
             <label>Password</label>
+            <br />
             <input
               placeholder="Enter Password"
               type="password"
