@@ -1104,7 +1104,11 @@ this:
 }
 ```
 
+By default, there should be no session user in the `session` slice of state.
+
 <h3 align="center">55</h3>
+
+
 
 
 
