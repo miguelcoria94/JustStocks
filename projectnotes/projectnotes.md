@@ -558,7 +558,7 @@ This proxy will force the frontend server to act like it's being served from the
 So if you do a `fetch` request in the React frontend like `fetch('/api/csrf/restore)`, then the `GET /api/csrf/restore` request will be made to the backend server instead of the frontend server.
 
 ```json
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:3000"
 ```
 Your `frontend/package.json`'s `"proxy"` key should like this:
 
