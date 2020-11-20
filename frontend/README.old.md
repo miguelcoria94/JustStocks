@@ -1,9 +1,6 @@
 Check to see if your Redux dev tools was successfully connected and if there is
 a `store` on the `window` in your browser's dev tools console.
 
-You can ignore the "Store does not have a valid reducer" error. This error is a
-result of not passing in anything into the `rootReducer`'s `combineReducer`.
-
 Try to dispatch an action from your browser's dev tools console. Make sure to
 include a `type` key in the action that you dispatch.
 
