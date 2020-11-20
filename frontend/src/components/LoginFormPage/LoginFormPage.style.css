@@ -45,3 +45,19 @@
 label {
     font-weight: 400;
 }
+
+input {
+    padding-bottom: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #1D5236;
+    font-weight: 700;
+}
+
+input:focus {
+    border-bottom: 3px solid #FFFB7D;
+    outline: none;
+    background-color: #ffffff;
+
+}
