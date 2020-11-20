@@ -47,7 +47,9 @@ Cd into the frontend folder and "npm install -D" the following packages as dev-d
 
 <h1 align="center">SETTING UP THE REDUX STORE</h1>
 <h3 align="center">6</h3>
-6. Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
+Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
+
+NOTE: Redux is a state container for JS apps, often called a Redux store. It stores the whole state of the app in an immutable object tree.
 
 7. import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package
 
