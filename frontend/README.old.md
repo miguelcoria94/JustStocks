@@ -1,13 +1,5 @@
 
 
-First, you need to add a `"proxy"` in your `frontend/package.json`. Add a
-`"proxy"` key with the value of `http://localhost:5000` or wherever you are
-serving your backend Express application. This proxy will force the frontend
-server to act like it's being served from the backend server. So if you do a
-`fetch` request in the React frontend like `fetch('/api/csrf/restore)`, then the
-`GET /api/csrf/restore` request will be made to the backend server instead of
-the frontend server.
-
 Your `frontend/package.json`'s `"proxy"` key should like this:
 
 ```json
