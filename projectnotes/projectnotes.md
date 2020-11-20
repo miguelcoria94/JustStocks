@@ -1433,7 +1433,19 @@ After you test it to see if it works, then use this thunk action inside of `App.
 <h1 align="center">SIGNUP FORM PAGE</h1>
 <h3 align="center">65</h3>
 
+The Signup Form Page is the second page that you will add to your frontend application.
 
+The flow will be very similar to how you did the Login Form Page.
+
+You will use the `POST /api/users` backend route to signup a user.
+
+In the session store file, add a signup thunk action that will hit the signup backend route with `username`, `email`, and `password` inputs.
+
+After the response from the AJAX call comes back, dispatch the action for setting the session user to the response's data.
+
+Export the signup thunk action.
+
+<h3 align="center">66</h3>
 
 
 

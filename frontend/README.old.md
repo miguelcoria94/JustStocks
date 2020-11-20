@@ -1,21 +1,3 @@
-## Phase 2: Signup Form Page
-
-The Signup Form Page is the second page that you will add to your frontend
-application. The flow will be very similar to how you did the Login Form Page.
-Can you remember all the steps to implement it? If so, **try doing this on your
-own before looking below for help!**
-
-### Signup Action
-
-You will use the `POST /api/users` backend route to signup a user.
-
-In the session store file, add a signup thunk action that will hit the signup
-backend route with `username`, `email`, and `password` inputs. After the
-response from the AJAX call comes back, dispatch the action for setting the
-session user to the response's data.
-
-Export the signup thunk action.
-
 #### Test the Signup Action
 
 Test the signup thunk action.
