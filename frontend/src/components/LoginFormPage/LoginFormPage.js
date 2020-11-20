@@ -37,6 +37,7 @@ const LoginFormPage = () => {
             <label>Username or Email</label>
             <br />
             <input
+              placeholder="Enter Username or Email"
               type="text"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
@@ -46,6 +47,7 @@ const LoginFormPage = () => {
           <div class="form_input-container">
             <label>Password</label>
             <input
+              placeholder="Enter Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
