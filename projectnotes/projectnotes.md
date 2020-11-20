@@ -577,7 +577,12 @@ To do this, you are going to wrap the `fetch` function on the `window` that will
 
 <h3 align="center">38</h3>
 
-Add a `csrf.js` file in the `frontend/src/store` folder.
+Create a `csrf.js` file in the `frontend/src/store` folder.
+
+```js
+// frontend/src/store/csrf.js
+import Cookies from 'js-cookie';
+```
 
 Import `Cookies` from `js-cookie` that will be used to extract the `XSRF-TOKEN` cookie value.
 
@@ -600,6 +605,8 @@ Set the parsed JSON body as a key of `data` on the response.
 If the response status code is 400 or above, `throw` the response as the error.
 
 Otherwise, return the response.
+
+
 
 
 

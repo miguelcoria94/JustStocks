@@ -1,8 +1,3 @@
-If the response has a JSON body, then parse it using the `.json` method on the
-response. Set the parsed JSON body as a key of `data` on the response. If the
-response status code is 400 or above, `throw` the response as the error.
-Otherwise, return the response.
-
 ```js
 // frontend/src/store/csrf.js
 import Cookies from 'js-cookie';
