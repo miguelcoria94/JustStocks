@@ -1447,6 +1447,41 @@ Export the signup thunk action.
 
 <h3 align="center">66</h3>
 
+Test the signup thunk action.
+
+Navigate to [http://localhost:3000]. If there is a `token` cookie, remove it and refresh.
+
+In the browser's dev tools console, try dispatching the signup thunk
+action with a new `username`, a new `email`, and a `password`.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "<new email>",
+      id: "<new id>",
+      updatedAt: "<Some date time format>",
+      username: "<new password>",
+    }
+  }
+}
+```
+
+If there is an error or if the previous or next state does not look like this, then check your logic in your signup action.
+
 
 
 
