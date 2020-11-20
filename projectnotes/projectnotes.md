@@ -1063,6 +1063,7 @@ There is no need to specify the headers because the default header for `"Content
 Make sure you have both the backend and frontend started.
 
 <h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
+
 <h3 align="center">53</h3>
 
 
