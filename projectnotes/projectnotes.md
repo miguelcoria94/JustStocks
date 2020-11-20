@@ -531,6 +531,10 @@ ReactDOM.render(
 
 <h3 align="center">32</h3>
 
+If you did everything right your redux dev tools should look like this:
+
+![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-20%20at%2012.06.21%20AM.png)
+
 
 
 

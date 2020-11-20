@@ -1,12 +1,3 @@
-Try to dispatch an action from your browser's dev tools console. Make sure to
-include a `type` key in the action that you dispatch.
-
-```js
-window.store.dispatch({ type: 'hello' });
-```
-
-![test-redux-store-image]
-
 If you cannot dispatch an action or if you cannot see the action in the Redux
 dev tools, check the syntax in your `frontend/src/store/index.js` and in your
 `frontend/src/index.js`.
