@@ -75,6 +75,8 @@ NOTE:
 
  * applyMiddleware - Middleware is the suggested way to extend Redux with custom functionality. Middleware lets you wrap the store's dispatch method for fun and profit. The key feature of middleware is that it is composable. Multiple middleware can be combined together, where each middleware requires no knowledge of what comes before or after it in the chain. https://redux.js.org/api/applymiddleware
 
+ * compose - Composes functions from right to left. All compose does is let you write deeply nested function transformations without the rightward drift of the code. Don't give it too much credit! https://redux.js.org/api/compose
+
  
 <h3 align="center">10</h3>
  
