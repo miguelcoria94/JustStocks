@@ -1062,9 +1062,12 @@ There is no need to specify the headers because the default header for `"Content
 
 Make sure you have both the backend and frontend started.
 
-<h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
+<h1 align="center">SESSION ACTIONS AND REDUCER</h1>
 
 <h3 align="center">53</h3>
+
+The Login Form Page is the first page that you will add to your frontend
+application.
 
 
 
