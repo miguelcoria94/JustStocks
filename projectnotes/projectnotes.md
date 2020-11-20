@@ -51,7 +51,8 @@ Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
 
  - NOTE: Redux is a state container for JS apps, often called a Redux store. It    stores the whole state of the app in an immutable object tree.
 
-7. import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package
+<h3 align="center">7</h3>
+Inside 'front'import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package
 
 NOTE:
  * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app.
