@@ -1,7 +1,3 @@
-
-**Remember to restart the frontend server after you make any edits to the
-`package.json` file.**
-
 Next, to make `fetch` requests with any HTTP verb other than `GET`, you need to
 set a `XSRF-TOKEN` header on the request and the value of the header should be
 set to the value of the `XSRF-TOKEN` cookie. To do this, you are going to wrap

@@ -566,6 +566,13 @@ Your `frontend/package.json`'s `"proxy"` key should like this:
 
 <h3 align="center">36</h3>
 
+**Remember to restart the frontend server after you make any edits to the
+`package.json` file.**
+
+<h3 align="center">37</h3>
+
+
+
 
 
 
