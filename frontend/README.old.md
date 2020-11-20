@@ -1,5 +1,3 @@
-Export the login thunk action, and export the reducer as the default export.
-
 Import the reducer in `session.js` into the file with the root reducer,
 `frontend/src/store/index.js`.
 

@@ -38,3 +38,5 @@ export const loginUser = ({ credential, password }) => async (dispatch) => {
 const sessionReducer = (state = {}, action) => {
 
 }
+
+export default sessionReducer;
