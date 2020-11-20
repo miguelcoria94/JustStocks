@@ -53,7 +53,9 @@ const LoginFormPage = () => {
             />
           </div>
           <div class="form_input-container">
-            <button type="submit">Log In</button>
+            <button class="loginbtn" type="submit">
+              Log In
+            </button>
           </div>
         </div>
       </form>
