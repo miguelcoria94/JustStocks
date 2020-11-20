@@ -368,7 +368,7 @@ It should the `App` component wrapped in Redux's `Provider` and React Router DOM
 
 Make sure to pass in the key of `store` with the value of `store` to the `Provider`.
 
-Your 'frontend/src/index.js' should look like this
+Your 'frontend/src/index.js' should look like this:
 
 ```js
 // frontend/src/index.js
