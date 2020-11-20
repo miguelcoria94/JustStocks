@@ -17,6 +17,24 @@ const endSession = (user) => {
     }
 };
 
+export const loginUser = ({ credential, password }) => async (dispatch) => {
+  try {
+    const res = await fetch("/api/session", {
+      method: "POST",
+      body: JSON.stringify({ credential, password }),
+    });
+      const { user } = res.data;
+      dispatch(setSession(user));
+
+      return {
+          type: LOGIN_USER,
+          payload: user,
+      };
+  } catch (err) {
+      console.error(err)
+  }
+};
+
 const sessionReducer = (state = {}, action) => {
 
 }

@@ -1,14 +1,3 @@
-Their types should be extracted as a
-constant and used by the action creator and the `session` reducer.
-
-You need to call the API to login then set the session user from the response,
-so add a thunk action for the `POST /api/session`. Make sure to use the custom
-`fetch` function from `frontend/src/store/csrf.js`. The `POST /api/session`
-route expects the request body to have a key of `credential` with an existing
-username or email and a key of `password`. After the response from the AJAX call
-comes back, dispatch the action for setting the session user to the response's
-data.
-
 Export the login thunk action, and export the reducer as the default export.
 
 Import the reducer in `session.js` into the file with the root reducer,

@@ -1156,6 +1156,16 @@ const sessionReducer = (state = {}, action) => {
 }
 ```
 
+<h3 align="center">57</h3>
+
+You need to call the API to login then set the session user from the response, so add a thunk action for the `POST /api/session`.
+
+Make sure to use the custom `fetch` function from `frontend/src/store/csrf.js`.
+
+The `POST /api/session` route expects the request body to have a key of `credential` with an existing username or email and a key of `password`.
+
+After the response from the AJAX call comes back, dispatch the action for setting the session user to the response'sdata.
+
 
 
 
