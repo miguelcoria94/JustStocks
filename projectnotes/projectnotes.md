@@ -302,6 +302,35 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+<h3 align="center">23</h3>
+
+Create a variable to access your store and expose it to the 'window'
+
+```js
+// frontend/src/index.js
+import React from 'react';
+
+import './index.css';
+
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+import configureStore from './store';
+
+const store = configureStore();
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+
+
 
 
 
