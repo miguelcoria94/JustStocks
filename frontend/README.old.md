@@ -1,16 +1,3 @@
-Now it's time to render some React components!
-
-## Phase 1: Login Form Page
-
-The Login Form Page is the first page that you will add to your frontend
-application.
-
-### Session Actions and Reducer
-
-First, you will add the Redux store actions and reducers that you need for this
-feature. You will use the `POST /api/session` backend route to login in a user
-as well as add the session user's information to the frontend Redux store.
-
 Make a file called `session.js` in the `frontend/src/store` folder. This file
 will contain all the actions specific to the session user's information and the
 session user's Redux reducer.

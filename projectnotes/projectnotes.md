@@ -1069,6 +1069,18 @@ Make sure you have both the backend and frontend started.
 The Login Form Page is the first page that you will add to your frontend
 application.
 
+add the Redux store actions and reducers that you need for this feature
+
+use the `POST /api/session` backend route to login in a user
+as well as add the session user's information to the frontend Redux store.
+
+<h3 align="center">54</h3>
+
+Make a file called `session.js` in the `frontend/src/store` folder. 
+
+
+
+
 
 
 
