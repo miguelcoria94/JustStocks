@@ -806,6 +806,18 @@ export async function fetch(url, options = {}) {
 <h1 align="center">RESTORE THE XSRF-TOKEN COOKIE</h1>
 <h3 align="center">46</h3>
 
+In development, the backend and frontend servers are separate. 
+
+In production though, the backend also serves up all the frontend assets, including the `index.html` and any JavaScript files in the `frontend/build` folder after running `npm start` in the `frontend` folder.
+
+In production, the `XSRF-TOKEN` will be attached to the `index.html` file in the `frontend/build` folder.
+
+In the `backend/routes/index.js` file, serve the `index.html` file at the `/` route and any routes that don't start with `/api`.
+
+Along with it, attach the `XSRF-TOKEN` cookie to the response.
+
+Serve the static files in the `frontend/build` folder using the `express.static` middleware.
+
 
 
 
