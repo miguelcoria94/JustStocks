@@ -60,6 +60,7 @@ Create an 'index.js' file inside 'frontend/src/store'.
 Inside "frontend/src/store/index.js" import 'createStore', 'combineReducers', 'applyMiddleware', 'compose' from the redux package.
 
 ```js
+    // frontend/src/store/index.js
     import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 ```
 
