@@ -1482,7 +1482,9 @@ The `next state` in the console should look something like this:
 
 If there is an error or if the previous or next state does not look like this, then check your logic in your signup action.
 
+<h3 align="center">67</h3>
 
+After finishing the Redux action for the signup feature, the React components are next.
 
 
 
