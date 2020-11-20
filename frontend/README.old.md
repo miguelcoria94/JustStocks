@@ -1,4 +1,3 @@
-
 In the frontend entry file (`frontend/src/index.js`), call the `restoreCSRF`
 function when in development before defining the `Root` functional component.
 Also, attach the custom `fetch` function onto the `window` when in development
