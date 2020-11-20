@@ -1377,6 +1377,18 @@ Also try logging in with invalid fields to test your handling and displaying of 
 
 create and import a LoginFormPage.css page into LoginFormPage.js.
 
+<h1 align="center">RESTORE THE SESSION USER</h1>
+<h3 align="center">64</h3>
+
+Right now, if you login successfully, you get redirected to the `"/"` route.
+
+If you refresh at that `"/"` page and navigate to the `"/login"` page, then you will not be redirected because the store does not retain the session user information on a refresh.
+
+How do you retain the session user information across a refresh? By loading the application after accessing the route to get the current session user `GET /api/session` and adding the user info to the Redux store again.
+
+<h3 align="center">65</h3>
+
+
 
 
 

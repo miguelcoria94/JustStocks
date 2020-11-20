@@ -1,17 +1,3 @@
-Define all your CSS styling rules for the `LoginFormPage` component in the
-`LoginForm.css` file. Practice doing some CSS now to make your login page
-look better. Make sure to **commit your code afterwards**!
-
-## Restore the Session User
-
-Right now, if you login successfully, you get redirected to the `"/"` route. If
-you refresh at that `"/"` page and navigate to the `"/login"` page, then you
-will not be redirected because the store does not retain the session user
-information on a refresh. How do you retain the session user information
-across a refresh? By loading the application after accessing the route to
-get the current session user `GET /api/session` and adding the user info to the
-Redux store again.
-
 Add a thunk action in `frontend/src/store/session.js` that will call the
 `GET /api/session` and dispatch the action to set the session user with the data
 from the response.
