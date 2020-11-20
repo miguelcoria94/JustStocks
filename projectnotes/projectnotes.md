@@ -451,6 +451,7 @@ ReactDOM.render(
 ```
 
 <h1 align="center">TEST THE REDUX STORE SETUP</h1>
+<h3 align="center">27</h3>
 
 
 
