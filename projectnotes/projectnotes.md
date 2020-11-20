@@ -580,6 +580,7 @@ To do this, you are going to wrap the `fetch` function on the `window` that will
 Create a `csrf.js` file in the `frontend/src/store` folder.
 
 Import `Cookies` from `js-cookie` that will be used to extract the `XSRF-TOKEN` cookie value.
+
 ```js
 // frontend/src/store/csrf.js
 import Cookies from 'js-cookie';
@@ -587,6 +588,15 @@ import Cookies from 'js-cookie';
 
 Define an `async` function called `fetch` that will take in `url` parameter and an
 `options` parameter that defaults to an empty object.
+
+```js
+// frontend/src/store/csrf.js
+import Cookies from 'js-cookie';
+
+export async function fetch(url, options = {}) {
+}
+```
+
 
 If `options.headers` is not set, default it to an empty object.
 

@@ -1,1 +1,3 @@
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
+
+export async function fetch(url, options = {}) {}
