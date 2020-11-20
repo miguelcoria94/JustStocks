@@ -600,7 +600,19 @@ export async function fetch(url, options = {}) {
 
 If `options.headers` is not set, default it to an empty object.
 
+```js
+// frontend/src/store/csrf.js
+import Cookies from 'js-cookie';
+
+export async function fetch(url, options = {}) {
+    // set options.method to 'GET' if there is no method
+  options.method = options.method || 'GET';
+}
+```
+
 If `options.method` is not set, set it to the `GET` method.
+
+
 
 If it is any method other than a `GET` method, set the `XSRF-TOKEN` header on the `options` object to the extracted value of the `XSRF-TOKEN` cookie.
 
