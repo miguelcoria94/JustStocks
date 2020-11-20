@@ -105,3 +105,24 @@ const rootReducer = combineReducers({
 });
 ```
 
+<h3 align="center">13</h3>
+
+Initialize an 'enchancer' variable that will be set to different store enhancers.
+
+```js
+// frontend/src/store/index.js
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+
+const rootReducer = combineReducers({
+});
+
+let enhancer;
+```
+
+<h3 align="center">14</h3>
+
+NOTE: it will change depending on if the Node environment is in development or production.
+
+
+
