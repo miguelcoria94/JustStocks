@@ -1062,8 +1062,325 @@ There is no need to specify the headers because the default header for `"Content
 
 Make sure you have both the backend and frontend started.
 
-<h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
+<h1 align="center">SESSION ACTIONS AND REDUCER</h1>
+
 <h3 align="center">53</h3>
+
+The Login Form Page is the first page that you will add to your frontend
+application.
+
+add the Redux store actions and reducers that you need for this feature
+
+use the `POST /api/session` backend route to login in a user
+as well as add the session user's information to the frontend Redux store.
+
+<h3 align="center">54</h3>
+
+Make a file called `session.js` in the `frontend/src/store` folder. 
+
+This file will contain all the actions specific to the session user's information and the session user's Redux reducer.
+
+The `session` slice of state should look like this if there is a
+current session user:
+
+```js
+{
+  user: {
+    id,
+    email,
+    username,
+    createdAt,
+    updatedAt
+  }
+}
+```
+
+If there is no session user, then the `session` slice of state should look like
+this:
+
+```js
+{
+  user: null
+}
+```
+
+By default, there should be no session user in the `session` slice of state.
+
+```js
+const sessionReducer = (state = {}, action) => {
+}
+```
+
+<h3 align="center">55</h3>
+
+Create two POJO action creators.
+
+One that will set the session user in the `session` slice of state to the action creator's input parameter, and another that will remove the session user.
+
+```js
+const setSession = (user) => {
+
+}
+
+const endSession = (user) => {
+    
+};
+```
+
+<h3 align="center">56</h3>
+
+Their types should be extracted as a constant and used by the action creator and the `session` reducer.
+
+```js
+import fetch from "./csrf"
+
+const LOGIN_USER = "LOGIN_USER";
+const SET_SESSION = "SET_SESSION";
+const END_SESSION = "END_SESSION";
+
+const setSession = (user) => {
+    return {
+        type: SET_SESSION,
+        payload: user,
+    }
+}
+
+const endSession = (user) => {
+    return {
+        type: END_SESSION,
+    }
+};
+
+const sessionReducer = (state = {}, action) => {
+
+}
+```
+
+<h3 align="center">57</h3>
+
+You need to call the API to login then set the session user from the response, so add a thunk action for the `POST /api/session`.
+
+Make sure to use the custom `fetch` function from `frontend/src/store/csrf.js`.
+
+The `POST /api/session` route expects the request body to have a key of `credential` with an existing username or email and a key of `password`.
+
+After the response from the AJAX call comes back, dispatch the action for setting the session user to the response'sdata.
+
+Export the login thunk action, and export the reducer as the default export.
+
+```js
+import { fetch } from "./csrf";
+
+const LOGIN_USER = "LOGIN_USER";
+const SET_SESSION = "SET_SESSION";
+const END_SESSION = "END_SESSION";
+
+const setSession = (user) => {
+  return {
+    type: SET_SESSION,
+    payload: user,
+  };
+};
+
+const endSession = () => {
+  return {
+    type: END_SESSION,
+  };
+};
+
+export const login = ({ credential, password }) => async (dispatch) => {
+  try {
+    const res = await fetch("/api/session", {
+      method: "POST",
+      body: JSON.stringify({ credential, password }),
+    });
+
+    const { user } = res.data;
+
+    dispatch(setSession(user));
+
+    return {
+      type: LOGIN_USER,
+      payload: user,
+    };
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export const restoreUser = () => async (dispatch) => {
+  const res = await fetch("/api/session");
+  dispatch(setSession(res.data.user));
+  return res;
+};
+
+export const signup = (user) => async (dispatch) => {
+  const { username, email, password } = user;
+  const response = await fetch("/api/users", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      email,
+      password,
+    }),
+  });
+  dispatch(setSession(response.data.user));
+  return response;
+};
+
+export const logout = () => async (dispatch) => {
+  const response = await fetch("/api/session", {
+    method: "DELETE",
+  });
+  dispatch(endSession());
+  return response;
+};
+
+const sessionReducer = (state = {}, action) => {
+  switch (action.type) {
+    case SET_SESSION:
+      return { ...state, user: action.payload };
+    case END_SESSION:
+      return { ...state, user: null };
+    default:
+      return state;
+  }
+};
+
+export default sessionReducer;
+```
+
+<h3 align="center">58</h3>
+
+Import the reducer in `session.js` into the file with the root reducer,
+`frontend/src/store/index.js`.
+
+Set a key of `session` in the `rootReducer`'s `combineReducer` object argument to the session reducer.
+
+```js
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import sessionReducer from "./session";
+
+const rootReducer = combineReducers({ session: sessionReducer})
+
+let enhancer;
+
+if (process.env.NODE_ENV === 'production') {
+    enhancer = applyMiddleware(thunk);
+} else {
+    const logger = require('redux-logger').default;
+    const composeEnhancers =
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+    enhancer = composeEnhancers(applyMiddleware(thunk, logger));
+}
+
+const configureStore = (preloadedState) => {
+    return createStore(rootReducer, preloadedState, enhancer);
+};
+
+export default configureStore;
+```
+
+<h1 align="center">TEST THE SESSION ACTIONS AND REDUCER</h1>
+
+<h3 align="center">59</h3>
+
+Login should be working so give it a try! Test the login thunk action and the `session` reducer.
+
+Import all the actions from the `session.js` file into the frontend application entry file, `frontend/src/index.js`.
+
+Then attach the actions to the `window` at the key of `sessionActions`:
+
+```js
+// frontend/src/index.js
+// ... other imports
+import * as sessionActions from './store/session';
+
+const store = configureStore();
+
+if (process.env.NODE_ENV !== 'production') {
+  restoreCSRF();
+
+  window.csrfFetch = fetch;
+  window.store = store;
+  window.sessionActions = sessionActions;
+}
+// ...
+```
+
+Navigate to [http://localhost:3000] and in the browser's dev tools console, try
+dispatching the login thunk action with the demo user login credentials.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "demo@appacademy.io",
+      id: 1,
+      updatedAt: "<Some date time format>",
+      username: "Demo-lition",
+    }
+  }
+}
+```
+<h1 align="center">LOGINFORMPAGE COMPONENT</h1>
+<h3 align="center">60</h3>
+
+After finishing the Redux actions and the reducer for the login feature, the React components are next.
+
+Create a `components` folder in the `frontend/src` folder. This is where all your components besides `App` will live.
+
+<h3 align="center">61</h3>
+
+Make a folder called `LoginFormPage` nested in the new `components` folder which will hold all the files for the login form.
+
+Add an `index.js` file in the `LoginFormPage`.
+
+Inside of this file, add a React functional component named
+`LoginFormPage`.
+
+<h3 align="center">62</h3>
+
+Render a form with a controlled input for the user login credential (username or email) and a controlled input for the user password.
+
+On submit of the form, dispatch the login thunk action with the form input values.
+
+Make sure to handle and display errors from the login thunk action if there are any.
+
+Export the `LoginFormPage` component at the bottom of the file, then render it in `App.js` at the `"/login"` route.
+
+If there is a current session user in the Redux store, then redirect the user to the `"/"` path if trying to access the `LoginFormPage`.
+
+Test your component by navigating to the `"/login"` page. Try logging into the form there with the demo user's credentials.
+
+Once you login, you should be redirected to the `"/"` route.
+
+Check your code for the `LoginFormPage` and the `App` component if this is not the flow that you are experiencing.
+
+Also try logging in with invalid fields to test your handling and displaying of error messages.
+
+<h3 align="center">63</h3>
+
+create and import a LoginFormPage.css page into LoginFormPage.js.
+
+
+
+
+
 
 
 
