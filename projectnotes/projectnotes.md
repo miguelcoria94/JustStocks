@@ -1129,6 +1129,33 @@ const endSession = (user) => {
 
 <h3 align="center">56</h3>
 
+Their types should be extracted as a constant and used by the action creator and the `session` reducer.
+
+```js
+import fetch from "./csrf"
+
+const LOGIN_USER = "LOGIN_USER";
+const SET_SESSION = "SET_SESSION";
+const END_SESSION = "END_SESSION";
+
+const setSession = (user) => {
+    return {
+        type: SET_SESSION,
+        payload: user,
+    }
+}
+
+const endSession = (user) => {
+    return {
+        type: END_SESSION,
+    }
+};
+
+const sessionReducer = (state = {}, action) => {
+
+}
+```
+
 
 
 

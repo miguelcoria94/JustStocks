@@ -1,4 +1,4 @@
- Their types should be extracted as a
+Their types should be extracted as a
 constant and used by the action creator and the `session` reducer.
 
 You need to call the API to login then set the session user from the response,
