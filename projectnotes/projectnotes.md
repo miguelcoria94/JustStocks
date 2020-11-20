@@ -366,6 +366,10 @@ Next, define a `Root` React functional component.
 
 It should the `App` component wrapped in Redux's `Provider` and React Router DOM's `BrowserRouter` provider components.
 
+Make sure to pass in the key of `store` with the value of `store` to the `Provider`.
+
+Your 'frontend/src/index.js' should look like this
+
 ```js
 // frontend/src/index.js
 import React from 'react';
@@ -387,7 +391,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 function Root() {
   return (
-    <Provider>
+    <Provider store={store}> // <---
       <BrowserRouter>
         <App />
       </BrowserRouter>

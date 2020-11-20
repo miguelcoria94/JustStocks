@@ -1,24 +1,3 @@
-Next, define a `Root` React functional component that returns the `App`
-component wrapped in Redux's `Provider` and React Router DOM's `BrowserRouter`
-provider components.
-
-```js
-// frontend/src/index.js
-// ...
-function Root() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  );
-}
-```
-
-Make sure to pass in the key of `store` with the value of `store` to the
-`Provider`.
-
 After defining the `Root` functional component, call `ReactDOM.render` function
 passing in the `Root` component and the HTML element with the id of `"root"`.
 
