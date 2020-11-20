@@ -979,6 +979,7 @@ Your `frontend/src/store/csrf.js` should look like this:
     export function restoreCSRF() {
     return fetch("/api/csrf/restore");
     }
+    
 ```
 
 
