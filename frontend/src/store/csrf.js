@@ -22,3 +22,7 @@ export async function fetch(url, options = {}) {
 
   return res;
 }
+
+export function restoreCSRF() {
+  return fetch("/api/csrf/restore");
+}

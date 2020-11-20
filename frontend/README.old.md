@@ -1,19 +1,3 @@
-Back in the React frontend, this `GET /api/csrf/restore` route needs to be
-called when the application is loaded.
-
-Define and export a function called `restoreCSRF` in the
-`frontend/src/store/csrf.js` that will call the custom `fetch` function with
-`/api/csrf/restore` as the `url` parameter.
-
-```js
-// frontend/src/store/csrf.js
-// ...
-
-// call this to get the "XSRF-TOKEN" cookie, should only be used in development
-export function restoreCSRF() {
-  return fetch('/api/csrf/restore');
-}
-```
 
 In the frontend entry file (`frontend/src/index.js`), call the `restoreCSRF`
 function when in development before defining the `Root` functional component.
