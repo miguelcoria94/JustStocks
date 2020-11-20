@@ -69,7 +69,7 @@ Inside "frontend/src/store/index.js" import 'createStore', 'combineReducers', 'a
 NOTE:
  * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app.
 
- * combineReducers
+ * combineReducers - As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducer helper function turns an object whose values are different reducing functions into a single reducing function you can pass to the store.
 
  
 <h3 align="center">10</h3>
