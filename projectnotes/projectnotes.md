@@ -71,7 +71,10 @@ NOTE:
 
  * combineReducers
 
-8. import 'thunk' from 'redux-thunk'
+ 
+<h3 align="center">10</h3>
+ 
+ Inside "frontend/src/store/index.js" also import 'thunk' from the redux-thunk package.
 
 9. create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
 
