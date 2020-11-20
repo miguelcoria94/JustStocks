@@ -92,12 +92,12 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 3px solid #183152;
+    border-bottom: 3px solid #1D5236;
     font-weight: 700;
 }
 
 input:focus {
-    border-bottom: 3px solid #C4AC5B;
+    border-bottom: 3px solid #FFFB7D;
     outline: none;
 
 }
