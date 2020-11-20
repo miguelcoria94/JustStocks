@@ -1106,6 +1106,12 @@ this:
 
 By default, there should be no session user in the `session` slice of state.
 
+```js
+const sessionReducer = (state = {}, action) => {
+
+}
+```
+
 <h3 align="center">55</h3>
 
 
