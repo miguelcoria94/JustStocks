@@ -1054,13 +1054,16 @@ ReactDOM.render(
 <h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
 <h3 align="center">52</h3>
 
-To test the custom `fetch` function that attaches the CSRF token to the header,
-navigate to root route of the React application, [http://localhost:3000]. In the
-browser's dev tools console, make a request to `POST /api/login` with the demo
-user credentials using the `window.csrfFetch` function. There is no need to
-specify the headers because the default header for `"Content-Type"`, set to
-`"application/json"`, and the `"XSRF-TOKEN"` header are added by the custom
-`fetch`.
+To test the custom `fetch` function that attaches the CSRF token to the header,navigate to root route of the React application, [http://localhost:3000].
+
+In the browser's dev tools console, make a request to `POST /api/login` with the demo user credentials using the `window.csrfFetch` function
+
+There is no need to specify the headers because the default header for `"Content-Type"`, set to `"application/json"`, and the `"XSRF-TOKEN"` header are added by the custom `fetch`.
+
+Make sure you have both the backend and frontend started.
+
+<h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
+<h3 align="center">53</h3>
 
 
 
