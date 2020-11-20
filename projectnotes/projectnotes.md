@@ -78,5 +78,9 @@ Inside "frontend/src/store/index.js" also import 'thunk' from the redux-thunk pa
 
 <h3 align="center">11</h3>
 
+NOTE:
+
+<h3 align="center">12</h3>
+
 create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
 
