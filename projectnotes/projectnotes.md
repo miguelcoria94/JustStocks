@@ -279,6 +279,29 @@ In your React application we need to use `BrowserRouter` from React Router for r
 
 <h3 align="center">22</h3>
 
+Go to 'frontend/src/index.js' and import React, index.css, ReactDOM, Provider, BrowserRouter, App and the configureStore function you just created. It should look something like this.
+
+```js
+// frontend/src/index.js
+import React from 'react';
+
+import './index.css';
+
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+import configureStore from './store';
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
 
 
 
