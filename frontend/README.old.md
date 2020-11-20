@@ -1,18 +1,3 @@
-```js
-// backend/routes/index.js
-// ...
-
-// Add a XSRF-TOKEN cookie in development
-if (process.env.NODE_ENV !== 'production') {
-  router.get('/api/csrf/restore', (req, res) => {
-    res.cookie('XSRF-TOKEN', req.csrfToken());
-    return res.json({});
-  });
-}
-
-// ...
-```
-
 Back in the React frontend, this `GET /api/csrf/restore` route needs to be
 called when the application is loaded.
 
