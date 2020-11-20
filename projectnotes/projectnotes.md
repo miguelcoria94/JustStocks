@@ -586,6 +586,8 @@ Import `Cookies` from `js-cookie` that will be used to extract the `XSRF-TOKEN` 
 import Cookies from 'js-cookie';
 ```
 
+<h3 align="center">39</h3>
+
 Define an `async` function called `fetch` that will take in `url` parameter and an
 `options` parameter that defaults to an empty object.
 
@@ -597,6 +599,7 @@ export async function fetch(url, options = {}) {
 }
 ```
 
+<h3 align="center">40</h3>
 
 If `options.headers` is not set, default it to an empty object.
 
@@ -609,6 +612,8 @@ export async function fetch(url, options = {}) {
   options.method = options.method || 'GET';
 }
 ```
+
+<h3 align="center">41</h3>
 
 If `options.method` is not set, set it to the `GET` method.
 
