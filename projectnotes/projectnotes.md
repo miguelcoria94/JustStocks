@@ -1051,6 +1051,7 @@ ReactDOM.render(
 );
 ```
 
+<h1 align="center">TEST CUSTOM `FETCH` WITH CSRF</h1>
 <h3 align="center">52</h3>
 
 

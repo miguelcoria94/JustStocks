@@ -1,23 +1,3 @@
-In the frontend entry file (`frontend/src/index.js`), call the `restoreCSRF`
-function when in development before defining the `Root` functional component.
-Also, attach the custom `fetch` function onto the `window` when in development
-as `window.csrfFetch`.
-
-```js
-// frontend/src/index.js
-// ... other imports
-import { restoreCSRF, fetch } from './store/csrf';
-
-// ... const store = configureStore();
-
-if (process.env.NODE_ENV !== 'production') {
-  restoreCSRF();
-
-  window.csrfFetch = fetch;
-  window.store = store;
-}
-```
-
 #### Test Custom `fetch` with CSRF
 
 To test the custom `fetch` function that attaches the CSRF token to the header,
