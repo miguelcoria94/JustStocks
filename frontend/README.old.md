@@ -1,26 +1,3 @@
-#### Test Custom `fetch` with CSRF
-
-To test the custom `fetch` function that attaches the CSRF token to the header,
-navigate to root route of the React application, [http://localhost:3000]. In the
-browser's dev tools console, make a request to `POST /api/login` with the demo
-user credentials using the `window.csrfFetch` function. There is no need to
-specify the headers because the default header for `"Content-Type"`, set to
-`"application/json"`, and the `"XSRF-TOKEN"` header are added by the custom
-`fetch`.
-
-```js
-window.csrfFetch('/api/test', {
-  method: 'POST',
-  body: JSON.stringify({ credential: 'Demo-lition', password: 'password' })
-}).then(res => console.log(res.data));
-```
-
-If you see an object with a key of `user` logged in the terminal, then you
-successfully set up CSRF protection on the frontend. If you don't then check
-your syntax in the `frontend/src/store/csrf.js` and the `frontend/src/index.js`.
-
-At this point, all the frontend setup is been complete. **Commit your code!**
-
 Now it's time to render some React components!
 
 ## Phase 1: Login Form Page
