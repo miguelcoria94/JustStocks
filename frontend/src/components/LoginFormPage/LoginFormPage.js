@@ -33,7 +33,7 @@ const LoginFormPage = () => {
             ))}
           </ul>
           <h1 className="loginform_title">JustStocks</h1>
-          <h2 className="loginform_subheading">Signin</h2>
+          <h2 className="loginform_subheading">Login</h2>
           <div className="form_input-container">
             <label>Username or Email</label>
             <input
