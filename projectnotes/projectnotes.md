@@ -124,7 +124,7 @@ let enhancer;
 
 NOTE: The enchancer will change depending on if the Node environment is in development or production.
 
-What is and enchancer ? Store enhancers are a formal mechanism for adding capabilities to Redux itself. Most people will never need to write one. To use middleware in Redux, we use the applyMiddleware() function exported by the Redux library. applyMiddleware is itself a store enhancer that lets us change how dispatch() works.
+What is an enchancer ? Store enhancers are a formal mechanism for adding capabilities to Redux itself. Most people will never need to write one. To use middleware in Redux, we use the applyMiddleware() function exported by the Redux library. applyMiddleware is itself a store enhancer that lets us change how dispatch() works.
 
 <h3 align="center">15</h3>
 
