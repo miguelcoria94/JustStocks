@@ -1,1 +1,12 @@
 /* TODO Add site wide styles */
+html {
+    font-family: 'Karla', sans-serif;
+    height: 100%;
+}
+
+body {
+    background-color: #1d5236;
+    background-image: linear-gradient(45deg, #1d5236 0%, #FFFB7D 100%);
+    margin: 0;
+    height: 100%;
+}
