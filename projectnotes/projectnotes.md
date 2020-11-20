@@ -275,6 +275,10 @@ The `configureStore` function you just exported will be used by another file als
 <h1 align="center">REDUX PROVIDER AND BROWSERROUTER</h1>
 <h3 align="center">21</h3>
 
+In your React application we need to use `BrowserRouter` from React Router for routing and `Provider` from Redux to provide the Redux store.
+
+
+
 
 
 
