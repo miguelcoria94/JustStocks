@@ -1,16 +1,4 @@
-After defining the `Root` functional component, call `ReactDOM.render` function
-passing in the `Root` component and the HTML element with the id of `"root"`.
 
-```js
-// frontend/src/index.js
-// ...
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
-```
 
 #### Test the Redux Store setup
 

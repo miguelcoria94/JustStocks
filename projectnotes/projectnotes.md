@@ -411,6 +411,8 @@ ReactDOM.render(
 After defining the `Root` functional component, call `ReactDOM.render` function
 passing in the `Root` component and the HTML element with the id of `"root"`.
 
+Your 'frontend/src/index.js' should look like this:
+
 ```js
 // frontend/src/index.js
 import React from 'react';
