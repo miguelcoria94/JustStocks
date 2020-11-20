@@ -1,19 +1,3 @@
-Next, to make `fetch` requests with any HTTP verb other than `GET`, you need to
-set a `XSRF-TOKEN` header on the request and the value of the header should be
-set to the value of the `XSRF-TOKEN` cookie. To do this, you are going to wrap
-the `fetch` function on the `window` that will be used in place of the default
-`fetch` function.
-
-Add a `csrf.js` file in the `frontend/src/store` folder. Import `Cookies` from
-`js-cookie` that will be used to extract the `XSRF-TOKEN` cookie value. Define
-an `async` function called `fetch` that will take in `url` parameter and an
-`options` parameter that defaults to an empty object. If `options.headers` is
-not set, default it to an empty object. If `options.method` is not set, set it
-to the `GET` method. If it is any method other than a `GET` method, set the
-`XSRF-TOKEN` header on the `options` object to the extracted value of the
-`XSRF-TOKEN` cookie. Call and `await` the `window.fetch` with the `url` and the
-`options` object to get the response.
-
 If the response has a JSON body, then parse it using the `.json` method on the
 response. Set the parsed JSON body as a key of `data` on the response. If the
 response status code is 400 or above, `throw` the response as the error.
