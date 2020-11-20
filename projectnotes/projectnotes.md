@@ -1282,6 +1282,8 @@ const configureStore = (preloadedState) => {
 export default configureStore;
 ```
 
+<h1 align="center">TEST THE SESSION ACTIONS AND REDUCER</h1>
+
 <h3 align="center">59</h3>
 
 

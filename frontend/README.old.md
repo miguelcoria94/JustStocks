@@ -1,9 +1,3 @@
-Import the reducer in `session.js` into the file with the root reducer,
-`frontend/src/store/index.js`.
-
-Set a key of `session` in the `rootReducer`'s `combineReducer` object argument
-to the session reducer.
-
 #### Test the Session Actions and Reducer
 
 Login should be working so give it a try! Test the login thunk action and the
