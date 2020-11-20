@@ -13,6 +13,7 @@ command: 'npx create-react-app . --template @appacademy/simple --use-npm'
 <h3 align="center">3</h3>
 I created a repo on github and connected it to my local repo
 
+<h1 align="center">DEPENDENCIES</h1>
 <h3 align="center">4</h3>
 Cd into the frontend folder and "npm install" all your dependencies:
 
