@@ -1,9 +1,3 @@
-In development, you need another way to get the `XSRF-TOKEN` cookie on your
-frontend application because the React frontend is on a different server than
-the Express backend. To solve this, add a backend route, `GET /api/csrf/restore`
-in the same file that can be accessed only in development and will restore the
-`XSRF-TOKEN` cookie.
-
 ```js
 // backend/routes/index.js
 // ...
