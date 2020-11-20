@@ -478,6 +478,8 @@ You can ignore the "Store does not have a valid reducer" error. This error is a 
 Check to see if your Redux dev tools was successfully connected and if there is
 a `store` on the `window` in your browser's dev tools console.
 
+![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.55.18%20PM.png)
+
 
 
 
