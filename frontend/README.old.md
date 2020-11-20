@@ -1,10 +1,3 @@
-
-
-#### Test the Redux Store setup
-
-Test your Redux store setup by starting your React frontend server (run
-`npm start` in your `frontend` folder) and navigate to [http://localhost:3000].
-
 Check to see if your Redux dev tools was successfully connected and if there is
 a `store` on the `window` in your browser's dev tools console.
 

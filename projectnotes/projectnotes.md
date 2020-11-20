@@ -459,6 +459,14 @@ Make sure you CD into the `frontend` folder and npm start
 
 ![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.34.12%20PM.png)
 
+<h3 align="center">28</h3>
+
+Your terminal should look like this if you did all the other steps together
+
+![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.41.49%20PM.png)
+
+
+
 
 
 
