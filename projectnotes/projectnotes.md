@@ -63,6 +63,48 @@ NOTE:
 9. create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 5. All the Backend is inside the backend folder.
 
 6. I also created a folder to test and experiment with css, I could use figma but I find testing with live server is better. Espcecially since I'm only going to be working with vanilla css.
