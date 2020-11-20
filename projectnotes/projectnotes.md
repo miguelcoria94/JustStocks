@@ -74,7 +74,9 @@ NOTE:
  
 <h3 align="center">10</h3>
  
- Inside "frontend/src/store/index.js" also import 'thunk' from the redux-thunk package.
+Inside "frontend/src/store/index.js" also import 'thunk' from the redux-thunk package.
 
-9. create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
+<h3 align="center">11</h3>
+
+create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
 
