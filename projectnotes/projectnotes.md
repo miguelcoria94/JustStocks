@@ -45,6 +45,7 @@ Cd into the frontend folder and "npm install -D" the following packages as dev-d
 - `redux-logger` - This library logs actions in the Developer Console, giving traceable stack of user actions.
 
 
+<h1 align="center">SETTING UP THE REDUX STORE</h1>
 <h3 align="center">6</h3>
 6. Next, set up the redux store. Create a folder in 'frontend/src' called 'store'.
 
