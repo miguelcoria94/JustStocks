@@ -1,8 +1,3 @@
-Make a folder called `LoginFormPage` nested in the new `components` folder which
-will hold all the files for the login form. Add an `index.js` file in the
-`LoginFormPage`. Inside of this file, add a React functional component named
-`LoginFormPage`.
-
 Render a form with a controlled input for the user login credential (username or
 email) and a controlled input for the user password.
 

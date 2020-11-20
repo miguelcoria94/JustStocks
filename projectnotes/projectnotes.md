@@ -1346,6 +1346,12 @@ Create a `components` folder in the `frontend/src` folder. This is where all you
 
 <h3 align="center">61</h3>
 
+Make a folder called `LoginFormPage` nested in the new `components` folder which will hold all the files for the login form.
+
+Add an `index.js` file in the `LoginFormPage`.
+
+Inside of this file, add a React functional component named
+`LoginFormPage`.
 
 
 
