@@ -1078,7 +1078,33 @@ as well as add the session user's information to the frontend Redux store.
 
 Make a file called `session.js` in the `frontend/src/store` folder. 
 
+This file will contain all the actions specific to the session user's information and the session user's Redux reducer.
 
+The `session` slice of state should look like this if there is a
+current session user:
+
+```js
+{
+  user: {
+    id,
+    email,
+    username,
+    createdAt,
+    updatedAt
+  }
+}
+```
+
+If there is no session user, then the `session` slice of state should look like
+this:
+
+```js
+{
+  user: null
+}
+```
+
+<h3 align="center">55</h3>
 
 
 

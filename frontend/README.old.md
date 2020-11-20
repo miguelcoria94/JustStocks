@@ -1,32 +1,3 @@
-Make a file called `session.js` in the `frontend/src/store` folder. This file
-will contain all the actions specific to the session user's information and the
-session user's Redux reducer.
-
-In this file, add a `session` reducer that will hold the current session user's
-information. The `session` slice of state should look like this if there is a
-current session user:
-
-```js
-{
-  user: {
-    id,
-    email,
-    username,
-    createdAt,
-    updatedAt
-  }
-}
-```
-
-If there is no session user, then the `session` slice of state should look like
-this:
-
-```js
-{
-  user: null
-}
-```
-
 By default, there should be no session user in the `session` slice of state.
 
 Create two POJO action creators. One that will set the session user in the
