@@ -126,5 +126,25 @@ NOTE: The enchancer will change depending on if the Node environment is in devel
 
 <h3 align="center">15</h3>
 
+In production, the `enhancer` should only apply the `thunk` middleware.
+
+```js
+// frontend/src/store/index.js
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+
+const rootReducer = combineReducers({
+});
+
+let enhancer;
+
+if (process.env.NODE_ENV === 'production') {
+  enhancer = applyMiddleware(thunk);
+} else {
+  //...
+}
+```
+
+
 
 
