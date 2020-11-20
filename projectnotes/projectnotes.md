@@ -465,6 +465,22 @@ Your terminal should look like this if you did all the other steps together
 
 ![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.41.49%20PM.png)
 
+<h3 align="center">29</h3>
+
+Open up your console
+
+![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.48.39%20PM.png)
+
+You can ignore the "Store does not have a valid reducer" error. This error is a result of not passing in anything into the rootReducer's combineReducer.
+
+Check to see if your Redux dev tools was successfully connected and if there is
+a `store` on the `window` in your browser's dev tools console.
+
+
+
+
+
+
 
 
 
