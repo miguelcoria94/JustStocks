@@ -2,6 +2,7 @@
     width: 40%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     height: 80%;
     align-items: center;
     background-color: white;
