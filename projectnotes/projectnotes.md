@@ -1337,7 +1337,7 @@ The `next state` in the console should look something like this:
   }
 }
 ```
-
+<h1 align="center">EXAMPLE SESSION ACTIONS AND REDUCER</h1>
 <h3 align="center">60</h3>
 
 

@@ -1,9 +1,3 @@
-
-If there is an error or if the previous or next state does not look like this,
-then check your logic in your session reducer and your actions.
-
-After you finished testing, **commit your code**.
-
 #### Example Session Actions and Reducer
 
 There is no absolute "right" way of doing this. As long as your `session`
