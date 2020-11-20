@@ -15,6 +15,8 @@ if (process.env.NODE_ENV !== 'production') {
   window.store = store;
 }
 
+window.store.dispatch({ type: "hello" });
+
 function Root() {
   return (
     <Provider store={store}>

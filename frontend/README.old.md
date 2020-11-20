@@ -1,6 +1,3 @@
-Check to see if your Redux dev tools was successfully connected and if there is
-a `store` on the `window` in your browser's dev tools console.
-
 Try to dispatch an action from your browser's dev tools console. Make sure to
 include a `type` key in the action that you dispatch.
 

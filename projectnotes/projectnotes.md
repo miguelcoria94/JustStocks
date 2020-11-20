@@ -482,6 +482,10 @@ a `store` on the `window` in your browser's dev tools console.
 
 <h3 align="center">31</h3>
 
+Try to dispatch an action from your browser's dev tools console. Make sure to include a `type` key in the action that you dispatch.
+
+
+
 
 
 
