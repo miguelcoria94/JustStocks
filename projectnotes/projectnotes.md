@@ -540,12 +540,8 @@ If you did everything right your redux dev tools should look like this:
 If you cannot dispatch an action or if you cannot see the action in the
 Redux dev tools, check the syntax in your `frontend/src/store/index.js` and in your `frontend/src/index.js`.
 
-
-
-
-
-
-
+<h1 align="center">WRAPPING 'FETCH' REQUESTS WITH CSRF</h1>
+<h3 align="center">34</h3>
 
 
 
