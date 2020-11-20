@@ -1,8 +1,8 @@
 .loginform_container {
-    width: 80%;
+    width: 40%;
     display: flex;
     justify-content: center;
-    height: 50%;
+    height: 80%;
     align-items: center;
     background-color: white;
 }
