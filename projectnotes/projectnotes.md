@@ -272,7 +272,7 @@ Don't forget to export default configureStore;
 
 The `configureStore` function you just exported will be used by another file also named "index.js" to attach the Redux store to the React App.
 
-<h1 align="center">CREATE-REACT-APP</h1>
+<h1 align="center">REDUX PROVIDER AND BROWSERROUTER</h1>
 <h3 align="center">21</h3>
 
 
