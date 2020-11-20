@@ -1430,12 +1430,8 @@ If you don't see this behavior, then check your syntax for the restore user thun
 
 After you test it to see if it works, then use this thunk action inside of `App.js` after the `App` component's first render.
 
-
-
-
-
-
-
+<h1 align="center">SIGNUP FORM PAGE</h1>
+<h3 align="center">65</h3>
 
 
 
