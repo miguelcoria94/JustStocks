@@ -814,11 +814,43 @@ In production, the `XSRF-TOKEN` will be attached to the `index.html` file in the
 
 <h3 align="center">47</h3>
 
-In the `backend/routes/index.js` file, serve the `index.html` file at the `/` route and any routes that don't start with `/api`.
+CD into `backend/routes/index.js` file, serve the `index.html` file at the `/` route and any routes that don't start with `/api`.
 
 Along with it, attach the `XSRF-TOKEN` cookie to the response.
 
 Serve the static files in the `frontend/build` folder using the `express.static` middleware.
+
+Your `backend/routes/index.js` file should look like this:
+
+```js
+// backend/routes/index.js
+// ... after `router.use('/api', apiRouter);`
+
+// Static routes
+// Serve React build files in production
+if (process.env.NODE_ENV === 'production') {
+  const path = require('path');
+  // Serve the frontend's index.html file at the root route
+  router.get('/', (req, res) => {
+    res.cookie('XSRF-TOKEN', req.csrfToken());
+    return res.sendFile(
+      path.resolve(__dirname, '../../frontend', 'build', 'index.html')
+    );
+  });
+
+  // Serve the static assets in the frontend's build folder
+  router.use(express.static(path.resolve("../frontend/build")));
+
+  // Serve the frontend's index.html file at all other routes NOT starting with /api
+  router.get(/^(?!\/?api).*/, (req, res) => {
+    res.cookie('XSRF-TOKEN', req.csrfToken());
+    return res.sendFile(
+      path.resolve(__dirname, '../../frontend', 'build', 'index.html')
+    );
+  });
+}
+
+// ...
 
 
 
