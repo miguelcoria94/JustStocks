@@ -1108,11 +1108,26 @@ By default, there should be no session user in the `session` slice of state.
 
 ```js
 const sessionReducer = (state = {}, action) => {
-
 }
 ```
 
 <h3 align="center">55</h3>
+
+Create two POJO action creators.
+
+One that will set the session user in the `session` slice of state to the action creator's input parameter, and another that will remove the session user.
+
+```js
+const setSession = (user) => {
+
+}
+
+const endSession = (user) => {
+    
+};
+```
+
+<h3 align="center">56</h3>
 
 
 

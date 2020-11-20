@@ -1,8 +1,4 @@
-By default, there should be no session user in the `session` slice of state.
-
-Create two POJO action creators. One that will set the session user in the
-`session` slice of state to the action creator's input parameter, and another
-that will remove the session user. Their types should be extracted as a
+ Their types should be extracted as a
 constant and used by the action creator and the `session` reducer.
 
 You need to call the API to login then set the session user from the response,
