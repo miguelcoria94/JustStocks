@@ -162,6 +162,26 @@ Then, grab the Redux dev tools compose enhancer with
 You can use an __or__ `||` to keep the Redux's original `compose` as a fallback. Then set the `enhancer` variable to the return of the `composeEnhancers` function passing in `applyMiddleware` invoked with `thunk`
 then `logger`.
 
+```js
+    import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+    import thunk from 'redux-thunk';
+
+    const rootReducer = combineReducers({
+
+    })
+
+    let enhancer;
+
+    if (process.env.NODE_ENV === 'production') {
+        enhancer = applyMiddleware(thunk);
+    } else {
+        const logger = require('redux-logger').default;
+        const composeEnhancers =
+            window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||compose;
+        enhancer = composeEnhancers(applyMiddleware(thunk, logger));
+}
+```
+
 
 
 
