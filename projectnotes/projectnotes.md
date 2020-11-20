@@ -571,6 +571,12 @@ Your `frontend/package.json`'s `"proxy"` key should like this:
 
 <h3 align="center">37</h3>
 
+Next, to make `fetch` requests with any HTTP verb other than `GET`, you need to set a `XSRF-TOKEN` header on the request and the value of the header should be set to the value of the `XSRF-TOKEN` cookie.
+
+To do this, you are going to wrap the `fetch` function on the `window` that will be used in place of the default `fetch` function. **DONE ON NEXT STEP**
+
+<h3 align="center">38</h3>
+
 
 
 
