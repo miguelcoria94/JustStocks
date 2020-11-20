@@ -23,12 +23,13 @@ Cd into the frontend folder and "npm install" all your dependencies:
     * heavily tested
     * no dependency
     * supports ES modules
+    https://www.npmjs.com/package/js-cookie
 
-- `react-redux` - React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also use React Redux to bind these two libraries.
+- `react-redux` - React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also use React Redux to bind these two libraries. https://react-redux.js.org/
 
-- `react-router-dom` - This is a frontend routing library to create routes that allows you to control which components to display using the browsers location. Since this will be a single page app you do not want to have to refresh the page each time the browser changes location. You want to be able to update the browers location and your app's response using JS. This is known as client-side routing.
+- `react-router-dom` - This is a frontend routing library to create routes that allows you to control which components to display using the browsers location. Since this will be a single page app you do not want to have to refresh the page each time the browser changes location. You want to be able to update the browers location and your app's response using JS. This is known as client-side routing. https://reactrouter.com/web/guides/quick-start
 
-- `redux` - Redux is a JavaScript Framework for managing the frontend state of a web application. Redux allows you to store information in an organized manner in a web app.Redux also allows you to quickly retrieve that information from anywhere in the app
+- `redux` - Redux is a JavaScript Framework for managing the frontend state of a web application. Redux allows you to store information in an organized manner in a web app.Redux also allows you to quickly retrieve that information from anywhere in the app https://redux.js.org/
 
 Advantages of using Redux
 
@@ -38,6 +39,7 @@ Advantages of using Redux
     * Redux is very predictable
 
 - `redux-thunk` - Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the function's body once the asynchronous operations have been completed.
+https://www.npmjs.com/package/redux-thunk
 
 <h3 align="center">5</h3>
 Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
