@@ -1388,6 +1388,50 @@ How do you retain the session user information across a refresh? By loading the 
 
 <h3 align="center">65</h3>
 
+Add a thunk action in `frontend/src/store/session.js` that will call the
+`GET /api/session` and dispatch the action to set the session user with the data from the response.
+
+Test your thunk action by logging in then refreshing at the
+[http://localhost:3000] route.
+
+Make sure you have a `token` in your cookies.
+
+In the browser's dev tools console, try dispatching the restore session user thunk action.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "demo@appacademy.io",
+      id: 1,
+      updatedAt: "<Some date time format>",
+      username: "Demo-lition",
+    }
+  }
+}
+```
+
+If you don't see this behavior, then check your syntax for the restore user thunk action.
+
+<h3 align="center">66</h3>
+
+After you test it to see if it works, then use this thunk action inside of `App.js` after the `App` component's first render.
+
+
+
 
 
 
