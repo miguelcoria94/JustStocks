@@ -455,6 +455,9 @@ ReactDOM.render(
 
 Test your Redux store setup by starting your React frontend server (run `npm start` in your `frontend` folder) and navigate to [http://localhost:3000].
 
+Make sure you CD into the `frontend` folder and npm start
+
+![npm start](https://github.com/miguelcoria94/JustStocks/blob/main/projectnotes/Screen%20Shot%202020-11-19%20at%2011.34.12%20PM.png)
 
 
 
