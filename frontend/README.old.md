@@ -1,11 +1,4 @@
 
-
-Your `frontend/package.json`'s `"proxy"` key should like this:
-
-```json
-  "proxy": "http://localhost:5000"
-```
-
 **Remember to restart the frontend server after you make any edits to the
 `package.json` file.**
 
