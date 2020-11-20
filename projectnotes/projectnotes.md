@@ -94,5 +94,14 @@ NOTE:
 
 <h3 align="center">12</h3>
 
-create a 'rootReducer' that calles 'combineReducer' and passes in an empty object
+create a 'rootReducer' that calles 'combineReducer' and passes in an empty object for now.
+
+```js
+// frontend/src/store/index.js
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+
+const rootReducer = combineReducers({
+});
+```
 
