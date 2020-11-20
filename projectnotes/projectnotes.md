@@ -1286,6 +1286,31 @@ export default configureStore;
 
 <h3 align="center">59</h3>
 
+Login should be working so give it a try! Test the login thunk action and the `session` reducer.
+
+Import all the actions from the `session.js` file into the frontend application entry file, `frontend/src/index.js`.
+
+Then attach the actions to the `window` at the key of `sessionActions`:
+
+```js
+// frontend/src/index.js
+// ... other imports
+import * as sessionActions from './store/session';
+
+const store = configureStore();
+
+if (process.env.NODE_ENV !== 'production') {
+  restoreCSRF();
+
+  window.csrfFetch = fetch;
+  window.store = store;
+  window.sessionActions = sessionActions;
+}
+// ...
+```
+
+<h3 align="center">60</h3>
+
 
 
 
