@@ -67,9 +67,9 @@ Inside "frontend/src/store/index.js" import 'createStore', 'combineReducers', 'a
 <h3 align="center">9</h3>
 
 NOTE:
- * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app.
+ * createStore - creates a redux store that holds the complete state tree of your app. There should only be a single store in your app. https://redux.js.org/api/createstore
 
- * combineReducers - As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducer helper function turns an object whose values are different reducing functions into a single reducing function you can pass to the store.
+ * combineReducers - As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducer helper function turns an object whose values are different reducing functions into a single reducing function you can pass to the store. https://redux.js.org/api/combinereducers
 
  * applyMiddleware - Middleware is the suggested way to extend Redux with custom functionality. Middleware lets you wrap the store's dispatch method for fun and profit. The key feature of middleware is that it is composable. Multiple middleware can be combined together, where each middleware requires no knowledge of what comes before or after it in the chain. https://redux.js.org/api/applymiddleware
 
