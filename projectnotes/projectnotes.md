@@ -270,7 +270,7 @@ Don't forget to export default configureStore;
 
 <h3 align="center">20</h3>
 
-
+The configureStore function you just exported will be used by another file also named "index.js" to attach the Redux store to the React App.
 
 
 
