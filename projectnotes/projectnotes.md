@@ -1355,26 +1355,23 @@ Inside of this file, add a React functional component named
 
 <h3 align="center">62</h3>
 
-Render a form with a controlled input for the user login credential (username or
-email) and a controlled input for the user password.
+Render a form with a controlled input for the user login credential (username or email) and a controlled input for the user password.
 
-On submit of the form, dispatch the login thunk action with the form input
-values. Make sure to handle and display errors from the login thunk action
-if there are any.
+On submit of the form, dispatch the login thunk action with the form input values.
 
-Export the `LoginFormPage` component at the bottom of the file, then render it
-in `App.js` at the `"/login"` route.
+Make sure to handle and display errors from the login thunk action if there are any.
 
-If there is a current session user in the Redux store, then redirect the user
-to the `"/"` path if trying to access the `LoginFormPage`.
+Export the `LoginFormPage` component at the bottom of the file, then render it in `App.js` at the `"/login"` route.
 
-Test your component by navigating to the `"/login"` page. Try logging into the
-form there with the demo user's credentials. Once you login, you should be
-redirected to the `"/"` route. Check your code for the `LoginFormPage` and the
-`App` component if this is not the flow that you are experiencing.
+If there is a current session user in the Redux store, then redirect the user to the `"/"` path if trying to access the `LoginFormPage`.
 
-Also try logging in with invalid fields to test your handling and displaying of
-error messages.
+Test your component by navigating to the `"/login"` page. Try logging into the form there with the demo user's credentials.
+
+Once you login, you should be redirected to the `"/"` route.
+
+Check your code for the `LoginFormPage` and the `App` component if this is not the flow that you are experiencing.
+
+Also try logging in with invalid fields to test your handling and displaying of error messages.
 
 
 
