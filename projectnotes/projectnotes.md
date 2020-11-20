@@ -484,6 +484,53 @@ a `store` on the `window` in your browser's dev tools console.
 
 Try to dispatch an action from your browser's dev tools console. Make sure to include a `type` key in the action that you dispatch.
 
+```js
+window.store.dispatch({ type: 'hello' });
+```
+
+Your `frontend/src/index.js` should look like this:
+
+```js
+// frontend/src/index.js
+import React from 'react';
+
+import './index.css';
+
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+import configureStore from './store';
+
+const store = configureStore();
+
+if (process.env.NODE_ENV !== 'production') {
+  window.store = store;
+}
+
+window.store.dispatch({ type: "hello" });
+
+function Root() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  );
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
+```
+
+<h3 align="center">32</h3>
+
 
 
 
