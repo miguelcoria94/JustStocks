@@ -44,7 +44,7 @@ https://www.npmjs.com/package/redux-thunk
 <h3 align="center">5</h3>
 Cd into the frontend folder and "npm install -D" the following packages as dev-dependencies:
 
-- `redux-logger` - This library logs actions in the Developer Console, giving traceable stack of user actions.
+- `redux-logger` - This library logs actions in the Developer Console, giving traceable stack of user actions. https://www.npmjs.com/package/redux-logger
 
 
 <h1 align="center">SETTING UP THE REDUX STORE</h1>
