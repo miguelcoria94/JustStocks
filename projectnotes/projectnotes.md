@@ -591,6 +591,8 @@ import Cookies from 'js-cookie';
 Define an `async` function called `fetch` that will take in `url` parameter and an
 `options` parameter that defaults to an empty object.
 
+If `options.headers` is not set, default it to an empty object.
+
 ```js
 // frontend/src/store/csrf.js
 import Cookies from 'js-cookie';
@@ -601,7 +603,8 @@ export async function fetch(url, options = {}) {
 
 <h3 align="center">40</h3>
 
-If `options.headers` is not set, default it to an empty object.
+If `options.method` is not set, set it to the `GET` method.
+
 
 ```js
 // frontend/src/store/csrf.js
@@ -615,7 +618,6 @@ export async function fetch(url, options = {}) {
 
 <h3 align="center">41</h3>
 
-If `options.method` is not set, set it to the `GET` method.
 
 
 
