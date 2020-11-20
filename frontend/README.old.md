@@ -1,11 +1,3 @@
-### `LoginFormPage` Component
-
-After finishing the Redux actions and the reducer for the login feature, the
-React components are next.
-
-Create a `components` folder in the `frontend/src` folder. This is where all
-your components besides `App` will live.
-
 Make a folder called `LoginFormPage` nested in the new `components` folder which
 will hold all the files for the login form. Add an `index.js` file in the
 `LoginFormPage`. Inside of this file, add a React functional component named
