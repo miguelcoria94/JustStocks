@@ -598,6 +598,8 @@ If `options.headers` is not set, default it to an empty object.
 import Cookies from 'js-cookie';
 
 export async function fetch(url, options = {}) {
+    // set options.headers to an empty object if there is no headers
+  options.headers = options.headers || {};
 }
 ```
 
@@ -613,15 +615,26 @@ import Cookies from 'js-cookie';
 export async function fetch(url, options = {}) {
     // set options.method to 'GET' if there is no method
   options.method = options.method || 'GET';
+  // set options.headers to an empty object if there is no headers
+  options.headers = options.headers || {};
 }
 ```
 
 <h3 align="center">41</h3>
 
-
-
-
 If it is any method other than a `GET` method, set the `XSRF-TOKEN` header on the `options` object to the extracted value of the `XSRF-TOKEN` cookie.
+
+```js
+// frontend/src/store/csrf.js
+import Cookies from 'js-cookie';
+
+export async function fetch(url, options = {}) {
+    // set options.method to 'GET' if there is no method
+  options.method = options.method || 'GET';
+  // set options.headers to an empty object if there is no headers
+  options.headers = options.headers || {};
+}
+```
 
 Call and `await` the `window.fetch` with the `url` and the `options` object to get the response.
 
