@@ -78,23 +78,26 @@ input:focus {
 
 .loginbtn {
     background-color: #1d5236;
+    transition: width 2s, height 2s, transform 2s;
+    transition-delay: .15s;
     padding: 10px;
     border:none;
     border-radius: 5px;
     color: #ffffff;
     font-weight: 700;
+    cursor: pointer;
     border: 1px solid #1d5236;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .loginbtn:hover {
-    background-color: #1b854c;
+    transition-delay: .25s;
+    background-color: #1D5236;
     padding: 10px;
     border:none;
     border-radius: 5px;
     font-weight: 700;
     border: 1px solid #1d5236;
-    box-shadow: none;
+    box-shadow: rgba(18, 216, 28, 0.25) 0px 14px 28px, rgba(50, 170, 20, 0.22) 0px 10px 10px;
 }
 
 ::placeholder {
@@ -112,7 +115,6 @@ input:focus {
         height: 100%;
         align-items: center;
         background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
         border-radius: 5px;
         margin: 0;
         padding: 40px;
@@ -128,7 +130,6 @@ input:focus {
         height: 100%;
         align-items: center;
         background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
         border-radius: 5px;
         margin: 0;
         padding: 40px;
