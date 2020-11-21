@@ -47,7 +47,6 @@ function RegisterFormPage() {
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
           <div className="form_input-container">
@@ -56,7 +55,6 @@ function RegisterFormPage() {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              required
             />
           </div>
           <div className="form_input-container">
@@ -65,7 +63,6 @@ function RegisterFormPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </div>
 
@@ -75,7 +72,6 @@ function RegisterFormPage() {
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              required
             />
           </div>
           <div className="form_input-container">

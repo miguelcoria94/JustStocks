@@ -15,12 +15,11 @@ const LoginFormPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors([]);
-    return dispatch(sessionActions.login({ credential, password })).catch(
-      (res) => {
-        if (res.data && res.data.errors) setErrors(res.data.errors);
-      }
-    );
+      setErrors([]);
+      return dispatch(sessionActions.login({ credential, password })).catch(
+        (res) => {
+          if (res.data && res.data.errors) setErrors(res.data.errors);
+        });
   };
 
   return (
@@ -41,7 +40,6 @@ const LoginFormPage = () => {
               type="text"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
-              required
             />
           </div>
           <div className="form_input-container">
@@ -51,7 +49,6 @@ const LoginFormPage = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </div>
           <div className="form_input-container">

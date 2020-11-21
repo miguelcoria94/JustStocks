@@ -18,23 +18,19 @@ const endSession = () => {
 };
 
 export const login = ({ credential, password }) => async (dispatch) => {
-  try {
-    const res = await fetch("/api/session", {
-      method: "POST",
-      body: JSON.stringify({ credential, password }),
-    });
+  const res = await fetch("/api/session", {
+    method: "POST",
+    body: JSON.stringify({ credential, password }),
+  });
 
-    const { user } = res.data;
+  const { user } = res.data;
 
-    dispatch(setSession(user));
+  dispatch(setSession(user));
 
-    return {
-      type: LOGIN_USER,
-      payload: user,
-    };
-  } catch (err) {
-    console.error(err);
-  }
+  return {
+    type: LOGIN_USER,
+    payload: user,
+  };
 };
 
 export const restoreUser = () => async (dispatch) => {
