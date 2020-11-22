@@ -50,7 +50,7 @@ function DefaultHomePage() {
             </div>
           </div>
         </div>
-        <div className="registerform_container">
+        <div className="registerformhome_container">
           <form onSubmit={handleSubmit} className="registerhome_content-form">
             <div className="registerform">
               <div>

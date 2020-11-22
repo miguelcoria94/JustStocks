@@ -28,6 +28,14 @@
     margin: 0 !important;
 }
 
+h2 {
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
 .registerform_subheading{
     font-size: 50px;
     font-weight: 400;
