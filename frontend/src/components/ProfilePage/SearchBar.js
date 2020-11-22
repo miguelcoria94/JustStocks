@@ -1,6 +1,6 @@
 import React, { useState }from "react";
 import { useDispatch } from "react-redux";
-import * as sessionActions from "../../store/profile";
+import * as profileActions from "../../store/profile";
 
 function SearchBar() {
     const dispatch = useDispatch();
@@ -9,7 +9,7 @@ function SearchBar() {
   const handleSearch = (e) => {
       e.preventDefault();
       return dispatch(
-          sessionActions.lookUp({ symbol })
+          profileActions.lookUp({ symbol })
       )
   };
 

@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LogoutButton from "./LogoutButton";
 import WelcomeMessage from "./WelcomeMessage"
+import SearchBar from "./SearchBar"
 import "./ProfilePage.style.css";
 
 function ProfilePage() {
@@ -20,7 +21,8 @@ function ProfilePage() {
     return (
       <div className="profileContainer">
         <div className="profile_navdiv">
-          <WelcomeMessage user={sessionUser}/>
+          <WelcomeMessage user={sessionUser} />
+          <SearchBar />
           <LogoutButton user={sessionUser} />
         </div>
       </div>
