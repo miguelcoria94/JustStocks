@@ -27,7 +27,6 @@ function SearchBar() {
             type="text"
             value={symbol}
             onChange={(e) => {
-              console.log(e.target.value);
               setSymbol(e.target.value);
             }}
             className="search-input"

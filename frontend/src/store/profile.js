@@ -15,13 +15,11 @@ export const getStock = ({ symbol }) => async (dispatch) => {
   const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apikey}`);
 
 
-  const { bestMatches } = response
-
-  dispatch(lookupStock(bestMatches));
+  dispatch(lookupStock(response.data.bestMatches));
   console.log(response)
   return {
     type: LOOKUP_STOCK,
-    payload: bestMatches,
+    payload: response.data.bestMatches,
   };
 };
 
