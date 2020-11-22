@@ -1,4 +1,5 @@
 .profileContainer {
+    padding: 25px;
     background-color: white;
     width: 90%;
     height: 90%;
@@ -17,4 +18,10 @@
     cursor: pointer;
     width: 100px;
     height: 40px;
+}
+
+.profile_navdiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

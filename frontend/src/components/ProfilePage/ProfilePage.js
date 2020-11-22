@@ -12,7 +12,7 @@ function ProfilePage({ isLoaded }) {
 
     return (
       <div className="profileContainer">
-        <div>
+        <div className="profile_navdiv">
           <WelcomeMessage user={sessionUser}/>
           <LogoutButton user={sessionUser} />
         </div>
