@@ -1,0 +1,29 @@
+.HomeDefault_container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.DefaultHome_container{
+    width: 50%;
+}
+
+.DefaultHome_title{
+    color: white;
+}
+
+.card_container {
+    padding:0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between
+}
+
+.card {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: none;
+}
