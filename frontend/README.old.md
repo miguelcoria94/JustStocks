@@ -1,39 +1,3 @@
-Make a `ProfileButton.js` file in the `Navigation` folder. Create a React
-functional component called `ProfileButton` that will render an icon from
-[Font Awesome].
-
-Follow the [instructions here for setting up Font Awesome][Font Awesome]. The
-easiest way to connect Font Awesome to your React application is by sharing your
-email and creating a new kit. The kit should let you copy an HTML `<script>`.
-Add this script to the `<head>` of your `frontend/public/index.html` file.
-
-**If you don't want to signup for Font Awesome** and are okay with using Font
-Awesome icons that may not be up to date, you can just add the following `link`
-to the `<head>` of your `frontend/public/index.html` file:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-  integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-  crossorigin="anonymous" />
-```
-
-Now you can use any of the [free icons available in Font Awesome][Choose a Font Awesome Icon] by adding the `<i>` element with the desired `className` to ber
-rendered in a React component. To change the size or color of the icon, wrap
-the `<i>` element in a parent element like a `div`. Manipulating the `font-size`
-of the parent element changes the size of the icon. The color of the parent
-element will be the color of the icon. For example, to render a big orange
-[carrot icon]:
-
-```js
-const Carrot = () => (
-  <div style={{ color: "orange", fontSize: "100px" }}>
-    <i className="fas fa-carrot"></i>
-  </div>
-);
-```
-
 [Choose an icon][Choose a Font Awesome Icon] that will represent the user
 profile button and render it in the `ProfileButton` component.
 
