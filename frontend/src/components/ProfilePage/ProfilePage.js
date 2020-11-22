@@ -5,8 +5,15 @@ import LogoutButton from "./LogoutButton";
 import WelcomeMessage from "./WelcomeMessage"
 import "./ProfilePage.style.css";
 
-function ProfilePage({ isLoaded }) {
-    const sessionUser = useSelector(state => state.session.user);
+function ProfilePage() {
+
+  const sessionUser = useSelector(state => state.session.user);
+
+  if (sessionUser) {
+    document.title = `JustStocks - ${sessionUser.username}`
+  } else {
+    document.title = 'JustStocks'
+  }
 
     if (!sessionUser) return <Redirect to="/" />;
 
