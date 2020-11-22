@@ -34,7 +34,7 @@ const LoginFormPage = () => {
         </dive>
         <div className="form">
           <h1>
-            <Link className="loginform_title">JustStocks</Link>
+            <Link className="loginform_title" to="/">JustStocks</Link>
           </h1>
           <h2 className="loginform_subheading">Login</h2>
           <div className="form_input-container">
