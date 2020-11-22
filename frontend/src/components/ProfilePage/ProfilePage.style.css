@@ -37,12 +37,16 @@
 }
 
 .search-input {
+    border: 2.5px solid #1d5236;
     height: 20px;
     padding: 0;
 }
 
 .search-button {
-
+    background-color: #1d5236;
+    margin:0;
+    height:25px;
+    
 }
 
 .searchbar{
