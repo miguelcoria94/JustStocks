@@ -1519,6 +1519,8 @@ Check your code for the `SignupFormPage` and the `App` component if this is not 
 
 Also try signing up with invalid fields to test your handling and displaying of error messages.
 
+<h1 align="center">LOGGINGOUT</h1>
+<h3 align="center">71</h3>
 
 
 
