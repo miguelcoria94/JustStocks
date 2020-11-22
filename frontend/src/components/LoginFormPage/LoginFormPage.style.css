@@ -13,6 +13,7 @@
 }
 
 .loginform_title{
+    text-decoration: none;
     font-size: 75px;
     color: #1D5236;
     margin: 0 !important;
@@ -21,8 +22,22 @@
 .loginform_subheading{
     font-size: 50px;
     font-weight: 400;
-    margin-bottom: 0 !important;
+    margin-top: 0 !important;
     color: #1F8859;
+}
+
+.login-error-box {
+    background-color: #F8D7DA;
+    border: .5px solid #721C24;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #721C24;
+    width: auto;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 5px;
 }
 
 .form {
@@ -87,6 +102,12 @@ input:focus {
     font-weight: 700;
     cursor: pointer;
     border: 1px solid #1d5236;
+}
+
+.register_link {
+    cursor: pointer;
+    color: #1D5236;
+    text-decoration: none;
 }
 
 .loginbtn:hover {
