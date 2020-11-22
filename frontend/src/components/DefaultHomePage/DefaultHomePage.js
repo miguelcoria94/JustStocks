@@ -32,10 +32,9 @@ function DefaultHomePage() {
     };
 
     return (
-        <div>
-
+        <div className="HomeDefault_container">
             <div className="DefaultHome_title">
-
+                <h1>TestLOGO</h1>
             </div>
             <div className="registerform_container">
                 <form onSubmit={handleSubmit} className="registerhome_content-form">
