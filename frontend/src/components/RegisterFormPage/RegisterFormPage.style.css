@@ -13,6 +13,7 @@
 }
 
 .registerform_title{
+    text-decoration: none;
     font-size: 75px;
     color: #1D5236;
     margin: 0 !important;

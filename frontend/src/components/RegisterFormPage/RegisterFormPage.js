@@ -39,7 +39,9 @@ function RegisterFormPage() {
               <li key={idx}>{error}</li>
             ))}
           </ul>
-          <h1 className="registerform_title">JustStocks</h1>
+          <h1>
+            <Link className="registerform_title" to="/">JustStocks</Link>
+          </h1>
           <h2 className="registerform_subheading">Register</h2>
           <div className="form_input-container">
             <label>Email</label>
@@ -81,12 +83,12 @@ function RegisterFormPage() {
           </div>
         </div>
       </form>
-        <span>
-          Already a member?{" "}
-          <Link to="/login" className="register_link">
-            Login
-          </Link>
-        </span>
+      <span>
+        Already a member?{" "}
+        <Link to="/login" className="register_link">
+          Login
+        </Link>
+      </span>
     </div>
   );
 }
