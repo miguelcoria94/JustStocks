@@ -1,19 +1,3 @@
-#### `SignupForm` CSS
-
-Add a `SignupForm.css` file in your `SignupFormPage` folder. Import this CSS
-file into the `frontend/src/components/SignupFormPage/index.js` file.
-
-```js
-// frontend/src/components/SignupFormPage/index.js
-// ...
-import './SignupForm.css';
-// ...
-```
-
-Define all your CSS styling rules for the `SignupFormPage` component in the
-`SignupForm.css` file. Practice doing some CSS now to make your signup page
-look better. Make sure to **commit your code afterwards**!
-
 ## Phase 3: Log Out
 
 The last part of the authentication flow is logging out. The log out button will
