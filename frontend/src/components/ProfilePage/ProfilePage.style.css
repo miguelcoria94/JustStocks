@@ -1,1 +1,9 @@
-.profile-logout-button
+.profile-logout-button {
+    background-color: #1d5236;
+    padding: 10px;
+    border: 1px solid #227F57;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
