@@ -1,3 +1,4 @@
+
 ## Phase 3: Log Out
 
 The last part of the authentication flow is logging out. The log out button will
