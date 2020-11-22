@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import "./RegisterFormPage.style.css";
 
@@ -75,10 +75,18 @@ function RegisterFormPage() {
             />
           </div>
           <div className="form_input-container">
-            <button className="registerbtn"type="submit">Register</button>
+            <button className="registerbtn" type="submit">
+              Register
+            </button>
           </div>
         </div>
       </form>
+        <span>
+          Already a member?{" "}
+          <Link to="/login" className="register_link">
+            Login
+          </Link>
+        </span>
     </div>
   );
 }
