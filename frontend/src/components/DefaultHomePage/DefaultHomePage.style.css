@@ -1,7 +1,7 @@
 .HomeDefault_container{
     display: flex;
     width: 100%;
-    height: 80%;
+    height: 100%;
     justify-content: space-around;
     align-items: center;
 }
@@ -45,14 +45,10 @@
 }
 
 @media only screen and (max-width: 900px) {
-
-    .card {
-        padding: 10px;
-    }
     
-    .DefaultHome_title{
+    .DefaultHome_container{
     display: none;
-}
+    }
 
     .HomeDefault_container {
         height: auto;
