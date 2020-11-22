@@ -46,7 +46,10 @@
     background-color: #1d5236;
     margin:0;
     height:25px;
-    
+    color:white;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .searchbar{
