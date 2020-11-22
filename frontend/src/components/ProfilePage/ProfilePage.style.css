@@ -38,7 +38,7 @@
 
 .search-input {
     border: 2.5px solid #1d5236 !important;
-    height: 20px;
+    height: 30px;
     width: 300px;
     padding: 0;
     border-top-left-radius: 5px;
@@ -48,11 +48,12 @@
 .search-button {
     background-color: #1d5236;
     margin:0;
-    height:25px;
+    height:35px;
     color:white;
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    cursor: pointer;
 }
 
 .searchbar{
