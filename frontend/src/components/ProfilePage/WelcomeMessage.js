@@ -5,7 +5,7 @@ function WelcomeMessage({ user }) {
 
   return (
     <div>
-          <h1>Welcome, {user.useranme}</h1>    
+          <h1>Welcome, {user.username}</h1>    
     </div>
   );
 }
