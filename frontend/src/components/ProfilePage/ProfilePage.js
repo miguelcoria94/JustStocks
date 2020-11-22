@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LogoutButton from "./LogoutButton";
+import WelcomeMessage from "./WelcomeMessage"
 import "./ProfilePage.style.css";
 
 function ProfilePage({ isLoaded }) {
@@ -11,7 +12,10 @@ function ProfilePage({ isLoaded }) {
 
     return (
       <div className="profileContainer">
-        <LogoutButton user={sessionUser} />
+        <div className="profile_navdiv">
+          <WelcomeMessage user={sessionUser}/>
+          <LogoutButton user={sessionUser} />
+        </div>
       </div>
     );
 
