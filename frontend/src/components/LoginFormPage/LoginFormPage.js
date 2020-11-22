@@ -4,12 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Link} from "react-router-dom";
 import './LoginFormPage.style.css'
 
+
+
 const LoginFormPage = () => {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+
+  if (!sessionUser) {
+    document.title = "JustStocks - Login";
+  }
 
   if (sessionUser) return <Redirect to="/" />;
 
