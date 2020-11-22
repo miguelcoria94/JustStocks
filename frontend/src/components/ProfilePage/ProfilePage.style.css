@@ -37,9 +37,12 @@
 }
 
 .search-input {
-    border: 2.5px solid #1d5236;
+    border: 2.5px solid #1d5236 !important;
     height: 20px;
+    width: 300px;
     padding: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .search-button {
