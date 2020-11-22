@@ -4,5 +4,12 @@
     height: 80%;
     justify-content: space-around;
     align-items: center;
+}
 
+.DefaultHome_container{
+    width: 50%;
+}
+
+.DefaultHome_title{
+    color: white;
 }
