@@ -5,7 +5,8 @@ import * as profileActions from "../../store/profile";
 
 function SearchBar() {
   const dispatch = useDispatch();
-    const [symbol, setSymbol] = useState("");
+  const profileSearch = useSelector((state) => state.session.profile);
+  const [symbol, setSymbol] = useState("");
     
   const handleSearch = (e) => {
       e.preventDefault();
@@ -33,6 +34,7 @@ function SearchBar() {
           />
           <button className="search-button"type="submit">Search</button>
         </div>
+        {}
       </form>
     </>
   );
