@@ -6,9 +6,13 @@ import "./ProfilePage.style.css";
 
 function ProfilePage({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
-    if (sessionUser) {
-        <LogoutButton />
-    }
+
+    return (
+      <div>
+        <LogoutButton user={sessionUser} />
+      </div>
+    );
+
 }
 
 export default ProfilePage;
