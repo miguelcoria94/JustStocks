@@ -1,9 +1,19 @@
-.profile-logout-button {
-    background-color: #1d5236;
-    padding: 10px;
-    border: 1px solid #227F57;
+.profileContainer {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    display: flex;
     border-radius: 5px;
-    color: #ffffff;
+}
+
+.profile-logout-button {
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #1d5236;
     font-weight: 700;
     cursor: pointer;
+    width: 100px;
+    height: 40px;
 }

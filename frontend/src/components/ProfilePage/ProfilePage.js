@@ -10,7 +10,7 @@ function ProfilePage({ isLoaded }) {
     if (!sessionUser) return <Redirect to="/" />;
 
     return (
-      <div>
+      <div className="profileContainer">
         <LogoutButton user={sessionUser} />
       </div>
     );
