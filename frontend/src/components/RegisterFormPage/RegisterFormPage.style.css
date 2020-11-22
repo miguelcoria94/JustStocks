@@ -1,32 +1,18 @@
-.loginform_container {
+.registerform_container {
     width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 80%;
+    height: auto;
     align-items: center;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 5px;
     margin: 0;
-    padding: 40px;
+    padding: 20px;
 }
 
-.loginform_title{
-    text-decoration: none;
-    font-size: 75px;
-    color: #1D5236;
-    margin: 0 !important;
-}
-
-.loginform_subheading{
-    font-size: 50px;
-    font-weight: 400;
-    margin-top: 0 !important;
-    color: #1F8859;
-}
-
-.login-error-box {
+.register-login-error-box {
     background-color: #F8D7DA;
     border-radius: 5px;
     font-weight: 600;
@@ -35,14 +21,22 @@
     font-size: 12px;
 }
 
-li {
-    list-style-type: none;
-    padding: px 10px;
-    margin: 5px 5px;
+.registerform_title{
+    text-decoration: none;
+    font-size: 75px;
+    color: #1D5236;
+    margin: 0 !important;
 }
 
-.form {
-    height: 100%;
+.registerform_subheading{
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 0 !important;
+    color: #1F8859;
+}
+
+.registerform {
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +45,7 @@ li {
     width: 80%;
 }
 
-.home_content-form {
+.registerhome_content-form {
     width: 100%;
     height: 100%;
     background-color: white;
@@ -64,62 +58,32 @@ li {
     align-content: center;
 }
 
-.form_input-container {
+.registerform_input-container {
     padding: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-label {
-    color: #1D5236;
-    font-weight: 400;
-}
-
-input {
-    padding-bottom: 10px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid #1D5236;
-    font-weight: 800;
-}
-
-input:focus {
-    border-bottom: 3px solid #FFFB7D;
-    outline: none;
-    background-color: #ffffff;
-
-}
-
-.loginbtn {
+.registerbtn {
     background-color: #1d5236;
-    transition: width 2s, height 2s, transform 2s;
-    transition-delay: .15s;
     padding: 10px;
     border:none;
     border-radius: 5px;
     color: #ffffff;
     font-weight: 700;
-    cursor: pointer;
     border: 1px solid #1d5236;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.register_link {
-    cursor: pointer;
-    color: #1D5236;
-    text-decoration: none;
-}
-
-.loginbtn:hover {
-    transition-delay: .25s;
-    background-color: #1D5236;
+.registerbtn:hover {
+    background-color: #1b854c;
     padding: 10px;
     border:none;
     border-radius: 5px;
     font-weight: 700;
     border: 1px solid #1d5236;
-    box-shadow: rgba(18, 216, 28, 0.25) 0px 14px 28px, rgba(50, 170, 20, 0.22) 0px 10px 10px;
+    box-shadow: none;
 }
 
 ::placeholder {
@@ -129,7 +93,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 900px) {
-   .loginform_container {
+   .registerform_container {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -137,6 +101,7 @@ input:focus {
         height: 100%;
         align-items: center;
         background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
         border-radius: 5px;
         margin: 0;
         padding: 40px;
@@ -144,7 +109,7 @@ input:focus {
 }
 
 @media only screen and (max-height: 100px) {
-   .loginform_container {
+   .registerform_container {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -152,6 +117,7 @@ input:focus {
         height: 100%;
         align-items: center;
         background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
         border-radius: 5px;
         margin: 0;
         padding: 40px;

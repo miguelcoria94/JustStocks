@@ -1433,9 +1433,91 @@ After you test it to see if it works, then use this thunk action inside of `App.
 <h1 align="center">SIGNUP FORM PAGE</h1>
 <h3 align="center">65</h3>
 
+The Signup Form Page is the second page that you will add to your frontend application.
 
+The flow will be very similar to how you did the Login Form Page.
 
+You will use the `POST /api/users` backend route to signup a user.
 
+In the session store file, add a signup thunk action that will hit the signup backend route with `username`, `email`, and `password` inputs.
+
+After the response from the AJAX call comes back, dispatch the action for setting the session user to the response's data.
+
+Export the signup thunk action.
+
+<h3 align="center">66</h3>
+
+Test the signup thunk action.
+
+Navigate to [http://localhost:3000]. If there is a `token` cookie, remove it and refresh.
+
+In the browser's dev tools console, try dispatching the signup thunk
+action with a new `username`, a new `email`, and a `password`.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "<new email>",
+      id: "<new id>",
+      updatedAt: "<Some date time format>",
+      username: "<new password>",
+    }
+  }
+}
+```
+
+If there is an error or if the previous or next state does not look like this, then check your logic in your signup action.
+
+<h3 align="center">67</h3>
+
+After finishing the Redux action for the signup feature, the React components are next.
+
+<h3 align="center">68</h3>
+
+Create a folder in the `components` directory for your signup page components.
+
+<h3 align="center">69</h3>
+
+Add an `index.js` and create a functional component named `SignupFormPage`.
+
+<h3 align="center">70</h3>
+
+Render a form with controlled inputs for the new user's username, email, and password, and confirm password fields.
+
+On submit of the form, validate that the confirm password is the same as the password fields, then dispatch the signup thunk action with the form input values.
+
+Make sure to handle and display errors from the signup thunk action
+if there are any.
+
+If the confirm password is not the same as the password, display an error message for this.
+
+Export the `SignupFormPage` component at the bottom of the file, then render it in `App.js` at the `"/signup"` route.
+
+If there is a current session user in the Redux store, then redirect the user to the `"/"` path if trying to access the `SignupFormPage`.
+
+Test your component by navigating to the `"/signup"` page.
+
+Try logging into the form there with new user's information.
+
+Once you signup, you should be redirected to the `"/"` route.
+
+Check your code for the `SignupFormPage` and the `App` component if this is not the flow that you are experiencing.
+
+Also try signing up with invalid fields to test your handling and displaying of error messages.
 
 
 
