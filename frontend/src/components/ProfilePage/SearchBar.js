@@ -16,22 +16,23 @@ function SearchBar() {
 
   return (
     <>
-      <form onSubmit={handleSearch} to="/profile" className="profile-logout-button">
-        <div className="form_input-container">
-                  <input
+      <form
+        onSubmit={handleSearch}
+        to="/profile"
+        className="searchbar_container"
+      >
+        <div>
+          <input
             placeholder="Search for..."
             type="text"
             value={symbol}
             onChange={(e) => {
-              console.log(e.target.value)
-              setSymbol(e.target.value)
+              console.log(e.target.value);
+              setSymbol(e.target.value);
             }}
+            className="search-input"
           />
-        </div>
-        <div className="form_input-container">
-          <button className="registerbtn" type="submit">
-            Search
-          </button>
+          <button className="search-button"type="submit">Search</button>
         </div>
       </form>
     </>
