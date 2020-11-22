@@ -34,13 +34,17 @@ function RegisterFormPage() {
     <div className="registerform_container">
       <form onSubmit={handleSubmit} className="registerhome_content-form">
         <div className="registerform">
-          <ul>
-            {errors.map((error, idx) => (
-              <li key={idx}>{error}</li>
-            ))}
-          </ul>
+          <div>
+            <div className="register-login-error-box">
+              {errors.map((error, idx) => (
+                <li key={idx}>{error}</li>
+              ))}
+            </div>
+          </div>
           <h1>
-            <Link className="registerform_title" to="/">JustStocks</Link>
+            <Link className="registerform_title" to="/">
+              JustStocks
+            </Link>
           </h1>
           <h2 className="registerform_subheading">Register</h2>
           <div className="form_input-container">

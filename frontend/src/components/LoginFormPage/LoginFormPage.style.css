@@ -28,16 +28,17 @@
 
 .login-error-box {
     background-color: #F8D7DA;
-    border: .5px solid #721C24;
     border-radius: 5px;
     font-weight: 600;
     color: #721C24;
     width: auto;
+    font-size: 12px;
 }
 
 li {
     list-style-type: none;
-    padding: 5px 5px;
+    padding: px 10px;
+    margin: 5px 5px;
 }
 
 .form {

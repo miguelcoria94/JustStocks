@@ -25,13 +25,13 @@ const LoginFormPage = () => {
   return (
     <div className="loginform_container">
       <form onSubmit={handleSubmit} className="home_content-form">
-        <dive>
+        <div>
           <div className="login-error-box">
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
           </div>
-        </dive>
+        </div>
         <div className="form">
           <h1>
             <Link className="loginform_title" to="/">JustStocks</Link>
