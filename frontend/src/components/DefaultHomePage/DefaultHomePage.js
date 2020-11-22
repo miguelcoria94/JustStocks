@@ -35,6 +35,20 @@ function DefaultHomePage() {
       <div className="HomeDefault_container">
         <div className="DefaultHome_container">
           <h1 className="DefaultHome_title">What we offer</h1>
+          <div className="card_container">
+            <div className="card">
+              <i className="far fa-user"></i>
+              <p>Create an account</p>
+            </div>
+            <div className="card">
+              <i class="fas fa-binoculars"></i>
+              <p>Create a watchlist</p>
+            </div>
+            <div className="card">
+              <i class="fas fa-chart-line"></i>
+              <p>Track what matters</p>
+            </div>
+          </div>
         </div>
         <div className="registerform_container">
           <form onSubmit={handleSubmit} className="registerhome_content-form">
