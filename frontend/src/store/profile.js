@@ -1,47 +1,40 @@
 import { fetch } from "./csrf";
 
-const LOGIN_USER = "LOGIN_USER";
-const SET_SESSION = "SET_SESSION";
-const END_SESSION = "END_SESSION";
+const apikey = `3X02Y44FZUJOPFF9`;
 
-const setSession = (user) => {
+const LOOKUP_STOCK = "LOOKUP_STOCK"
+
+const lookupStock = (symbol) => {
   return {
-    type: SET_SESSION,
-    payload: user,
+    type: LOOKUP_STOCK,
+    payload: symbol,
   };
 };
 
-const endSession = () => {
+export const getStock = ({ symbol }) => async (dispatch) => {
+  const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apikey}`);
+
+
+  const { bestMatches } = response
+
+  dispatch(lookupStock(bestMatches));
+  console.log(response)
   return {
-    type: END_SESSION,
+    type: LOOKUP_STOCK,
+    payload: bestMatches,
   };
 };
 
-export const login = ({ credential, password }) => async (dispatch) => {
-  const res = await fetch("/api/session", {
-    method: "POST",
-    body: JSON.stringify({ credential, password }),
-  });
-
-  const { user } = res.data;
-
-  dispatch(setSession(user));
-
-  return {
-    type: LOGIN_USER,
-    payload: user,
-  };
-};
-
-const sessionReducer = (state = {}, action) => {
+const profileReducer = (state = {}, action) => {
   switch (action.type) {
-    case SET_SESSION:
-      return { ...state, user: action.payload };
-    case END_SESSION:
-      return { ...state, user: null };
+    case LOOKUP_STOCK:
+      return { ...state, symbol: action.payload };
     default:
       return state;
   }
-};
+}
 
-export default sessionReducer;
+export default profileReducer;
+
+
+
