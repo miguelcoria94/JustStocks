@@ -13,7 +13,7 @@ function LogoutButton({ user }) {
 
   return (
     <>
-      <button onClick={logout} to="/">
+      <button onClick={logout} to="/" className="profile-logout-button">
         <i className="fas fa-user-circle" /> Logout
       </button>
     </>
