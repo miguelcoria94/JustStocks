@@ -1522,6 +1522,54 @@ Also try signing up with invalid fields to test your handling and displaying of 
 <h1 align="center">LOGGINGOUT</h1>
 <h3 align="center">71</h3>
 
+The last part of the authentication flow is logging out.
+
+The log out button will be placed in a dropdown menu in a navigation bar only when a session user exists.
+
+<h3 align="center">71</h3>
+
+You will use the `DELETE /api/session` backend route to logout a user.
+
+In the session store file, add a logout thunk action that will hit the logout backend route.
+
+After the response from the AJAX call comes back, dispatch the action for removing the session user to the response's data.
+
+Export the logout thunk action.
+
+<h3 align="center">72</h3>
+
+Test the logout thunk action.
+
+Navigate to [http://localhost:3000]. If there is no `token` cookie, add one by logging in or signing up. In the browser's dev tools console, try dispatching the logout thunk action.
+
+The `previous state` in the console should look like this:
+
+```js
+{
+  session: {
+    user: {
+      createdAt: "<Some date time format>",
+      email: "<new email>",
+      id: "<new id>",
+      updatedAt: "<Some date time format>",
+      username: "<new password>",
+    }
+  }
+}
+```
+
+The `next state` in the console should look something like this:
+
+```js
+{
+  session: {
+    user: null
+  }
+}
+```
+
+If there is an error or if the previous or next state does not look like this,
+then check your logic in your logout action and in your session reducer.
 
 
 
