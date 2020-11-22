@@ -26,7 +26,7 @@ function SearchBar() {
         </div>
         <div className="form_input-container">
           <button className="registerbtn" type="submit">
-            Register
+            Search
           </button>
         </div>
       </form>
