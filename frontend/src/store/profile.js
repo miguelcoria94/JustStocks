@@ -17,7 +17,6 @@ export const getStock = ({ symbol }) => async (dispatch) => {
 
 const { bestMatches } = response.data
   dispatch(lookupStock(bestMatches));
-  console.log(bestMatches)
   return {
     type: LOOKUP_STOCK,
     payload: bestMatches,

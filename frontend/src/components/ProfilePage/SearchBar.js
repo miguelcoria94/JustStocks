@@ -5,39 +5,44 @@ import * as profileActions from "../../store/profile";
 
 function SearchBar() {
   const dispatch = useDispatch();
-  const searchResult = useSelector((state) => state.profile.symbol);
+  let searchResult = useSelector((state) => state.profile.symbol);
   const [symbol, setSymbol] = useState("");
-    
-  const handleSearch = (e) => {
-      e.preventDefault();
-      return dispatch(
-        profileActions.getStock({ symbol })
-      )
-    };
 
-  return (
-    <>
-      <form
-        onSubmit={handleSearch}
-        to="/profile"
-        className="searchbar_container"
-      >
-        <div>
-          <input
-            placeholder="Search for..."
-            type="text"
-            value={symbol}
-            onChange={(e) => {
-              setSymbol(e.target.value);
-            }}
-            className="search-input"
-          />
-          <button className="search-button"type="submit">Search</button>
-        </div>
+  const onChange = (e) => {
+    e.preventDefault();
+    setSymbol(e.target.value)
+    return dispatch(
+      profileActions.getStock({ symbol })
+    )
+  };
+  
+  const handleSearch = () => {
+
+  }
+    
+    return (
+      <>
+        <form
+          onSubmit={handleSearch}
+          to="/profile"
+          className="searchbar_container"
+        >
+          <div>
+            <input
+              placeholder="Search for..."
+              type="text"
+              value={symbol}
+              onChange={onChange}
+              className="search-input"
+            />
+            <button className="search-button" type="submit">
+              Search
+            </button>
+          </div>
+        </form>
         {}
-      </form>
-    </>
-  );
+      </>
+    );
 }
 
 export default SearchBar;
