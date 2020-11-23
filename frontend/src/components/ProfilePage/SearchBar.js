@@ -6,14 +6,13 @@ import SearchItem from './SearchItem'
 
 
 function SearchBar({ search }) {
+  
   const dispatch = useDispatch();
   const [symbol, setSymbol] = useState("");
-  const [stock, setStock] = useState("");
 
   const onChange = (e) => {
     e.preventDefault();
     setSymbol(e.target.value)
-    setStock(e.target.value);
     console.log(e.target.value)
     return dispatch(
       profileActions.getStock({ symbol })
@@ -21,13 +20,8 @@ function SearchBar({ search }) {
   };
   
   const handleSearch = (e) => {
-    const lastInput = document.querySelector("#search-input")
-    console.log(lastInput)
-
     e.preventDefault()
-    return dispatch(
-      profileActions.mainStock({ stock })
-    )
+    return dispatch(profileActions.mainStock({ stock: symbol }));
   }
     
     return (
@@ -53,11 +47,11 @@ function SearchBar({ search }) {
             </button>
             {search ? (
               <div className="search-result-div" id="search-result-div">
-                <SearchItem searchItem={search[0]} />
-                <SearchItem searchItem={search[1]} />
-                <SearchItem searchItem={search[2]} />
-                <SearchItem searchItem={search[3]} />
-                <SearchItem searchItem={search[4]} />
+                <SearchItem searchItem={search[0]} setSymbol={setSymbol} />
+                <SearchItem searchItem={search[1]} setSymbol={setSymbol} />
+                <SearchItem searchItem={search[2]} setSymbol={setSymbol} />
+                <SearchItem searchItem={search[3]} setSymbol={setSymbol} />
+                <SearchItem searchItem={search[4]} setSymbol={setSymbol} />
               </div>
             ) : (
               <li></li>
