@@ -1,2 +1,7 @@
-import 'ProfilePage.style.css'
+import "./ProfilePage.style.css";
+
+function StockData() {
+}
+
+export default StockData;
 
