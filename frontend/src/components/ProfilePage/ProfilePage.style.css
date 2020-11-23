@@ -11,7 +11,8 @@
 
 .welcome-message {
     color: #1d5236;
-    font-size: 20px;
+    font-size: 30px;
+
 }
 
 .profile-logout-button {
@@ -31,18 +32,21 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .searchbar_container{
     z-index: 3;
     display: flex;
     height: 30px;
+    margin-bottom: 10px;
 }
 
 .search-input {
     border: 2.5px solid #dfdfdf !important;
-    height: 34px;
-    width: 300px;
+    height: 33px;
+    width: 500px;
     padding: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -53,7 +57,7 @@
 .search-button {
     border: 2.5px solid #dfdfdf !important;
     margin:0;
-    height:39px;
+    height:38px;
     font-weight: 800;
     color:white;
     text-shadow: -1px -1px 0 #dfdfdf, 1px -1px 0 #dfdfdf, -1px 1px 0 #dfdfdf, 1px 1px 0 #dfdfdf;

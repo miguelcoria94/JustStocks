@@ -45,6 +45,7 @@ function SearchBar({ search }) {
               autocomplete="off"
             />
             <button className="search-button" type="submit">
+              <i class="fas fa-search"></i>
               Search
             </button>
             {search ? (
