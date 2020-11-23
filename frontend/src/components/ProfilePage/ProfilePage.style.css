@@ -86,7 +86,7 @@
 .stock-data-div {
     z-index: 1;
     border: 2.5px solid #dfdfdf !important;
-    background: white;
+    background: white !important;
     width: 600px;
     height: 300px;
     padding: 20px;
