@@ -41,7 +41,7 @@ function SearchBar({ search }) {
               Search
             </button>
             {search ? (
-              <div className="search-result-div">
+              <div className="search-result-div" id="search-result-div">
                 <SearchItem searchItem={search[0]} />
                 <SearchItem searchItem={search[1]} />
                 <SearchItem searchItem={search[2]} />

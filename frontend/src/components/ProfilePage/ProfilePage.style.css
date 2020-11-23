@@ -59,3 +59,7 @@
 .search-result-div {
     border: 3px solid #1d5236 !important;
 }
+
+.hide-search {
+    display: none;
+}
