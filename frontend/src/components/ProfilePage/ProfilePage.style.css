@@ -89,8 +89,8 @@
 
 .graph-container {
     max-width: 100%;
-    border-top: 5px solid #1d5236;
-    border-bottom: 5px solid #1d5236;
+    border-top: 5px solid #139B59;
+    border-bottom: 5px solid #139B59;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -113,12 +113,12 @@
 }
 
 .recharts-wrapper {
-    border-bottom: 5px solid #1d5236;
+    border-bottom: 5px solid #139B59;
 }
 
 .featured-data-title {
     font-weight: 800;
-    color: #1D5236;
+    color: #247856;
 }
 
 .featured-data {
@@ -130,5 +130,5 @@
 }
 
 .market-cap {
-    color: #1D5236
+    color: #139B59
 }
