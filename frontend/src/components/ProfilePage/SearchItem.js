@@ -4,11 +4,10 @@ import * as profileActions from "../../store/profile";
 import "./ProfilePage.style.css";
 
 function SearchItem({searchItem}) {
-  const dispatch = useDispatch();
-    let searchResult = useSelector((state) => state.profile.symbol);
-
     const handleSearch = (e) => {
-      console.log(e.target.innerText.split('- ')[0])
+        let searchBar = document.getElementById('search-input')
+
+        searchBar.value = e.target.innerText.split('- ')[0]
   }
     
   return (

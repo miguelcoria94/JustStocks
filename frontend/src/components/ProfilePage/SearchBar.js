@@ -35,6 +35,7 @@ function SearchBar({ search }) {
               value={symbol}
               onChange={onChange}
               className="search-input"
+              id="search-input"
             />
             <button className="search-button" type="submit">
               Search
