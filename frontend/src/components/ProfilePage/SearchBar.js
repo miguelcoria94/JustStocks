@@ -1,11 +1,11 @@
-import React, { useState, useSelector }from "react";
-import { useDispatch } from "react-redux";
+import React, { useState }from "react";
+import { useDispatch, useSelector} from "react-redux";
 import * as profileActions from "../../store/profile";
 
 
 function SearchBar() {
   const dispatch = useDispatch();
-  const profileSearch = useSelector((state) => state.session.profile);
+  const searchResult = useSelector((state) => state.profile.symbol);
   const [symbol, setSymbol] = useState("");
     
   const handleSearch = (e) => {
