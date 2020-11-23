@@ -48,7 +48,7 @@ const data = [
 function StockChart() {
 
   return (
-    <ResponsiveContainer width={500} height="40%">
+    <ResponsiveContainer width={650} height="44%">
       <AreaChart
         data={data}
         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
