@@ -86,7 +86,10 @@
 }
 
 .graph-container {
+    max-width: 98.5%;
     border-top: 5px solid #88B29B;
+    border-left: 5px solid #88B29B;
+    border-right: 5px solid #88B29B;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }

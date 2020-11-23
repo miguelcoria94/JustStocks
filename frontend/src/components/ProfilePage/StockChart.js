@@ -49,11 +49,11 @@ function StockChart() {
 
   return (
     <ResponsiveContainer className="graph-container" width="100%" height="45%">
-      <AreaChart data={data} margin={{ top: 40, right: 0, left: 0, bottom: 0 }}>
+      <AreaChart data={data} margin={{ top: 70, right: 0, left: 0, bottom: 0 }}>
         <Tooltip />
         <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
         <ReferenceLine
-          y={4000}
+          y={5000}
           label="Stock"
           stroke="#247856"
           strokeDasharray="3 3"
