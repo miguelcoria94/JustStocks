@@ -48,21 +48,23 @@ const data = [
 function StockChart() {
 
   return (
-    <ResponsiveContainer width="100%" height="45%">
-      <AreaChart
-        data={data}
-        margin={{ top: 20, right: 0, left: 0, bottom: 0 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
+    <ResponsiveContainer className="graph-container" width="100%" height="45%">
+      <AreaChart data={data} margin={{ top: 40, right: 0, left: 0, bottom: 0 }}>
         <Tooltip />
         <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
         <ReferenceLine
           y={4000}
-          label="Max"
-          stroke="red"
+          label="Stock"
+          stroke="#247856"
           strokeDasharray="3 3"
         />
-        <Area width="100%" type="monotone" dataKey="uv" stroke="#247856" fill="#28835B" />
+        <Area
+          width="100%"
+          type="monotone"
+          dataKey="uv"
+          stroke="#247856"
+          fill="#28835B"
+        />
       </AreaChart>
     </ResponsiveContainer>
   );

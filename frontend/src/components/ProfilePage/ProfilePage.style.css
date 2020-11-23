@@ -85,6 +85,12 @@
     width: 50%;
 }
 
+.graph-container {
+    border-top: 5px solid #88B29B;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
 .stock-data-div {
     z-index: 1;
     border: 5px solid #88B29B;
