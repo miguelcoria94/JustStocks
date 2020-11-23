@@ -1,5 +1,5 @@
 import React, { useState }from "react";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 import * as profileActions from "../../store/profile";
 import './ProfilePage.style.css'
 import SearchItem from './SearchItem'
@@ -13,15 +13,18 @@ function SearchBar({ search }) {
   const onChange = (e) => {
     e.preventDefault();
     setSymbol(e.target.value)
-    setStock(e.target.value)
+    setStock(e.target.value);
+    console.log(e.target.value)
     return dispatch(
       profileActions.getStock({ symbol })
     )
   };
   
   const handleSearch = (e) => {
-    e.preventDefault()
+    const lastInput = document.querySelector("#search-input")
+    console.log(lastInput)
 
+    e.preventDefault()
     return dispatch(
       profileActions.mainStock({ stock })
     )
@@ -45,6 +48,7 @@ function SearchBar({ search }) {
               autocomplete="off"
             />
             <button className="search-button" type="submit">
+              <i class="fas fa-search"></i>
               Search
             </button>
             {search ? (

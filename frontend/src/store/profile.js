@@ -1,6 +1,6 @@
 import { fetch } from "./csrf";
 
-const apikey = `3X02Y44FZUJOPFF9`;
+import { apiKey } from './apikey'
 
 const LOOKUP_STOCK = "LOOKUP_STOCK"
 const CURRENT_STOCK = "CURRENT_STOCK"
@@ -20,7 +20,7 @@ const currentStock = (stock) => {
 };
 
 export const mainStock = ({ stock }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apikey}`);
+  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`);
 
   const { data } = response
   dispatch(currentStock(data));
@@ -33,7 +33,7 @@ export const mainStock = ({ stock }) => async (dispatch) => {
 
 
 export const getStock = ({ symbol }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apikey}`);
+  const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apiKey}`);
 
   const { bestMatches } = response.data
   

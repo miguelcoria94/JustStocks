@@ -1,65 +1,114 @@
 .profileContainer {
     padding: 25px;
-    background-color: white;
+    background-color: #F7F7F7;
     width: 90%;
     height: 85%;
     display: flex;
+    flex-direction: column;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .welcome-message {
-    color: #1d5236;
-    font-size: 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: -1px -1px 0 #a5a5a5, 1px -1px 0 #a5a5a5, -1px 1px 0 #a5a5a5, 1px 1px 0 #a5a5a5;
 }
 
 .profile-logout-button {
-    background-color: white;
     padding: 10px;
-    border: none;
+    border: 1px solid #dfdfdf;
     border-radius: 5px;
-    color: #1d5236;
+    color: white;
+    text-shadow: -1px -1px 0 #a5a5a5, 1px -1px 0 #a5a5a5, -1px 1px 0 #a5a5a5, 1px 1px 0 #a5a5a5;
     font-weight: 700;
     cursor: pointer;
     width: 100px;
-    height: 40px;
+    height: 39px;
 }
 
 .profile_navdiv {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .searchbar_container{
+    z-index: 3;
     display: flex;
     height: 30px;
+    margin-bottom: 10px;
 }
 
 .search-input {
-    border: 2.5px solid #1d5236 !important;
-    height: 30px;
-    width: 300px;
+    border: 2.5px solid #dfdfdf !important;
+    height: 34px;
+    width: 500px;
     padding: 0;
     border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding-left: 5px;
     font-weight: 700;
 }
 
 .search-button {
-    background-color: #1d5236;
+    border: 2.5px solid #dfdfdf !important;
     margin:0;
-    height:35px;
+    height:39px;
+    font-weight: 800;
     color:white;
-    border: none;
+    text-shadow: -1px -1px 0 #dfdfdf, 1px -1px 0 #dfdfdf, -1px 1px 0 #dfdfdf, 1px 1px 0 #dfdfdf;
     border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
 }
 
 .search-result-div {
-    border: 3px solid #1d5236 !important;
+    background: white;
+    position: relative;
+    border: none;
+    width: 305px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .hide-search {
     display: none;
+}
+
+.main-stock-div {
+    width: 100%;
+}
+
+.stock-data-div {
+    z-index: 1;
+    border: 2.5px solid #dfdfdf !important;
+    background: white !important;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    overflow: scroll;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.featured-data-title {
+    font-weight: 800;
+    color: #1D5236;
+}
+
+.featured-data {
+    display: flex;
+}
+
+.featured-data-text {
+    margin-right: 10px;
+}
+
+.market-cap {
+    color: #1D5236
 }

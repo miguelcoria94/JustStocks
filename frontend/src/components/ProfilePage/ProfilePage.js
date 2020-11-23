@@ -4,12 +4,14 @@ import { useSelector } from "react-redux";
 import LogoutButton from "./LogoutButton";
 import WelcomeMessage from "./WelcomeMessage"
 import SearchBar from "./SearchBar"
+import StockData from "./StockData"
 import "./ProfilePage.style.css";
 
 function ProfilePage() {
 
   const sessionUser = useSelector(state => state.session.user);
   const searchBar = useSelector((state) => state.profile.symbol);
+  const stockData = useSelector((state) => state.profile.stock);
 
   if (sessionUser) {
     document.title = `JustStocks - ${sessionUser.username}`
@@ -25,6 +27,9 @@ function ProfilePage() {
           <WelcomeMessage user={sessionUser} />
           <SearchBar search={searchBar}/>
           <LogoutButton user={sessionUser} />
+        </div>
+        <div className="main-stock-div">
+          <StockData stock={stockData}/>
         </div>
       </div>
     );
