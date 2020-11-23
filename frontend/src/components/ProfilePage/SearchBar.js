@@ -30,12 +30,13 @@ function SearchBar({ search }) {
         >
           <div>
             <input
-              placeholder="Search for..."
+              placeholder=" Search for..."
               type="text"
               value={symbol}
               onChange={onChange}
               className="search-input"
               id="search-input"
+              autocomplete="off"
             />
             <button className="search-button" type="submit">
               Search
