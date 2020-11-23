@@ -67,6 +67,9 @@
     background: white;
     position: relative;
     border: 3px solid #1d5236 !important;
+    width: 305px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
 .hide-search {
