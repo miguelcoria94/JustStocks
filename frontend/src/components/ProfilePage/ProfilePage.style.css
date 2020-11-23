@@ -71,9 +71,10 @@
 }
 
 .stock-data-div {
-    border: 1px solid #1d5236;
+    border: 3px solid #1d5236;
     width: 600px;
     height: 300px;
     padding: 20px;
     overflow: scroll;
+    border-radius: 5px;
 }
