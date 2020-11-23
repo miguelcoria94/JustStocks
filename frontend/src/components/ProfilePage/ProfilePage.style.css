@@ -99,3 +99,7 @@
 .featured-data-title {
     font-weight: 800;
 }
+
+.featured-data {
+    display: flex;
+}
