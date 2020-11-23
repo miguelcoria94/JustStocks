@@ -22,11 +22,12 @@ const currentStock = (stock) => {
 export const mainStock = ({ stock }) => async (dispatch) => {
   const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apikey}`);
 
-  dispatch(currentStock(response));
+  const { data } = response
+  dispatch(currentStock(data));
 
   return {
     type: CURRENT_STOCK,
-    payload: response,
+    payload: data,
   };
 }
 
