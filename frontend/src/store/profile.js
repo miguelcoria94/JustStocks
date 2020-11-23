@@ -20,7 +20,7 @@ const currentStock = (symbol) => {
 };
 
 export const currentStock = ({ symbol }) => async (dispatch) => {
-  const response = await fetch(``)
+  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apikey}`);
 }
 
 
