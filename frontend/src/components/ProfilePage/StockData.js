@@ -1,1 +1,2 @@
 import 'ProfilePage.style.css'
+

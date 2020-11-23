@@ -6,7 +6,6 @@ function SearchItem({searchItem}) {
         searchBar.value = e.target.innerText.split('- ')[0]
         document.getElementById("search-result-div").className ="hide-search";
   }
-    
   return (
     <>
       <li>
