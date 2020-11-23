@@ -2,11 +2,11 @@ import React, { useState }from "react";
 import { useDispatch, useSelector} from "react-redux";
 import * as profileActions from "../../store/profile";
 import './ProfilePage.style.css'
+import SearchItem from './SearchItem'
 
 
-function SearchBar() {
+function SearchBar({ search }) {
   const dispatch = useDispatch();
-  let searchResult = useSelector((state) => state.profile.symbol);
   const [symbol, setSymbol] = useState("");
 
   const onChange = (e) => {
@@ -39,13 +39,13 @@ function SearchBar() {
             <button className="search-button" type="submit">
               Search
             </button>
-            {searchResult ? (
+            {search ? (
               <div className="search-result-div">
-                <li>{`$${searchResult[0]["1. symbol"]} - ${searchResult[0]["2. name"]}`}</li>
-                <li>{`$${searchResult[1]["1. symbol"]} - ${searchResult[1]["2. name"]}`}</li>
-                <li>{`$${searchResult[2]["1. symbol"]} - ${searchResult[2]["2. name"]}`}</li>
-                <li>{`$${searchResult[4]["1. symbol"]} - ${searchResult[3]["2. name"]}`}</li>
-                <li>{`$${searchResult[5]["1. symbol"]} - ${searchResult[4]["2. name"]}`}</li>
+                <SearchItem searchItem={search[0]} />
+                <SearchItem searchItem={search[1]} />
+                <SearchItem searchItem={search[2]} />
+                <SearchItem searchItem={search[3]} />
+                <SearchItem searchItem={search[4]} />
               </div>
             ) : (
               <li></li>
