@@ -17,15 +17,15 @@ function StockData({ stock }) {
             <h1>Stock Overview</h1>
             <h3>{`Symbol - ${stockDetails[0][0].slice(1)}`}</h3>
             <div className="featured-data">
-              <p>
+              <p className="featured-data-text">
                 <span className="featured-data-title">Name</span>
                 {` - ${stockDetails[0][2].slice(1)}`}
               </p>
-              <p>
+              <p className="featured-data-text">
                 <span className="featured-data-title">Name</span>
                 {` - ${stockDetails[0][2].slice(1)}`}
               </p>
-              <p>
+              <p className="featured-data-text">
                 <span className="featured-data-title">Name</span>
                 {` - ${stockDetails[0][2].slice(1)}`}
               </p>

@@ -98,8 +98,13 @@
 
 .featured-data-title {
     font-weight: 800;
+    color: #1D5236;
 }
 
 .featured-data {
     display: flex;
+}
+
+.featured-data-text {
+    margin-right: 10px;
 }
