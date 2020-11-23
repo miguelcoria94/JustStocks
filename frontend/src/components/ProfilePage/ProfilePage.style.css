@@ -45,7 +45,7 @@
 
 .search-input {
     border: 2.5px solid #dfdfdf !important;
-    height: 33px;
+    height: 34px;
     width: 500px;
     padding: 0;
     border-top-left-radius: 5px;
@@ -57,7 +57,7 @@
 .search-button {
     border: 2.5px solid #dfdfdf !important;
     margin:0;
-    height:38px;
+    height:39px;
     font-weight: 800;
     color:white;
     text-shadow: -1px -1px 0 #dfdfdf, 1px -1px 0 #dfdfdf, -1px 1px 0 #dfdfdf, 1px 1px 0 #dfdfdf;
