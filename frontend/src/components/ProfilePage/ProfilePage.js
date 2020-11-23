@@ -5,6 +5,7 @@ import LogoutButton from "./LogoutButton";
 import WelcomeMessage from "./WelcomeMessage"
 import SearchBar from "./SearchBar"
 import StockData from "./StockData"
+import StockChart from "./StockChart"
 import "./ProfilePage.style.css";
 
 function ProfilePage() {
@@ -29,6 +30,7 @@ function ProfilePage() {
           <LogoutButton user={sessionUser} />
         </div>
         <div className="main-stock-div">
+          <StockChart />
           <StockData stock={stockData}/>
         </div>
       </div>
