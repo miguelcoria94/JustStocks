@@ -33,6 +33,7 @@
 }
 
 .searchbar_container{
+    z-index: 3;
     display: flex;
     height: 30px;
 }
@@ -58,6 +59,7 @@
 }
 
 .search-result-div {
+    background: white;
     position: relative;
     border: 3px solid #1d5236 !important;
 }
@@ -71,6 +73,7 @@
 }
 
 .stock-data-div {
+    z-index: 1;
     box-shadow: #1d5236 0px 0px 0px 2px, #1d5236 0px 4px 6px -1px, #1d5236 0px 1px 0px inset;
     border: 1px solid #1d5236;
     width: 600px;
