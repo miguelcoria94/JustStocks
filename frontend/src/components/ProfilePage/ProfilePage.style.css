@@ -12,6 +12,7 @@
 .welcome-message {
     color: white;
     font-size: 30px;
+    font-weight: 400;
     text-shadow: -1px -1px 0 #a5a5a5, 1px -1px 0 #a5a5a5, -1px 1px 0 #a5a5a5, 1px 1px 0 #a5a5a5;
 }
 
