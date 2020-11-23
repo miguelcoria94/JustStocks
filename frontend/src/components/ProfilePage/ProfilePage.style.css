@@ -78,21 +78,26 @@
 
 .hide-search {
     display: none;
+    width: 100%;
 }
 
 .main-stock-div {
-    width: 100%;
+    width: 50%;
 }
 
 .stock-data-div {
     z-index: 1;
-    border: 2.5px solid #dfdfdf !important;
+    border: 5px solid #88B29B;
+    border-top: none;
     background: white !important;
-    width: 600px;
+    width: auto;
     height: 300px;
     padding: 20px;
     overflow: scroll;
-    border-radius: 5px;
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 

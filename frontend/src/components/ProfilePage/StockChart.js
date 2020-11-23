@@ -48,10 +48,10 @@ const data = [
 function StockChart() {
 
   return (
-    <ResponsiveContainer width={675} height="44%">
+    <ResponsiveContainer width="100%" height="45%">
       <AreaChart
         data={data}
-        margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
+        margin={{ top: 20, right: 0, left: 0, bottom: 0 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
@@ -62,7 +62,7 @@ function StockChart() {
           stroke="red"
           strokeDasharray="3 3"
         />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        <Area width="100%" type="monotone" dataKey="uv" stroke="#247856" fill="#28835B" />
       </AreaChart>
     </ResponsiveContainer>
   );
