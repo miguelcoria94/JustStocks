@@ -39,9 +39,15 @@ function SearchBar() {
               Search
             </button>
             {searchResult ? (
-              <li>{searchResult[0]["2. name"]}</li>
+              <div>
+                <li>{`${searchResult[0]["1. symbol"]} ${searchResult[0]["2. name"]}`}</li>
+                <li>{`${searchResult[1]["1. symbol"]} ${searchResult[1]["2. name"]}`}</li>
+                <li>{`${searchResult[2]["1. symbol"]} ${searchResult[2]["2. name"]}`}</li>
+                <li>{`${searchResult[4]["1. symbol"]} ${searchResult[3]["2. name"]}`}</li>
+                <li>{`${searchResult[5]["1. symbol"]} ${searchResult[4]["2. name"]}`}</li>
+              </div>
             ) : (
-              <li>no results</li>
+              <li></li>
             )}
           </div>
         </form>
