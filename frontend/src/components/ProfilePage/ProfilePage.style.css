@@ -1,6 +1,6 @@
 .profileContainer {
     padding: 25px;
-    background-color: white;
+    background-color: #F7F7F7;
     width: 90%;
     height: 85%;
     display: flex;
@@ -66,10 +66,11 @@
 .search-result-div {
     background: white;
     position: relative;
-    border: 3px solid #1d5236 !important;
+    border: none;
     width: 305px;
     margin-top: 5px;
     border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .hide-search {
