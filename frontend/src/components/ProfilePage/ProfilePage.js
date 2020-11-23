@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import LogoutButton from "./LogoutButton";
 import WelcomeMessage from "./WelcomeMessage"
 import SearchBar from "./SearchBar"
+import StockData from "./StockData"
 import "./ProfilePage.style.css";
 
 function ProfilePage() {
@@ -25,6 +26,9 @@ function ProfilePage() {
           <WelcomeMessage user={sessionUser} />
           <SearchBar search={searchBar}/>
           <LogoutButton user={sessionUser} />
+        </div>
+        <div>
+          <StockData />
         </div>
       </div>
     );
