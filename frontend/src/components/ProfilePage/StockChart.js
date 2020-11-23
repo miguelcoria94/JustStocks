@@ -48,13 +48,11 @@ const data = [
 function StockChart() {
 
   return (
-    <ResponsiveContainer width={650} height="44%">
+    <ResponsiveContainer width={675} height="44%">
       <AreaChart
         data={data}
         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
       >
-        <XAxis dataKey="name" />
-        <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
