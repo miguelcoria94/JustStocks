@@ -69,3 +69,11 @@
 .main-stock-div {
     width: 100%;
 }
+
+.stock-data-div {
+    border: 1px solid #1d5236;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    overflow: scroll;
+}
