@@ -38,9 +38,9 @@ function SearchBar() {
             <button className="search-button" type="submit">
               Search
             </button>
+        {searchResult ? console.log(searchResult) : <li>no results</li>}
           </div>
         </form>
-        {}
       </>
     );
 }
