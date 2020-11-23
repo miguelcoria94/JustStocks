@@ -24,7 +24,7 @@
     font-weight: 700;
     cursor: pointer;
     width: 100px;
-    height: 40px;
+    height: 39px;
 }
 
 .profile_navdiv {
@@ -40,7 +40,7 @@
 }
 
 .search-input {
-    border: 2.5px solid #1d5236 !important;
+    border: 2.5px solid #dfdfdf !important;
     height: 34px;
     width: 300px;
     padding: 0;
@@ -51,13 +51,12 @@
 }
 
 .search-button {
-    background: -webkit-linear-gradient(to top, #093028, #237a57); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #093028, #237a57);
+    border: 2.5px solid #dfdfdf !important;
     margin:0;
     height:39px;
     font-weight: 800;
     color:white;
-    border: none;
+    text-shadow: -1px -1px 0 #dfdfdf, 1px -1px 0 #dfdfdf, -1px 1px 0 #dfdfdf, 1px 1px 0 #dfdfdf;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
