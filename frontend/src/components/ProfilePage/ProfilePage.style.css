@@ -15,11 +15,13 @@
 }
 
 .profile-logout-button {
-    background-color: white;
+    background: -webkit-linear-gradient(to top, #093028, #237a57); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #093028, #237a57);
+
     padding: 10px;
     border: none;
     border-radius: 5px;
-    color: #1d5236;
+    color: white;
     font-weight: 700;
     cursor: pointer;
     width: 100px;
