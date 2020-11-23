@@ -38,7 +38,11 @@ function SearchBar() {
             <button className="search-button" type="submit">
               Search
             </button>
-        {searchResult ? <li>match</li> : <li>no results</li>}
+            {searchResult ? (
+              <li>{searchResult[0]["2. name"]}</li>
+            ) : (
+              <li>no results</li>
+            )}
           </div>
         </form>
       </>
