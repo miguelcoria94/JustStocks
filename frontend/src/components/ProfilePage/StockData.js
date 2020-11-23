@@ -14,8 +14,22 @@ function StockData({ stock }) {
       <div>
         {stockDetails.length > 0 ? (
           <div className="stock-data-div">
+            <h1>Stock Overview</h1>
             <h3>{`Symbol - ${stockDetails[0][0].slice(1)}`}</h3>
-            <p>{`Name - ${stockDetails[0][2].slice(1)}`}</p>
+            <div className="featured-data">
+              <p>
+                <span className="featured-data-title">Name</span>
+                {` - ${stockDetails[0][2].slice(1)}`}
+              </p>
+              <p>
+                <span className="featured-data-title">Name</span>
+                {` - ${stockDetails[0][2].slice(1)}`}
+              </p>
+              <p>
+                <span className="featured-data-title">Name</span>
+                {` - ${stockDetails[0][2].slice(1)}`}
+              </p>
+            </div>
             <p>{`Description - ${stockDetails[0][3].slice(1)}`}</p>
           </div>
         ) : (
