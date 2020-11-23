@@ -17,8 +17,8 @@ function SearchBar({ search }) {
     )
   };
   
-  const handleSearch = () => {
-
+  const handleSearch = (e) => {
+    console.log(e.target.value)
   }
     
     return (
