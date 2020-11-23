@@ -12,15 +12,22 @@ const lookupStock = (symbol) => {
   };
 };
 
-const currentStock = (symbol) => {
+const currentStock = (stock) => {
   return {
-    type: LOOKUP_STOCK,
-    payload: symbol,
+    type: CURRENT_STOCK,
+    payload: stock,
   };
 };
 
-export const currentStock = ({ symbol }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apikey}`);
+export const mainStock = ({ stock }) => async (dispatch) => {
+  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apikey}`);
+
+  dispatch(currentStock(response));
+
+  return {
+    type: CURRENT_STOCK,
+    payload: response,
+  };
 }
 
 
@@ -41,7 +48,7 @@ const profileReducer = (state = {}, action) => {
     case LOOKUP_STOCK:
       return { ...state, symbol: action.payload };
     case CURRENT_STOCK:
-      return { ...state, symbol: action.payload}
+      return { ...state, stock: action.payload}
     default:
       return state;
   }

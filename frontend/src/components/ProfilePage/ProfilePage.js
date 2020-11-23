@@ -25,7 +25,6 @@ function ProfilePage() {
           <WelcomeMessage user={sessionUser} />
           <SearchBar search={searchBar}/>
           <LogoutButton user={sessionUser} />
-          
         </div>
       </div>
     );

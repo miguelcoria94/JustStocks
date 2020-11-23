@@ -8,17 +8,23 @@ import SearchItem from './SearchItem'
 function SearchBar({ search }) {
   const dispatch = useDispatch();
   const [symbol, setSymbol] = useState("");
+  const [stock, setStock] = useState("");
 
   const onChange = (e) => {
     e.preventDefault();
     setSymbol(e.target.value)
+    setStock(e.target.value)
     return dispatch(
       profileActions.getStock({ symbol })
     )
   };
   
   const handleSearch = (e) => {
-    console.log(e.target.value)
+    e.preventDefault()
+
+    return dispatch(
+      profileActions.mainStock({ stock })
+    )
   }
     
     return (
