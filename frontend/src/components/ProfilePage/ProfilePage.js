@@ -28,7 +28,7 @@ function ProfilePage() {
           <SearchBar search={searchBar}/>
           <LogoutButton user={sessionUser} />
         </div>
-        <div>
+        <div className="main-stock-div">
           <StockData stock={stockData}/>
         </div>
       </div>
