@@ -17,4 +17,8 @@ router.get("/", restoreUser, (req, res) => {
   } else return res.json({});
 });
 
+router.post("/search-stock", asyncHandler(async (req, res) => {
+  console.log(req)
+}));
+
 module.exports = router;

@@ -30,3 +30,36 @@
     width: 100%;
     justify-content: space-between;
 }
+
+.searchbar_container{
+    display: flex;
+    height: 30px;
+}
+
+.search-input {
+    border: 2.5px solid #1d5236 !important;
+    height: 30px;
+    width: 300px;
+    padding: 0;
+    border-top-left-radius: 5px;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.search-button {
+    background-color: #1d5236;
+    margin:0;
+    height:35px;
+    color:white;
+    border: none;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+.search-result-div {
+    border: 3px solid #1d5236 !important;
+}
+
+.hide-search {
+    display: none;
+}

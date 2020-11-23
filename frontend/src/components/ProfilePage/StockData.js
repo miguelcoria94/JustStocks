@@ -1,0 +1,2 @@
+import 'ProfilePage.style.css'
+
