@@ -58,6 +58,7 @@
 }
 
 .search-result-div {
+    position: relative;
     border: 3px solid #1d5236 !important;
 }
 

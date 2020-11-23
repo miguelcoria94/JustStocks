@@ -1,8 +1,14 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import * as profileActions from "../../store/profile";
 import "./ProfilePage.style.css";
+import SearchItem from "./SearchItem";
 
-function StockData() {
+function StockData({ stock }) {
     return (
-        <h1>Hello</h1>
+        <div>
+            {stock ? <h1>{stock}</h1> : <h1>Loading ... </h1>}
+        </div>
     )
 }
 
