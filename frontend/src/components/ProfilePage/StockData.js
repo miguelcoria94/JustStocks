@@ -1,13 +1,18 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import * as profileActions from "../../store/profile";
 import "./ProfilePage.style.css";
-import SearchItem from "./SearchItem";
 
 function StockData({ stock }) {
+    const stockDetails = []
+    
+    if (stock) {
+        const stockData = Object.entries(stock);
+        stockDetails.push(stockData)
+    }
+
+    console.log(stockDetails)
+
     return (
         <div>
-            {stock ? <h1>{stock}</h1> : <h1>Loading ... </h1>}
+            { (stockDetails.length > 0) ? <h3>{stockDetails[0][0]}</h3> : <h1>Loading...</h1>}
         </div>
     )
 }
