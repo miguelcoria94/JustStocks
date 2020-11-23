@@ -10,9 +10,9 @@
 }
 
 .welcome-message {
-    color: #1d5236;
+    color: white;
     font-size: 30px;
-
+    text-shadow: -1px -1px 0 #a5a5a5, 1px -1px 0 #a5a5a5, -1px 1px 0 #a5a5a5, 1px 1px 0 #a5a5a5;
 }
 
 .profile-logout-button {
