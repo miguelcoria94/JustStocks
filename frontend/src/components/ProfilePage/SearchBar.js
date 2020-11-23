@@ -13,7 +13,7 @@ function SearchBar() {
       return dispatch(
         profileActions.getStock({ symbol })
       )
-  };
+    };
 
   return (
     <>
