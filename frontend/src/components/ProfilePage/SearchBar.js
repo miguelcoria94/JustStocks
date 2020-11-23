@@ -13,15 +13,18 @@ function SearchBar({ search }) {
   const onChange = (e) => {
     e.preventDefault();
     setSymbol(e.target.value)
-    setStock(e.target.value)
+    setStock(e.target.value);
+    console.log(e.target.value)
     return dispatch(
       profileActions.getStock({ symbol })
     )
   };
   
   const handleSearch = (e) => {
-    e.preventDefault()
+    const lastInput = document.querySelector("#search-input")
+    console.log(lastInput)
 
+    e.preventDefault()
     return dispatch(
       profileActions.mainStock({ stock })
     )

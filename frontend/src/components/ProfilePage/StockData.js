@@ -22,12 +22,26 @@ function StockData({ stock }) {
                 {` - ${stockDetails[0][2].slice(1)}`}
               </p>
               <p className="featured-data-text">
+                <span className="featured-data-title">Exchange</span>
+                {` - ${stockDetails[0][4].slice(1)}`}
+              </p>
+              <p className="featured-data-text">
+                <span className="featured-data-title">Sector</span>
+                {` - ${stockDetails[0][8].slice(1)}`}
+              </p>
+            </div>
+            <div className="featured-data">
+              <p className="featured-data-text">
                 <span className="featured-data-title">Name</span>
                 {` - ${stockDetails[0][2].slice(1)}`}
               </p>
               <p className="featured-data-text">
-                <span className="featured-data-title">Name</span>
-                {` - ${stockDetails[0][2].slice(1)}`}
+                <span className="featured-data-title">Exchange</span>
+                {` - ${stockDetails[0][4].slice(1)}`}
+              </p>
+              <p className="featured-data-text">
+                <span className="featured-data-title">Sector</span>
+                {` - ${stockDetails[0][8].slice(1)}`}
               </p>
             </div>
             <p>{`Description - ${stockDetails[0][3].slice(1)}`}</p>
