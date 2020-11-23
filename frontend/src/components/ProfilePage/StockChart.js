@@ -50,6 +50,12 @@ function StockChart() {
   return (
     <ResponsiveContainer className="graph-container" width="100%" height="45%">
       <AreaChart data={data} margin={{ top: 70, right: 0, left: 0, bottom: 0 }}>
+        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#139B59" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#139B59" stopOpacity={0} />
+          </linearGradient>
+        </defs>
         <Tooltip />
         <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
         <ReferenceLine
@@ -63,7 +69,8 @@ function StockChart() {
           type="monotone"
           dataKey="uv"
           stroke="#247856"
-          fill="#28835B"
+          fillOpacity={1}
+          fill="url(#colorUv)"
         />
       </AreaChart>
     </ResponsiveContainer>
