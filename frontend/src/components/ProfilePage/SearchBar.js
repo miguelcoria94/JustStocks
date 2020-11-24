@@ -33,7 +33,7 @@ function SearchBar({ search }) {
         >
           <div>
             <input
-              placeholder=" Search for..."
+              placeholder=" Enter a symbol. . ."
               type="text"
               value={symbol}
               onChange={onChange}
