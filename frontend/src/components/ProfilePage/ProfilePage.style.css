@@ -83,7 +83,7 @@
 
 .main-stock-div {
     margin: 20px;
-    width: 46%;
+    width: 50%;
     height: 80%;
 }
 
@@ -92,7 +92,7 @@
     border-bottom: 5px solid #139B59;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .stock-data-div {
@@ -108,7 +108,7 @@
     border-top-left-radius: none;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .recharts-wrapper {
@@ -116,6 +116,7 @@
 }
 
 .featured-data-title {
+    font-size: 15px;
     font-weight: 800;
     color: #247856;
 }
@@ -125,9 +126,11 @@
 }
 
 .featured-data-text {
+    font-size: 16px;
     margin-right: 10px;
 }
 
 .market-cap {
-    color: #139B59
+    color: #247856;
+    font-size: 16px;
 }
