@@ -1,4 +1,5 @@
 import "./ProfilePage.style.css";
+import numeral from "numeral";
 
 function StockData({ stock }) {
   const stockDetails = []
@@ -20,9 +21,9 @@ function StockData({ stock }) {
               <h3 className="featured-data-text">{`Symbol - ${stockDetails[0][0].slice(
                 1
               )}`}</h3>
-              <h3 className="market-cap">{`Market Cap - $${stockDetails[0][13].slice(
-                1
-              )}`}</h3>
+              <h3 className="market-cap">{`Market Cap - ${numeral(
+                Number(stockDetails[0][13].slice(1))
+              ).format('($ 0.00 a)')}`}</h3>
             </div>
             <div className="featured-data">
               <p className="featured-data-text">
