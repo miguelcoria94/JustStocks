@@ -83,7 +83,7 @@
 
 .main-stock-div {
     margin: 20px;
-    width: 50%;
+    width: 40%;
     height: 80%;
 }
 
@@ -102,7 +102,7 @@
     background: white !important;
     width: auto;
     height: 300px;
-    padding: 20px;
+    padding: 10px;
     overflow: scroll;
     border-top-right-radius: none;
     border-top-left-radius: none;
@@ -126,11 +126,11 @@
 }
 
 .featured-data-text {
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 10px;
 }
 
 .market-cap {
-    color: #247856;
-    font-size: 16px;
+    color: #139B59;
+    font-size: 15px;
 }
