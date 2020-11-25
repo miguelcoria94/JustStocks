@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      const cloumnMapping = {
+        through: "WatchList",
+        otherKey: "userId",
+        foreignKey: "stockId",
+      };
+      this.belongsToMany(models.User, cloumnMapping);
     }
   };
   Stock.init({
