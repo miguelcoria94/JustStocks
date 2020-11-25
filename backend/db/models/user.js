@@ -38,7 +38,12 @@ module.exports = (sequelize, DataTypes) => {
       return await User.scope('currentUser').findByPk(user.id);
     };
     static associate(models) {
-      // define association here
+      const cloumnMapping = {
+        through: 'WatchList',
+        otherKey: 'stockId',
+        foreignKey: 'userId',
+      };
+      this.belongsToMany(models.Stock, cloumnMapping)
     }
   };
   User.init(
