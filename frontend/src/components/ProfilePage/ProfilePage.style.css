@@ -10,8 +10,12 @@
 }
 
 .welcome-message {
+    border: 1px solid #dfdfdf;
+    background-color: #EFEFEF;
     color: white;
-    font-size: 30px;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 15px;
     font-weight: 400;
     text-shadow: -1px -1px 0 #a5a5a5, 1px -1px 0 #a5a5a5, -1px 1px 0 #a5a5a5, 1px 1px 0 #a5a5a5;
 }
@@ -92,14 +96,31 @@
     border-bottom: 5px solid #139B59;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.tooltip {
+    color: #EFEFEF !important;
+    background-color: #247856 !important;
+}
+
+.recharts-default-tooltip {
+    background-color: black !important;
+    border: none !important;
+    background-color: transparent !important;
+    padding: none !important;
+}
+
+.chart {
+    border-radius: 5px;
+    background-color: #247856;
 }
 
 .stock-data-div {
     z-index: 1;
     border: none;
     border-top: none;
-    background: white !important;
+    background: rgb(255, 255, 255) !important;
     width: auto;
     height: 300px;
     padding: 10px;
@@ -108,7 +129,8 @@
     border-top-left-radius: none;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    
 }
 
 .recharts-wrapper {
@@ -132,5 +154,5 @@
 
 .market-cap {
     color: #247856;
-    font-size: 15px;
+    font-size: 20px;
 }

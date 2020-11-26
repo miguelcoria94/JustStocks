@@ -3,6 +3,7 @@ import { apiKey } from "./apikey";
 
 const LOOKUP_STOCK = "LOOKUP_STOCK"
 const CURRENT_STOCK = "CURRENT_STOCK"
+const CURRENT_STOCKCHART = "CURRENT_STOCKCHART"
 
 const lookupStock = (symbol) => {
   return {
@@ -18,6 +19,13 @@ const currentStock = (stock) => {
   };
 };
 
+const currentStockGraph = (graph) => {
+  return {
+    type: CURRENT_STOCKCHART,
+    payload: graph,
+  };
+};
+
 export const mainStock = ({ stock }) => async (dispatch) => {
 
   const res = await fetch("/api/profile/search-stock", {
@@ -25,9 +33,12 @@ export const mainStock = ({ stock }) => async (dispatch) => {
     body: JSON.stringify({stock}),
   })
 
-  const { stockData } = res.data
-
+  const { stockData, stockChartData } = res.data
+  
+  dispatch(currentStockGraph(stockChartData))
+  graphData(stockChartData)
   dispatch(currentStock(stockData));
+
 
   return {
     type: CURRENT_STOCK,
@@ -35,6 +46,13 @@ export const mainStock = ({ stock }) => async (dispatch) => {
   };
 }
 
+
+export const graphData = (data) => async (dispatch) => {
+  return {
+    type: CURRENT_STOCKCHART,
+    payload: data,
+  };
+}
 
 export const getStock = ({ symbol }) => async (dispatch) => {
   const res = await fetch("api/profile/search-match", {
@@ -56,7 +74,9 @@ const profileReducer = (state = {}, action) => {
     case LOOKUP_STOCK:
       return { ...state, symbol: action.payload };
     case CURRENT_STOCK:
-      return { ...state, stock: action.payload}
+      return { ...state, stock: action.payload };
+    case CURRENT_STOCKCHART:
+      return { ...state, graph: action.payload }
     default:
       return state;
   }

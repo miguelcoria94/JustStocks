@@ -24,8 +24,23 @@ router.post("/search-stock",
         console.error("Error:", error);
       });
     
+    const stockChartData = await fetch(
+      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stock}&interval=5min&outputsize=compact&apikey=${apiKey}`
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        return result;
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+    
+
+    console.log(stockChartData)
+    
     return res.json({
-      stockData,
+      stockData, stockChartData
     })
   }));
 

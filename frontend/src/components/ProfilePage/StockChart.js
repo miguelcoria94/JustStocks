@@ -1,79 +1,42 @@
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area} from 'recharts';
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+import { LineChart, Legend, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area} from 'recharts';
 
 
-function StockChart() {
+function StockChart({ graphData }) {
+
+  let chartData = []
+
+  if (graphData) {
+    let graphEntriesNumber = Object.entries(Object.entries(graphData)[1][1]);
+    graphEntriesNumber.slice(0, 50).forEach((el) => 
+      chartData.push(Object.entries(el)[1][1])
+    )
+  }
 
   return (
-    <ResponsiveContainer className="graph-container" width="100%" height="45%">
-      <AreaChart data={data} margin={{ top: 70, right: 0, left: 0, bottom: 0 }}>
-        <defs>
-          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#139B59" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#139B59" stopOpacity={0} />
-          </linearGradient>
-        </defs>
-        <Tooltip />
-        <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
-        <ReferenceLine
-          y={5000}
-          label="Stock"
-          stroke="#247856"
-          strokeDasharray="3 3"
-        />
-        <Area
-          width="100%"
-          type="monotone"
-          dataKey="uv"
-          stroke="#247856"
-          fillOpacity={1}
-          fill="url(#colorUv)"
-        />
-      </AreaChart>
-    </ResponsiveContainer>
+    <div
+      className="graph-container"
+      style={{ width: "100%", height: 300, backgroundColor: "none" }}
+    >
+      <ResponsiveContainer>
+        <LineChart
+          className="chart"
+          height={100}
+          data={chartData}
+          margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
+        >
+          <Tooltip labelStyle={{ display: "none" }} dataKey="4. close" />
+          <YAxis domain={"auto"} hide="true" />
+          <Line
+            dataKey={"4. close"}
+            className="tooltip"
+            stroke="#EFEFEF"
+            strokeWidth={5}
+            name="PRICE"
+            dot={false}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
 
