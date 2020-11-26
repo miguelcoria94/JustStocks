@@ -35,15 +35,14 @@ router.post("/search-stock",
       const { symbol } = req.body;
 
       const bestMatches = await fetch(
-        `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`
+        `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apiKey}`,
       )
         .then((response) => response.json())
         .then((result) => {
-          return result;
+          return result.bestMatches;
         })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
+      
+      console.log(bestMatches)
 
       return res.json({
         bestMatches,
