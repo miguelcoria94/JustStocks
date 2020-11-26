@@ -13,6 +13,7 @@ function ProfilePage() {
   const sessionUser = useSelector(state => state.session.user);
   const searchBar = useSelector((state) => state.profile.symbol);
   const stockData = useSelector((state) => state.profile.stock);
+  const graphData = useSelector((state) => state.profile.graph);
 
   if (sessionUser) {
     document.title = `JustStocks - ${sessionUser.username}`
@@ -30,7 +31,7 @@ function ProfilePage() {
           <LogoutButton user={sessionUser} />
         </div>
         <div className="main-stock-div">
-          <StockChart />
+          <StockChart graphData={graphData}/>
           <StockData stock={stockData}/>
         </div>
       </div>
