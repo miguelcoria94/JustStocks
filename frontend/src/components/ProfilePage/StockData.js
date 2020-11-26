@@ -1,7 +1,7 @@
 import "./ProfilePage.style.css";
 import numeral from "numeral";
 
-function StockData({ stock }) {
+function StockData({ stock, search, user}) {
   const stockDetails = []
   
     
@@ -11,7 +11,7 @@ function StockData({ stock }) {
     }
   
   const addStockToWatchlist = () => {
-    console.log("add")
+    console.log("add", stock.Symbol, user.id)
   }
 
   const removeStockToWatchlist = () => {

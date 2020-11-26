@@ -73,6 +73,9 @@ router.post("/search-stock",
     })
   );
 
-  router.post("/add-stock", asyncHandler)
+router.post("/add-stock", asyncHandler(async (req, res, next) => {
+  const { symbol } = req.body
+  console.log(symbol)
+  }))
 
 module.exports = router;
