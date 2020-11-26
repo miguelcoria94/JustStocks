@@ -95,6 +95,11 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
+.chart {
+    border-radius: 5px;
+    background-color: #247856;
+}
+
 .stock-data-div {
     z-index: 1;
     border: none;

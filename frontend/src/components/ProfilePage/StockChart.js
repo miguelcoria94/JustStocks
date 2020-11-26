@@ -14,9 +14,10 @@ function StockChart({ graphData }) {
   console.log("ss",chartData)
 
   return (
-    <div className="graph-container" style={{ width: "100%", height: 300 }}>
+    <div className="graph-container" style={{ width: "100%", height: 300, backgroundColor: "none"}}>
       <ResponsiveContainer>
         <LineChart
+          className="chart"
           height={100}
           data={chartData}
           margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
@@ -25,7 +26,7 @@ function StockChart({ graphData }) {
           <YAxis domain={"auto"} hide="true" />
           <Line
             dataKey="4. close"
-            stroke="#227956"
+            stroke="#ffffff"
             strokeWidth={5}
             name="PRICE"
             dot={false}
