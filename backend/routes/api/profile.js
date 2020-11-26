@@ -2,6 +2,7 @@ const express = require("express");
 const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 const fetch = require("node-fetch");
+const { Stock } = require("../../db/models");
 
 const apiKey = "7B9VRQ2X6FX1KB7N";
 
