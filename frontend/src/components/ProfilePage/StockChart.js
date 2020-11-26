@@ -21,7 +21,7 @@ function StockChart({ graphData }) {
           data={chartData}
           margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
         >
-          <Tooltip labelStyle={{ display: "none" }} />
+          <Tooltip labelStyle={{ display: "none" }}/>
           <YAxis domain={"auto"} hide="true" />
           <Line
             dataKey="4. close"
