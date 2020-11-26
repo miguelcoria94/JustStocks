@@ -27,6 +27,28 @@ router.post("/search-stock",
     return res.json({
       stockData,
     })
-}));
+  }));
+
+  router.post(
+    "/search-match",
+    asyncHandler(async (req, res, next) => {
+      const { symbol } = req.body;
+
+      const bestMatches = await fetch(
+        `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          return result;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
+      return res.json({
+        bestMatches,
+      });
+    })
+  );
 
 module.exports = router;

@@ -42,7 +42,7 @@ export const getStock = ({ symbol }) => async (dispatch) => {
     body: JSON.stringify({ symbol }),
   });
 
-  const { bestMatches } = response.data
+  const { bestMatches } = res.data
   
   dispatch(lookupStock(bestMatches));
   return {
