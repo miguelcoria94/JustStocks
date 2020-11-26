@@ -9,6 +9,12 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+    static async addStock(symbol) {
+      const stock = await Stock.create({
+        symbol
+      });
+    }
+
     static associate(models) {
       const cloumnMapping = {
         through: "WatchList",

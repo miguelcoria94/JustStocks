@@ -14,11 +14,17 @@ function StockData({ stock }) {
       <div>
         {stockDetails.length > 0 ? (
           <div className="stock-data-div">
+            <div className="featured-data">
+              <button>Add to watchlist</button>
+              <button>Remove from watchlist</button>
+            </div>
             <h1>{`$${stockDetails[0][0].slice(1)} Stock Overview`}</h1>
             <div className="featured-data">
               <h3 className="market-cap">{`Market Cap - ${numeral(
                 Number(stockDetails[0][13].slice(1))
-              ).format("($ 0.00 a)").toUpperCase()}`}</h3>
+              )
+                .format("($ 0.00 a)")
+                .toUpperCase()}`}</h3>
             </div>
             <div className="featured-data">
               <p className="featured-data-text">
