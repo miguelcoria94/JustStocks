@@ -37,7 +37,9 @@ export const mainStock = ({ stock }) => async (dispatch) => {
 
 
 export const getStock = ({ symbol }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apiKey}`);
+  const res = await fetch("api/profile/search-match", {
+    method: "POST"
+  });
 
   const { bestMatches } = response.data
   
