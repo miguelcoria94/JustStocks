@@ -38,7 +38,8 @@ export const mainStock = ({ stock }) => async (dispatch) => {
 
 export const getStock = ({ symbol }) => async (dispatch) => {
   const res = await fetch("api/profile/search-match", {
-    method: "POST"
+    method: "POST",
+    body: JSON.stringify({ symbol }),
   });
 
   const { bestMatches } = response.data
