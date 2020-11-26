@@ -1,5 +1,6 @@
 import { LineChart, Legend, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area} from 'recharts';
 
+
 function StockChart({ graphData }) {
 
   let chartData = []
@@ -11,10 +12,11 @@ function StockChart({ graphData }) {
     )
   }
 
-  console.log("ss",chartData)
-
   return (
-    <div className="graph-container" style={{ width: "100%", height: 300, backgroundColor: "none"}}>
+    <div
+      className="graph-container"
+      style={{ width: "100%", height: 300, backgroundColor: "none" }}
+    >
       <ResponsiveContainer>
         <LineChart
           className="chart"
@@ -22,11 +24,15 @@ function StockChart({ graphData }) {
           data={chartData}
           margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
         >
-          <Tooltip labelStyle={{ display: "none" }}/>
+          <Tooltip
+            labelStyle={{ display: "none" }}
+            dataKey="4. close"
+          />
           <YAxis domain={"auto"} hide="true" />
           <Line
-            dataKey="4. close"
-            stroke="#ffffff"
+            dataKey={"4. close"}
+            className="tooltip"
+            stroke="#FFFFFF"
             strokeWidth={5}
             name="PRICE"
             dot={false}

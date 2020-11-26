@@ -95,6 +95,18 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
+.tooltip {
+    color: white !important;
+    background-color: #247856 !important;
+}
+
+.recharts-default-tooltip {
+    background-color: black !important;
+    border: none !important;
+    background-color: transparent !important;
+    padding: none !important;
+}
+
 .chart {
     border-radius: 5px;
     background-color: #247856;
