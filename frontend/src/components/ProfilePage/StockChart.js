@@ -24,15 +24,12 @@ function StockChart({ graphData }) {
           data={chartData}
           margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
         >
-          <Tooltip
-            labelStyle={{ display: "none" }}
-            dataKey="4. close"
-          />
+          <Tooltip labelStyle={{ display: "none" }} dataKey="4. close" />
           <YAxis domain={"auto"} hide="true" />
           <Line
             dataKey={"4. close"}
             className="tooltip"
-            stroke="#FFFFFF"
+            stroke="#EFEFEF"
             strokeWidth={5}
             name="PRICE"
             dot={false}
