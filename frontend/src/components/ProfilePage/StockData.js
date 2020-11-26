@@ -47,14 +47,18 @@ function StockData({ stock }) {
               </p>
               <p className="featured-data-text">
                 <span className="featured-data-title">52WeekHigh</span>
-                {` - ${stockDetails[0][39].slice(1)}`}
+                {` - ${numeral(Number(stockDetails[0][39].slice(1)))
+                  .format("($ 0.00 a)")
+                  .toUpperCase()}`}
               </p>
               <p className="featured-data-text">
                 <span className="featured-data-title">52WeekLow</span>
-                {` - ${stockDetails[0][40].slice(1)}`}
+                {` - ${numeral(Number(stockDetails[0][40].slice(1)))
+                  .format("($ 0.00 a)")
+                  .toUpperCase()}`}
               </p>
             </div>
-            <p>{`Description - ${stockDetails[0][3].slice(1)}`}</p>
+            <p>{`${stockDetails[0][3].slice(1)}`}</p>
           </div>
         ) : (
           <h3>Loading...</h3>
