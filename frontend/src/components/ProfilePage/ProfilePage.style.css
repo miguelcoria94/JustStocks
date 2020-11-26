@@ -47,6 +47,25 @@
     margin-bottom: 10px;
 }
 
+.add-button {
+    margin-right: 10px;
+    border: none;
+    background-color: #139B59;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.remove-button {
+    border: none;
+    background-color: #8d3d45;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 800;
+}
+
 .search-input {
     border: 2.5px solid #dfdfdf !important;
     height: 34px;
@@ -87,7 +106,7 @@
 
 .main-stock-div {
     margin-top: 20px;
-    width: 41%;
+    width: 50%;
     height: 80%;
 }
 
@@ -138,8 +157,7 @@
 }
 
 .featured-data-title {
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 16px;
     color: #247856;
 }
 
@@ -148,7 +166,7 @@
 }
 
 .featured-data-text {
-    font-size: 15px;
+    font-size: 16px;
     margin-right: 10px;
 }
 
