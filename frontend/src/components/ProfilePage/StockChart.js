@@ -21,11 +21,15 @@ function StockChart({ graphData }) {
           data={chartData}
           margin={{ top: 0, right: 0, left: 0, bottom: 10 }}
         >
-          <Tooltip />
+          <Tooltip labelStyle={{ display: "none" }} />
           <YAxis domain={"auto"} hide="true" />
-          <Line dataKey="1. open" stroke="#169E5A" strokeWidth={5} />
-          <Line dataKey="2. high" stroke="#169E5A" strokeWidth={5} />
-          <Line dataKey="3. low" stroke="#227956" strokeWidth={5} />
+          <Line
+            dataKey="4. close"
+            stroke="#227956"
+            strokeWidth={5}
+            name="PRICE"
+            dot={false}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
