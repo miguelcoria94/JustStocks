@@ -66,6 +66,16 @@
     font-weight: 800;
 }
 
+.remove-button:hover {
+    background-color: #d62839;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #05bd64;
+    cursor: pointer;
+}
+
 .search-input {
     border: 2.5px solid #dfdfdf !important;
     height: 34px;
@@ -110,6 +120,7 @@
     height: 80%;
 }
 
+
 .graph-container {
     max-width: 100%;
     border-bottom: 5px solid #139B59;
@@ -118,16 +129,23 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+
 .tooltip {
     color: #EFEFEF !important;
     background-color: #247856 !important;
 }
+
 
 .recharts-default-tooltip {
     background-color: black !important;
     border: none !important;
     background-color: transparent !important;
     padding: none !important;
+}
+.stock-down {
+    border-radius: 5px;
+    background-color: #8D3E44;
+    border-bottom: 5px solid #c53d48;
 }
 
 .chart {

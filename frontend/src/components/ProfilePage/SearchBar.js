@@ -21,6 +21,8 @@ function SearchBar({ search }) {
   
   const handleSearch = (e) => {
     e.preventDefault()
+    document.getElementById("search-result-div").className = 
+      "hide-search";
     dispatch(profileActions.graphData({ stock: symbol }))
     dispatch(profileActions.mainStock({ stock: symbol }));
   }
