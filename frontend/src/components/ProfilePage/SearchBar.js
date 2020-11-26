@@ -28,7 +28,6 @@ function SearchBar({ search }) {
       <>
         <form
           onSubmit={handleSearch}
-          to="/profile"
           className="searchbar_container"
         >
           <div>
