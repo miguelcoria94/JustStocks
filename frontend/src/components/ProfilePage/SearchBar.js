@@ -54,7 +54,7 @@ function SearchBar({ search }) {
                 <SearchItem searchItem={search[4]} setSymbol={setSymbol} />
               </div>
             ) : (
-              <li>search..</li>
+              <li></li>
             )}
           </div>
         </form>
