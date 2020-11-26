@@ -28,7 +28,6 @@ function SearchBar({ search }) {
       <>
         <form
           onSubmit={handleSearch}
-          to="/profile"
           className="searchbar_container"
         >
           <div>
@@ -54,7 +53,7 @@ function SearchBar({ search }) {
                 <SearchItem searchItem={search[4]} setSymbol={setSymbol} />
               </div>
             ) : (
-              <li></li>
+              <li>search..</li>
             )}
           </div>
         </form>

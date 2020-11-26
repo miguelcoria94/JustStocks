@@ -1,6 +1,5 @@
 import { fetch } from "./csrf";
-
-import { apiKey } from './apikey'
+import { apiKey } from "./apikey";
 
 const LOOKUP_STOCK = "LOOKUP_STOCK"
 const CURRENT_STOCK = "CURRENT_STOCK"
@@ -20,22 +19,30 @@ const currentStock = (stock) => {
 };
 
 export const mainStock = ({ stock }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`);
 
-  const { data } = response
-  dispatch(currentStock(data));
+  const res = await fetch("/api/profile/search-stock", {
+    method: "POST",
+    body: JSON.stringify({stock}),
+  })
+
+  const { stockData } = res.data
+
+  dispatch(currentStock(stockData));
 
   return {
     type: CURRENT_STOCK,
-    payload: data,
+    payload: stockData,
   };
 }
 
 
 export const getStock = ({ symbol }) => async (dispatch) => {
-  const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apiKey}`);
+  const res = await fetch("api/profile/search-match", {
+    method: "POST",
+    body: JSON.stringify({symbol}),
+  });
 
-  const { bestMatches } = response.data
+  const { bestMatches } = res.data
   
   dispatch(lookupStock(bestMatches));
   return {

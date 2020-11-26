@@ -1,24 +1,53 @@
 const express = require("express");
 const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
+const fetch = require("node-fetch");
 
-const { handleValidationErrors } = require("../../utils/validation");
-const { setTokenCookie, restoreUser } = require("../../utils/auth");
-const { User } = require("../../db/models");
+const apiKey = "7B9VRQ2X6FX1KB7N";
 
 const router = express.Router();
 
-router.get("/", restoreUser, (req, res) => {
-  const { user } = req;
-  if (user) {
-    return res.json({
-      user: user.toSafeObject(),
-    });
-  } else return res.json({});
-});
 
-router.post("/search-stock", asyncHandler(async (req, res) => {
-  console.log(req)
-}));
+router.post("/search-stock",
+  asyncHandler(async (req, res, next) => {
+
+    const { stock } = req.body
+
+    const stockData = await fetch(
+      `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`,
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        return result
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+    return res.json({
+      stockData,
+    })
+  }));
+
+  router.post(
+    "/search-match",
+    asyncHandler(async (req, res, next) => {
+      const { symbol } = req.body;
+
+      const bestMatches = await fetch(
+        `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=${apiKey}`,
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          return result.bestMatches;
+        })
+      
+      console.log(bestMatches)
+
+      return res.json({
+        bestMatches,
+      });
+    })
+  );
 
 module.exports = router;
