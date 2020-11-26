@@ -73,4 +73,6 @@ router.post("/search-stock",
     })
   );
 
+  router.post("/add-stock", asyncHandler)
+
 module.exports = router;

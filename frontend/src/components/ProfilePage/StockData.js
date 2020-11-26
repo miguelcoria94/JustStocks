@@ -9,14 +9,26 @@ function StockData({ stock }) {
         const stockData = Object.entries(stock);
         stockDetails.push(stockData)
     }
+  
+  const addStockToWatchlist = () => {
+    console.log("add")
+  }
+
+  const removeStockToWatchlist = () => {
+    console.log("remove")
+  };
 
     return (
       <div>
         {stockDetails.length > 0 ? (
           <div className="stock-data-div">
             <div className="featured-data">
-              <button className="add-button">Add to watchlist</button>
-              <button className="remove-button">Remove from watchlist</button>
+              <button className="add-button" onClick={addStockToWatchlist}>
+                Add to watchlist
+              </button>
+              <button className="remove-button" onClick={removeStockToWatchlist}>
+                Remove from watchlist
+              </button>
             </div>
             <h1>{`$${stockDetails[0][0].slice(1)} Stock Overview`}</h1>
             <div className="featured-data">
