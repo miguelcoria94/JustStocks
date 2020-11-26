@@ -14,6 +14,13 @@ router.post("/search-stock",
 
     const { stock } = req.body
 
+    try {
+      const newStock = await Stock.addStock(stock);
+    } catch {
+      console.log("stock already in DB")
+    }
+
+
     const stockData = await fetch(
       `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`,
     )
