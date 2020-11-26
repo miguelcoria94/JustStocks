@@ -21,7 +21,8 @@ function SearchBar({ search }) {
   
   const handleSearch = (e) => {
     e.preventDefault()
-    return dispatch(profileActions.mainStock({ stock: symbol }));
+    dispatch(profileActions.graphData({ stock: symbol }))
+    dispatch(profileActions.mainStock({ stock: symbol }));
   }
     
     return (
