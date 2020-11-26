@@ -4,6 +4,15 @@ import { apiKey } from "./apikey";
 const LOOKUP_STOCK = "LOOKUP_STOCK"
 const CURRENT_STOCK = "CURRENT_STOCK"
 const CURRENT_STOCKCHART = "CURRENT_STOCKCHART"
+const CURRENT_WATCHLIST = "CURRENT_WATCHLIST"
+
+const currentWatchList = (list) => {
+  return {
+    type: CURRENT_WATCHLIST,
+    payload: list,
+  }
+}
+
 
 const lookupStock = (symbol) => {
   return {
@@ -76,7 +85,9 @@ const profileReducer = (state = {}, action) => {
     case CURRENT_STOCK:
       return { ...state, stock: action.payload };
     case CURRENT_STOCKCHART:
-      return { ...state, graph: action.payload }
+      return { ...state, graph: action.payload };
+    case CURRENT_WATCHLIST:
+      return { ...state, graph: action.payload };
     default:
       return state;
   }
