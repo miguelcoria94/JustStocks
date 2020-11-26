@@ -12,6 +12,8 @@ function StockChart({ graphData }) {
     )
   }
 
+  let chartDataReverse = chartData.reverse()
+
   return (
     <div
       className="graph-container"
@@ -21,7 +23,7 @@ function StockChart({ graphData }) {
         <LineChart
           className="chart"
           height={100}
-          data={chartData}
+          data={chartDataReverse}
           margin={{ top: 20, right: 0, left: 0, bottom: 10 }}
         >
           <Tooltip labelStyle={{ display: "none" }} dataKey="4. close" />
