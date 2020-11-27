@@ -15,6 +15,17 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
+    static async getStockSymbol(id) {
+      const stock = await Stock.findOne({
+        where: {
+            id: id,
+        },
+      });
+      if (stock) {
+        return await Stock.findByPk(stock.id);
+      }
+    }
+
     static associate(models) {
       const cloumnMapping = {
         through: "WatchList",

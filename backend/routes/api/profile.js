@@ -12,10 +12,26 @@ router.post("/", asyncHandler(async (req, res, next) => {
   const { id } = req.body;
   const watchlistData = await WatchList.getCurrentWatchlist({ id });
 
-  watchlistData.forEach((el) => {
-    let stockID = el["dataValues"]["stockId"];
-    console.log("refresh",el["dataValues"]["stockId"])
+  const stockIdArray = []
+
+  watchlistData.forEach(async (el) => {
+    let stockId = el["dataValues"]["stockId"];
+    stockIdArray.push(stockId)
   })
+
+  const anAsyncFunction = async (item) => {
+    return await Stock.getStockSymbol(item)
+  };
+
+  const getData = async () => {
+    return Promise.all(stockIdArray.map((stockDBId) => anAsyncFunction(stockDBId)));
+  };
+
+  console.log(
+    getData().then((data) => {
+      console.log(data);
+    })
+  );
 
   return res.json({
     watchlistData

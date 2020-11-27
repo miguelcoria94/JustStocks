@@ -5,12 +5,12 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class WatchList extends Model {
     static async getCurrentWatchlist({ id }) {
-      const watchist = await WatchList.findAll({
+      const watchlist = await WatchList.findAll({
         where: {
           userId: id,
         },
       });
-        return watchist
+        return watchlist
     }
     static associate(models) {
       // define association here
