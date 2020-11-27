@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
           [Op.or]: {
             username: credential,
             email: credential,
-          },
+          }
         },
       });
       if (user && user.validatePassword(password)) {

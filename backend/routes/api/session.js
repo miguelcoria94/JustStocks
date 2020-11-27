@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 
 const { handleValidationErrors } = require("../../utils/validation");
 const { setTokenCookie, restoreUser } = require("../../utils/auth");
-const { User } = require("../../db/models");
+const { User, WatchList } = require("../../db/models");
 
 const router = express.Router();
 
@@ -36,6 +36,7 @@ router.post(
       return next(err);
     }
 
+    
     await setTokenCookie(res, user);
 
     return res.json({

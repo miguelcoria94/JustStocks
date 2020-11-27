@@ -2,11 +2,50 @@ const express = require("express");
 const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 const fetch = require("node-fetch");
-const { Stock } = require("../../db/models");
+const { Stock, WatchList } = require("../../db/models");
 
 const apiKey = "7B9VRQ2X6FX1KB7N";
 
 const router = express.Router();
+
+router.post("/", asyncHandler(async (req, res, next) => {
+  const { id } = req.body;
+  const watchlistData = await WatchList.getCurrentWatchlist({ id });
+
+  const stockIdArray = []
+
+  watchlistData.forEach(async (el) => {
+    let stockId = el["dataValues"]["stockId"];
+    stockIdArray.push(stockId)
+  })
+
+  let stockSymbols = await Promise.all(
+    stockIdArray.map(async (stockId) => {
+      let dbResponse = await Stock.getStockSymbol(stockId)
+      return dbResponse["dataValues"]["symbol"];
+    })
+  );
+
+  let stockData = await Promise.all(
+    stockSymbols.map(async (stockSymbol) => {
+      let apiResponse = await fetch(
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&apikey=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          return result;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      return apiResponse
+    })
+  );
+
+  return res.json({
+    stockData
+  })
+}))
 
 
 router.post("/search-stock",
@@ -42,10 +81,6 @@ router.post("/search-stock",
       .catch((error) => {
         console.error("Error:", error);
       });
-    
-    
-
-    console.log(stockChartData)
     
     return res.json({
       stockData, stockChartData
