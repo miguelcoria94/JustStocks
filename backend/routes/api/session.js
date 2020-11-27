@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 
 const { handleValidationErrors } = require("../../utils/validation");
 const { setTokenCookie, restoreUser } = require("../../utils/auth");
-const { User } = require("../../db/models");
+const { User, WatchList } = require("../../db/models");
 
 const router = express.Router();
 
@@ -35,6 +35,8 @@ router.post(
       err.errors = ['The provided credentials were invalid.'];
       return next(err);
     }
+
+    const userWatchlist = await 
 
     await setTokenCookie(res, user);
 
