@@ -2,7 +2,7 @@
     padding: 40px;
     background-color: #F7F7F7;
     width: 88%;
-    height: 85%;
+    height: auto;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -47,6 +47,35 @@
     margin-bottom: 10px;
 }
 
+.add-button {
+    margin-right: 10px;
+    border: none;
+    background-color: #139B59;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.remove-button {
+    border: none;
+    background-color: #8d3d45;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 800;
+}
+
+.remove-button:hover {
+    background-color: #d62839;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #05bd64;
+    cursor: pointer;
+}
+
 .search-input {
     border: 2.5px solid #dfdfdf !important;
     height: 34px;
@@ -70,6 +99,10 @@
     cursor: pointer;
 }
 
+.stock-data-main-div{
+    height: 100%;
+}
+
 .search-result-div {
     background: white;
     position: relative;
@@ -87,9 +120,10 @@
 
 .main-stock-div {
     margin-top: 20px;
-    width: 41%;
-    height: 80%;
+    width: 50%;
+    height: 100%;
 }
+
 
 .graph-container {
     max-width: 100%;
@@ -99,16 +133,23 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+
 .tooltip {
     color: #EFEFEF !important;
     background-color: #247856 !important;
 }
+
 
 .recharts-default-tooltip {
     background-color: black !important;
     border: none !important;
     background-color: transparent !important;
     padding: none !important;
+}
+.stock-down {
+    border-radius: 5px;
+    background-color: #8D3E44;
+    border-bottom: 5px solid #c53d48;
 }
 
 .chart {
@@ -138,8 +179,7 @@
 }
 
 .featured-data-title {
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 16px;
     color: #247856;
 }
 
@@ -148,7 +188,7 @@
 }
 
 .featured-data-text {
-    font-size: 15px;
+    font-size: 16px;
     margin-right: 10px;
 }
 

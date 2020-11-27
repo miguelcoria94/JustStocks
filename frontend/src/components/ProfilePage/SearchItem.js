@@ -3,7 +3,7 @@ import "./ProfilePage.style.css";
 function SearchItem({searchItem, setSymbol}) {
     const handleSearch = (e) => {
         setSymbol(e.target.innerText.split(' - ')[0].split("$").join("").toLowerCase())
-        document.getElementById("search-result-div").className ="hide-search";
+      document.getElementById("search-result-div").className = "hide-search";
   }
   return (
     <>

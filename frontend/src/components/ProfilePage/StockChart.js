@@ -1,5 +1,5 @@
-import { LineChart, Legend, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area} from 'recharts';
-
+import { LineChart, Legend, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area } from 'recharts';
+import "./ProfilePage.style.css";
 
 function StockChart({ graphData }) {
 
@@ -12,6 +12,22 @@ function StockChart({ graphData }) {
     )
   }
 
+  let myAttr;
+
+  let chartDataReverse = chartData.reverse()
+  
+  try {
+    if (!chartDataReverse ||
+      Object.values(chartDataReverse[0])[0] >
+      Object.values(chartDataReverse[chartDataReverse.length - 1])[0]
+    ) {
+      myAttr = { className: "stock-down" };
+    } else {
+      myAttr = { className: "chart" };
+    }
+  } catch {
+    console.log("oops")
+  }
   return (
     <div
       className="graph-container"
@@ -19,9 +35,10 @@ function StockChart({ graphData }) {
     >
       <ResponsiveContainer>
         <LineChart
-          className="chart"
+          id="chart"
+          {...myAttr}
           height={100}
-          data={chartData}
+          data={chartDataReverse}
           margin={{ top: 20, right: 0, left: 0, bottom: 10 }}
         >
           <Tooltip labelStyle={{ display: "none" }} dataKey="4. close" />

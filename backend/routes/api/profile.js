@@ -33,7 +33,7 @@ router.post("/search-stock",
       });
     
     const stockChartData = await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${stock}&interval=5min&outputsize=compact&apikey=${apiKey}`
+      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=compact&apikey=${apiKey}`
     )
       .then((response) => response.json())
       .then((result) => {
@@ -72,5 +72,10 @@ router.post("/search-stock",
       });
     })
   );
+
+router.post("/add-stock", asyncHandler(async (req, res, next) => {
+  const { symbol } = req.body
+  console.log(symbol)
+  }))
 
 module.exports = router;

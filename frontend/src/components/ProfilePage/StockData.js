@@ -1,7 +1,7 @@
 import "./ProfilePage.style.css";
 import numeral from "numeral";
 
-function StockData({ stock }) {
+function StockData({ stock, search, user}) {
   const stockDetails = []
   
     
@@ -9,14 +9,26 @@ function StockData({ stock }) {
         const stockData = Object.entries(stock);
         stockDetails.push(stockData)
     }
+  
+  const addStockToWatchlist = () => {
+    console.log("add", stock.Symbol, user.id)
+  }
+
+  const removeStockToWatchlist = () => {
+    console.log("remove")
+  };
 
     return (
-      <div>
+      <div className="stock-data-main-div">
         {stockDetails.length > 0 ? (
           <div className="stock-data-div">
             <div className="featured-data">
-              <button>Add to watchlist</button>
-              <button>Remove from watchlist</button>
+              <button className="add-button" onClick={addStockToWatchlist}>
+                Add to watchlist
+              </button>
+              <button className="remove-button" onClick={removeStockToWatchlist}>
+                Remove from watchlist
+              </button>
             </div>
             <h1>{`$${stockDetails[0][0].slice(1)} Stock Overview`}</h1>
             <div className="featured-data">
@@ -47,14 +59,18 @@ function StockData({ stock }) {
               </p>
               <p className="featured-data-text">
                 <span className="featured-data-title">52WeekHigh</span>
-                {` - ${stockDetails[0][39].slice(1)}`}
+                {` - ${numeral(Number(stockDetails[0][39].slice(1)))
+                  .format("($ 0.00 a)")
+                  .toUpperCase()}`}
               </p>
               <p className="featured-data-text">
                 <span className="featured-data-title">52WeekLow</span>
-                {` - ${stockDetails[0][40].slice(1)}`}
+                {` - ${numeral(Number(stockDetails[0][40].slice(1)))
+                  .format("($ 0.00 a)")
+                  .toUpperCase()}`}
               </p>
             </div>
-            <p>{`Description - ${stockDetails[0][3].slice(1)}`}</p>
+            <p>{`${stockDetails[0][3].slice(1)}`}</p>
           </div>
         ) : (
           <h3>Loading...</h3>

@@ -27,12 +27,12 @@ function ProfilePage() {
       <div className="profileContainer">
         <div className="profile_navdiv">
           <WelcomeMessage user={sessionUser} />
-          <SearchBar search={searchBar}/>
+          <SearchBar search={searchBar} />
           <LogoutButton user={sessionUser} />
         </div>
         <div className="main-stock-div">
-          <StockChart graphData={graphData}/>
-          <StockData stock={stockData}/>
+          <StockChart graphData={graphData} />
+          <StockData stock={stockData} search={searchBar} user={sessionUser} />
         </div>
       </div>
     );
