@@ -32,13 +32,23 @@ export const login = ({ credential, password }) => async (dispatch) => {
     body: JSON.stringify({ credential, password }),
   });
 
-  const { user } = res.data;
+  const { user, currentWatchList } = res.data;
 
+  dispatch(currentWatchList);
+  watchlistData(currentWatchList)
   dispatch(setSession(user));
+
 
   return {
     type: LOGIN_USER,
     payload: user,
+  };
+};
+
+export const watchlistData = (data) => async (dispatch) => {
+  return {
+    type: CURRENT_WATCHLIST,
+    payload: data,
   };
 };
 
