@@ -1,5 +1,4 @@
 import { fetch } from "./csrf";
-import { apiKey } from "./apikey";
 
 const LOOKUP_STOCK = "LOOKUP_STOCK"
 const CURRENT_STOCK = "CURRENT_STOCK"

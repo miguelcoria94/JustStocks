@@ -4,6 +4,7 @@ const LOGIN_USER = "LOGIN_USER";
 const SET_SESSION = "SET_SESSION";
 const END_SESSION = "END_SESSION";
 
+
 const setSession = (user) => {
   return {
     type: SET_SESSION,
