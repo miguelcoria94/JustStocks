@@ -19,22 +19,31 @@ router.post("/", asyncHandler(async (req, res, next) => {
     stockIdArray.push(stockId)
   })
 
-  const anAsyncFunction = async (item) => {
-    return await Stock.getStockSymbol(item)
-  };
+  let stockSymbols = await Promise.all(
+    stockIdArray.map(async (stockId) => {
+      let dbResponse = await Stock.getStockSymbol(stockId)
+      return dbResponse["dataValues"]["symbol"];
+    })
+  );
 
-  const getData = async () => {
-    return Promise.all(stockIdArray.map((stockDBId) => anAsyncFunction(stockDBId)));
-  };
-
-  console.log(
-    getData().then((data) => {
-      console.log(data);
+  let stockData = await Promise.all(
+    stockSymbols.map(async (stockSymbol) => {
+      let apiResponse = await fetch(
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&apikey=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          return result;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      return apiResponse
     })
   );
 
   return res.json({
-    watchlistData
+    stockData
   })
 }))
 

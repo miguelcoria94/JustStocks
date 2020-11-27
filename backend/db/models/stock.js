@@ -15,15 +15,13 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    static async getStockSymbol(id) {
+    static async getStockSymbol(stockId) {
       const stock = await Stock.findOne({
         where: {
-            id: id,
+            id: stockId,
         },
       });
-      if (stock) {
-        return await Stock.findByPk(stock.id);
-      }
+      return stock
     }
 
     static associate(models) {

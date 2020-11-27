@@ -70,12 +70,12 @@ export const getWatchlist = ({ id }) => async (dispatch) => {
     body: JSON.stringify({ id }),
   });
 
-  const { watchlistData } = res.data;
+  const { stockData } = res.data;
 
-  dispatch(setWatchlist(watchlistData));
+  dispatch(setWatchlist(stockData));
   return {
     type: SET_WATCHLIST,
-    payload: watchlistData,
+    payload: stockData,
   };
 };
 
