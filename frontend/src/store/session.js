@@ -3,6 +3,14 @@ import { fetch } from "./csrf";
 const LOGIN_USER = "LOGIN_USER";
 const SET_SESSION = "SET_SESSION";
 const END_SESSION = "END_SESSION";
+const CURRENT_WATCHLIST = "CURRENT_WATCHLIST";
+
+const currentWatchList = (list) => {
+  return {
+    type: CURRENT_WATCHLIST,
+    payload: list,
+  };
+};
 
 
 const setSession = (user) => {
@@ -68,6 +76,8 @@ const sessionReducer = (state = {}, action) => {
       return { ...state, user: action.payload };
     case END_SESSION:
       return { ...state, user: null };
+    case CURRENT_WATCHLIST:
+      return { ...state, graph: action.payload };
     default:
       return state;
   }
