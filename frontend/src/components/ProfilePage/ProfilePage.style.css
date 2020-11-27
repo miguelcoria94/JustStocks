@@ -2,7 +2,7 @@
     padding: 40px;
     background-color: #F7F7F7;
     width: 88%;
-    height: 85%;
+    height: auto;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -99,6 +99,10 @@
     cursor: pointer;
 }
 
+.stock-data-main-div{
+    height: 100%;
+}
+
 .search-result-div {
     background: white;
     position: relative;
@@ -117,7 +121,7 @@
 .main-stock-div {
     margin-top: 20px;
     width: 50%;
-    height: 80%;
+    height: 100%;
 }
 
 

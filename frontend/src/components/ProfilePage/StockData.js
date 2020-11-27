@@ -19,7 +19,7 @@ function StockData({ stock, search, user}) {
   };
 
     return (
-      <div>
+      <div className="stock-data-main-div">
         {stockDetails.length > 0 ? (
           <div className="stock-data-div">
             <div className="featured-data">
