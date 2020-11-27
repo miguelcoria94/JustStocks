@@ -4,11 +4,14 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class WatchList extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    static async getCurrentWatchlist({ id }) {
+      const watchist = await WatchList.findAll({
+        where: {
+          userId: id,
+        },
+      });
+        return watchist
+    }
     static associate(models) {
       // define association here
     }
