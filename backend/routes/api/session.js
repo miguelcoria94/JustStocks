@@ -36,13 +36,8 @@ router.post(
       return next(err);
     }
 
-    const id = user.id
-
     
     await setTokenCookie(res, user);
-    const userWatchlist = await WatchList.getCurrentWatchlist({ id })
-
-    console.log(userWatchlist)
 
     return res.json({
       user,

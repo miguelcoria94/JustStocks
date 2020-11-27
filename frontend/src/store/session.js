@@ -3,15 +3,6 @@ import { fetch } from "./csrf";
 const LOGIN_USER = "LOGIN_USER";
 const SET_SESSION = "SET_SESSION";
 const END_SESSION = "END_SESSION";
-const CURRENT_WATCHLIST = "CURRENT_WATCHLIST";
-
-const currentWatchList = (list) => {
-  return {
-    type: CURRENT_WATCHLIST,
-    payload: list,
-  };
-};
-
 
 const setSession = (user) => {
   return {
@@ -32,23 +23,14 @@ export const login = ({ credential, password }) => async (dispatch) => {
     body: JSON.stringify({ credential, password }),
   });
 
-  const { user, currentWatchList } = res.data;
+  const { user } = res.data;
 
-  dispatch(currentWatchList);
-  watchlistData(currentWatchList)
   dispatch(setSession(user));
 
 
   return {
     type: LOGIN_USER,
     payload: user,
-  };
-};
-
-export const watchlistData = (data) => async (dispatch) => {
-  return {
-    type: CURRENT_WATCHLIST,
-    payload: data,
   };
 };
 
@@ -86,8 +68,6 @@ const sessionReducer = (state = {}, action) => {
       return { ...state, user: action.payload };
     case END_SESSION:
       return { ...state, user: null };
-    case CURRENT_WATCHLIST:
-      return { ...state, graph: action.payload };
     default:
       return state;
   }

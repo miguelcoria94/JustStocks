@@ -2,11 +2,20 @@ const express = require("express");
 const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 const fetch = require("node-fetch");
-const { Stock } = require("../../db/models");
+const { Stock, WatchList } = require("../../db/models");
 
 const apiKey = "7B9VRQ2X6FX1KB7N";
 
 const router = express.Router();
+
+router.post("/", asyncHandler(async (req, res, next) => {
+  const { id } = req.body;
+  const watchlistData = await WatchList.getCurrentWatchlist({ id });
+
+  return res.json({
+    watchlistData
+  })
+}))
 
 
 router.post("/search-stock",
@@ -42,10 +51,6 @@ router.post("/search-stock",
       .catch((error) => {
         console.error("Error:", error);
       });
-    
-    
-
-    console.log(stockChartData)
     
     return res.json({
       stockData, stockChartData
