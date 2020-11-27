@@ -12,6 +12,11 @@ router.post("/", asyncHandler(async (req, res, next) => {
   const { id } = req.body;
   const watchlistData = await WatchList.getCurrentWatchlist({ id });
 
+  watchlistData.forEach((el) => {
+    let stockID = el["dataValues"]["stockId"];
+    console.log("refresh",el["dataValues"]["stockId"])
+  })
+
   return res.json({
     watchlistData
   })
