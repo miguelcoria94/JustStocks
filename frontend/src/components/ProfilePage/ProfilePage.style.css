@@ -117,6 +117,13 @@
     display: flex;
 }
 
+.watchlist-div {
+    margin-top: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    
+}
 .hide-search {
     display: none;
     width: 100%;
