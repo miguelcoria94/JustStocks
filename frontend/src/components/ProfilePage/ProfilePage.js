@@ -35,12 +35,14 @@ function ProfilePage() {
           <SearchBar search={searchBar} />
           <LogoutButton user={sessionUser} />
         </div>
-        <div className="main-stock-div">
-          <StockChart graphData={graphData} />
-          <StockData stock={stockData} search={searchBar} user={sessionUser} />
-        </div>
-        <div className="watchlist-div">
-          <Watchlist />
+        <div className="main-content">
+          <div className="main-stock-div">
+            <StockChart graphData={graphData} />
+            <StockData stock={stockData} search={searchBar} user={sessionUser} />
+          </div>
+          <div className="watchlist-div">
+            <Watchlist />
+          </div>
         </div>
       </div>
     );
