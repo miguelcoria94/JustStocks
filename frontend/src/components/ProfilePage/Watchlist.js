@@ -57,7 +57,6 @@ function Watchlist() {
         }
     }
     const filteredSymbols = stockSymbols.filter((word) => word !== undefined);
-    const filteredData = lastupdate.filter((word) => word !== undefined);
 
     console.log("me", graphdata);
 
@@ -65,7 +64,7 @@ function Watchlist() {
       <div>
         {filteredSymbols.map((symbol, idx) => (
           <div>
-            <h3 key={idx}>{symbol}</h3>
+            <h3 key={idx}>{`$${symbol.toUpperCase()}`}</h3>
             <div
               className="graph-container"
               style={{ width: "200", height: 200, backgroundColor: "none" }}
