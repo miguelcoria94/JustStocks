@@ -30,6 +30,15 @@ module.exports = (sequelize, DataTypes) => {
         });
       }
     }
+
+    static async removeStock(id, stockToFind) {
+      return await WatchList.destroy({
+        where: {
+          userId: id,
+          stockId: stockToFind,
+        },
+      });
+    }
     static associate(models) {
       // define association here
     }

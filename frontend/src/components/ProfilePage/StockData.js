@@ -23,17 +23,20 @@ function StockData({ stock, search, user }) {
         stockDetails.push(stockData)
     }
   
+    const updateList = (id) => {
+      dispatch(profileActions.getWatchlist({ id }));
+    }
   const addStockToWatchlist = (symbol) => {
     let id = user.id
     dispatch(profileActions.addStock({ symbol, id }))
     return updateList(id)
   }
-  const updateList = (id) => {
-    dispatch(profileActions.getWatchlist({ id }));
-  }
+
   
   const removeStockToWatchlist = (symbol) => {
-    console.log("remove", symbol, user.id)
+    let id = user.id;
+    dispatch(profileActions.removeStock({ symbol, id }));
+    return updateList(id);
   };
 
     return (

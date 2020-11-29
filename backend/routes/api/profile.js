@@ -124,6 +124,15 @@ router.post("/add-stock", asyncHandler(async (req, res, next) => {
   const { symbol, id } = req.body
   const stockToFind = await Stock.findAStock({ symbol })
   return await WatchList.addStock(id, stockToFind)
-  }))
+}))
+  
+router.post(
+  "/remove-stock",
+  asyncHandler(async (req, res, next) => {
+    const { symbol, id } = req.body;
+    const stockToFind = await Stock.findAStock({ symbol });
+    return await WatchList.removeStock(id, stockToFind);
+  })
+);
 
 module.exports = router;

@@ -95,6 +95,13 @@ export const addStock = ({ symbol, id }) => async (dispatch) => {
   })
 }
 
+export const removeStock = ({ symbol, id }) => async (dispatch) => {
+  return await fetch("api/profile/remove-stock", {
+    method: "POST",
+    body: JSON.stringify({ symbol, id }),
+  });
+};
+
 export const getStock = ({ symbol }) => async (dispatch) => {
   const res = await fetch("api/profile/search-match", {
     method: "POST",
