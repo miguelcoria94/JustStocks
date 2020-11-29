@@ -67,7 +67,7 @@ function Watchlist() {
           <h1> YOUR WATCHLIST </h1>
         {filteredSymbols.map((symbol, idx) => (
             <div>
-            <h3 key={idx}>{`$${symbol.toUpperCase()}`}</h3>
+            <h3 key={idx}>{`$${symbol.toUpperCase()}`} - 100 DAY CHART</h3>
             <div
               className="graph-container"
               style={{ width: "200", height: 200, backgroundColor: "none" }}
