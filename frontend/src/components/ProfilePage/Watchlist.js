@@ -1,21 +1,13 @@
 import React from "react";
 import {
   LineChart,
-  Legend,
   Line,
-  CartesianGrid,
-  XAxis,
   YAxis,
   ResponsiveContainer,
-  AreaChart,
   Tooltip,
-  ReferenceLine,
-  Area,
 } from "recharts";
 import { useSelector } from "react-redux";
 import "./ProfilePage.style.css";
-import { useDispatch } from "react-redux";
-import * as profileActions from "../../store/profile";
 
 
 function Watchlist() {
@@ -46,7 +38,6 @@ function Watchlist() {
         }
     }
 
-    let myAttr;
     let graphdata = []
 
 

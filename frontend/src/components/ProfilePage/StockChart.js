@@ -1,4 +1,4 @@
-import { LineChart, Legend, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, AreaChart, Tooltip, ReferenceLine, Area } from 'recharts';
+import { LineChart, Line, YAxis, ResponsiveContainer, Tooltip} from 'recharts';
 import "./ProfilePage.style.css";
 
 function StockChart({ graphData }) {
