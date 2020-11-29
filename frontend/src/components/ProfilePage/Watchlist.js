@@ -46,7 +46,9 @@ function Watchlist() {
         }
     }
 
+    let myAttr;
     let graphdata = []
+
 
     for (let i = 0; i < lastupdate.length; i++) {
         if (lastupdate[i] !== undefined) {
@@ -57,6 +59,18 @@ function Watchlist() {
         }
     }
     const filteredSymbols = stockSymbols.filter((word) => word !== undefined);
+
+    const stockStatus = (array) => {
+        if (
+          Object.values(array[0])[0] >
+          Object.values(array[array.length - 1])[0]
+        ) {
+          return "stock-down";
+        } else {
+          return "chart";
+        }
+    }
+    
 
     console.log("me", graphdata);
 
@@ -72,6 +86,9 @@ function Watchlist() {
               <ResponsiveContainer>
                 <LineChart
                   height={100}
+                  className={stockStatus(
+                    graphdata.slice(idx * 100, 100 * (idx + 1)).reverse()
+                  )}
                   data={graphdata.slice(idx * 100, 100 * (idx + 1)).reverse()}
                   margin={{ top: 20, right: 0, left: 0, bottom: 10 }}
                 >
