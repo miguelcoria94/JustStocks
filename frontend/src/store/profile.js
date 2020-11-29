@@ -79,8 +79,6 @@ export const getWatchlist = ({ id }) => async (dispatch) => {
 
   const { stockData, firstStockData } = res.data;
 
-  console.log("first stock", firstStockData)
-
   dispatch(setWatchlist(stockData));
   dispatch(setFirstStock(firstStockData));
   return {
