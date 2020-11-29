@@ -61,9 +61,6 @@ function Watchlist() {
           return "chart";
         }
     }
-    
-
-    console.log("me", graphdata);
 
     return (
       <div>
