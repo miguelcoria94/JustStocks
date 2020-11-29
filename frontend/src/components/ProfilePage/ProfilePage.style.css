@@ -60,9 +60,9 @@
 .remove-button {
     border: none;
     background-color: #8d3d45;
+    padding: 10px;
     color: white;
     border-radius: 5px;
-    padding: 15px;
     font-weight: 800;
 }
 
