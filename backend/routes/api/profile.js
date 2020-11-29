@@ -3,6 +3,7 @@ const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 const fetch = require("node-fetch");
 const { Stock, WatchList } = require("../../db/models");
+const stock = require("../../db/models/stock");
 
 const apiKey = "7B9VRQ2X6FX1KB7N";
 
@@ -112,8 +113,6 @@ router.post("/search-stock",
         .then((result) => {
           return result.bestMatches;
         })
-      
-      console.log(bestMatches)
 
       return res.json({
         bestMatches,
@@ -122,8 +121,9 @@ router.post("/search-stock",
   );
 
 router.post("/add-stock", asyncHandler(async (req, res, next) => {
-  const { symbol } = req.body
-  console.log(symbol)
+  const { symbol, id } = req.body
+  const stockToFind = await Stock.findAStock({ symbol })
+  return await WatchList.addStock(id, stockToFind)
   }))
 
 module.exports = router;

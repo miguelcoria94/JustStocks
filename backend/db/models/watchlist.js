@@ -10,7 +10,25 @@ module.exports = (sequelize, DataTypes) => {
           userId: id,
         },
       });
-        return watchlist
+      return watchlist;
+    }
+
+    static async addStock(id, stockToFind) {
+      const AlreadyExist = await WatchList.findOne({
+        where: {
+          userId: id,
+          stockId: stockToFind,
+        },
+      });
+
+      if (AlreadyExist) {
+        return;
+      } else {
+        const stock = await WatchList.create({
+          userId: id,
+          stockId: stockToFind,
+        });
+      }
     }
     static associate(models) {
       // define association here

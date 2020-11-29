@@ -1,8 +1,10 @@
 import "./ProfilePage.style.css";
 import numeral from "numeral";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import * as profileActions from "../../store/profile";
 
 function StockData({ stock, search, user }) {
+  const dispatch = useDispatch();
   const watchlistFirstStock = useSelector((state) => state.profile.firstStock);
 
   const firstStockDetails = []
@@ -22,7 +24,9 @@ function StockData({ stock, search, user }) {
     }
   
   const addStockToWatchlist = (symbol) => {
-    console.log("add", symbol, user.id)
+    let id = user.id
+    dispatch(profileActions.addStock({symbol, id}))
+    dispatch(profileActions.getWatchlist({ id }));
   }
 
   const removeStockToWatchlist = (symbol) => {

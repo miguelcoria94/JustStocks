@@ -5,6 +5,7 @@ const CURRENT_STOCK = "CURRENT_STOCK";
 const CURRENT_STOCKCHART = "CURRENT_STOCKCHART";
 const SET_WATCHLIST = "SET_WATCHLIST";
 const FIRST_STOCK = "FIRST_STOCK";
+const ADD_STOCK = "ADD_STOCK";
 
 
 const lookupStock = (symbol) => {
@@ -87,6 +88,13 @@ export const getWatchlist = ({ id }) => async (dispatch) => {
   };
 };
 
+export const addStock = ({ symbol, id }) => async (dispatch) => {
+  return await fetch("api/profile/add-stock", {
+    method: "POST",
+    body: JSON.stringify({ symbol, id }),
+  })
+}
+
 export const getStock = ({ symbol }) => async (dispatch) => {
   const res = await fetch("api/profile/search-match", {
     method: "POST",
@@ -113,7 +121,7 @@ const profileReducer = (state = {}, action) => {
     case SET_WATCHLIST:
       return { ...state, list: action.payload };
     case FIRST_STOCK:
-      return { ...state, firstStock: action.payload}
+      return { ...state, firstStock: action.payload };
     default:
       return state;
   }
