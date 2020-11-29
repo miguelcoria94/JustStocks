@@ -41,9 +41,20 @@ router.post("/", asyncHandler(async (req, res, next) => {
       return apiResponse
     })
   );
+ const firstStockData = await fetch(
+   `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockSymbols[0]}&apikey=${apiKey}`
+ )
+   .then((response) => response.json())
+   .then((result) => {
+     return result;
+   })
+   .catch((error) => {
+     console.error("Error:", error);
+   });
 
   return res.json({
-    stockData
+    stockData,
+    firstStockData
   })
 }))
 
@@ -82,9 +93,11 @@ router.post("/search-stock",
         console.error("Error:", error);
       });
     
+    
     return res.json({
-      stockData, stockChartData
-    })
+      stockData,
+      stockChartData
+    });
   }));
 
   router.post(

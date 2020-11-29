@@ -4,6 +4,7 @@ const LOOKUP_STOCK = "LOOKUP_STOCK";
 const CURRENT_STOCK = "CURRENT_STOCK";
 const CURRENT_STOCKCHART = "CURRENT_STOCKCHART";
 const SET_WATCHLIST = "SET_WATCHLIST";
+const FIRST_STOCK = "FIRST_STOCK";
 
 
 const lookupStock = (symbol) => {
@@ -32,6 +33,13 @@ const setWatchlist = (list) => {
     type: SET_WATCHLIST,
     payload: list,
   };
+}
+
+const setFirstStock = (data) => {
+  return {
+    type: FIRST_STOCK,
+    payload: data,
+  }
 }
 
 export const mainStock = ({ stock }) => async (dispatch) => {
@@ -64,15 +72,17 @@ export const graphData = (data) => async (dispatch) => {
 
 export const getWatchlist = ({ id }) => async (dispatch) => {
 
-  id = 1
   const res = await fetch("api/profile/", {
     method: "POST",
     body: JSON.stringify({ id }),
   });
 
-  const { stockData } = res.data;
+  const { stockData, firstStockData } = res.data;
+
+  console.log("first stock", firstStockData)
 
   dispatch(setWatchlist(stockData));
+  dispatch(setFirstStock(firstStockData));
   return {
     type: SET_WATCHLIST,
     payload: stockData,
@@ -104,6 +114,8 @@ const profileReducer = (state = {}, action) => {
       return { ...state, graph: action.payload };
     case SET_WATCHLIST:
       return { ...state, list: action.payload };
+    case FIRST_STOCK:
+      return { ...state, firstStock: action.payload}
     default:
       return state;
   }

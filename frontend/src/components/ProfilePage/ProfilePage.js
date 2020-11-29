@@ -19,9 +19,11 @@ function ProfilePage() {
   const stockData = useSelector((state) => state.profile.stock);
   const graphData = useSelector((state) => state.profile.graph);
 
+
   if (sessionUser) {
+    let id = sessionUser.id
     document.title = `JustStocks - ${sessionUser.username}`
-    dispatch(profileActions.getWatchlist({ sessionUser }));
+    dispatch(profileActions.getWatchlist({ id }));
   } else {
     document.title = 'JustStocks'
   }

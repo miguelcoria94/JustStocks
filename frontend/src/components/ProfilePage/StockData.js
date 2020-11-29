@@ -1,7 +1,9 @@
 import "./ProfilePage.style.css";
 import numeral from "numeral";
 
-function StockData({ stock, search, user}) {
+function StockData({ stock, search, user }) {
+  
+  
   const stockDetails = []
   
     

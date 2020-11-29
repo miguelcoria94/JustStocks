@@ -41,8 +41,6 @@ function StockChart({ graphData }) {
     )
   }
 
-  let myAttr;
-
   let chartDataReverse = chartData.reverse()
   const changeClass = () => {try {
     if (!chartDataReverse ||
