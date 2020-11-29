@@ -76,8 +76,9 @@ function Watchlist() {
 
     return (
       <div>
+          <h1> YOUR WATCHLIST </h1>
         {filteredSymbols.map((symbol, idx) => (
-          <div>
+            <div>
             <h3 key={idx}>{`$${symbol.toUpperCase()}`}</h3>
             <div
               className="graph-container"
