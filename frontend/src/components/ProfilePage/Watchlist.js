@@ -72,7 +72,7 @@ function Watchlist() {
               <ResponsiveContainer>
                 <LineChart
                   height={100}
-                  data={graphdata.slice((idx) * 100, ((100) * (idx + 1))).reverse()}
+                  data={graphdata.slice(idx * 100, 100 * (idx + 1)).reverse()}
                   margin={{ top: 20, right: 0, left: 0, bottom: 10 }}
                 >
                   <Tooltip
@@ -83,7 +83,7 @@ function Watchlist() {
                   <Line
                     dataKey={"4. close"}
                     className="tooltip"
-                    stroke="#000000"
+                    stroke="#EFEFEF"
                     strokeWidth={5}
                     name="PRICE"
                     dot={false}
