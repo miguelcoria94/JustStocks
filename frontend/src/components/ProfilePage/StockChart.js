@@ -44,18 +44,32 @@ function StockChart({ graphData }) {
   let myAttr;
 
   let chartDataReverse = chartData.reverse()
-  try {
+  const changeClass = () => {try {
     if (!chartDataReverse ||
       Object.values(chartDataReverse[0])[0] >
       Object.values(chartDataReverse[chartDataReverse.length - 1])[0]
     ) {
-      myAttr = { className: "stock-down" };
+      return "stock-down"
     } else {
-      myAttr = { className: "chart" };
+      return "chart"
     }
   } catch {
     console.log("oops")
   }
+
+  try {
+    if (
+      !wldata ||
+      wldata.slice(0 * 100, 100 * (0 + 1)).reverse()[0][0] >
+        wldata.slice(0 * 100, 100 * (0+ 1)).reverse()[watchlistData.length - 1][0]
+    ) {
+      return "stock-down"
+    } else {
+      return "chart"
+    }
+  } catch {
+    console.log("oops");
+  }}
 
   return (
     <div
@@ -65,7 +79,7 @@ function StockChart({ graphData }) {
       <ResponsiveContainer>
         <LineChart
           id="chart"
-          {...myAttr}
+          className={changeClass()}
           height={100}
           data={
             chartDataReverse.length
