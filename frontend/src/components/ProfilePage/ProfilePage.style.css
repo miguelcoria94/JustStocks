@@ -2,7 +2,7 @@
     padding: 40px;
     background-color: #F7F7F7;
     width: 88%;
-    height: auto;
+    height: 80%;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -100,7 +100,6 @@
 }
 
 .stock-data-main-div{
-    height: 100%;
 }
 
 .search-result-div {
@@ -113,6 +112,24 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.watchlist-stock {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.main-content {
+    display: flex;
+    height: 50%;
+}
+
+.watchlist-div {
+    margin-top: 20px;
+    width: 50%;
+    height: 535px;
+    padding: 20px;
+    overflow: scroll;
+
+}
 .hide-search {
     display: none;
     width: 100%;
@@ -121,7 +138,6 @@
 .main-stock-div {
     margin-top: 20px;
     width: 50%;
-    height: 100%;
 }
 
 
@@ -157,13 +173,18 @@
     background-color: #247856;
 }
 
+.watchlist-chart {
+    border-radius: 5px;
+    background-color: #2a2e2c;
+}
+
 .stock-data-div {
     z-index: 1;
     border: none;
     border-top: none;
     background: rgb(255, 255, 255) !important;
     width: auto;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     overflow: scroll;
     border-top-right-radius: none;

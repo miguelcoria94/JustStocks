@@ -6,6 +6,7 @@ import WelcomeMessage from "./WelcomeMessage"
 import SearchBar from "./SearchBar"
 import StockData from "./StockData"
 import StockChart from "./StockChart"
+import Watchlist from "./Watchlist"
 import "./ProfilePage.style.css";
 import { useDispatch } from "react-redux";
 import * as profileActions from "../../store/profile";
@@ -19,11 +20,8 @@ function ProfilePage() {
   const graphData = useSelector((state) => state.profile.graph);
 
   if (sessionUser) {
-    dispatch(profileActions.getWatchlist({sessionUser}))
-  }
-
-  if (sessionUser) {
     document.title = `JustStocks - ${sessionUser.username}`
+    dispatch(profileActions.getWatchlist({ sessionUser }));
   } else {
     document.title = 'JustStocks'
   }
@@ -37,9 +35,14 @@ function ProfilePage() {
           <SearchBar search={searchBar} />
           <LogoutButton user={sessionUser} />
         </div>
-        <div className="main-stock-div">
-          <StockChart graphData={graphData} />
-          <StockData stock={stockData} search={searchBar} user={sessionUser} />
+        <div className="main-content">
+          <div className="main-stock-div">
+            <StockChart graphData={graphData} />
+            <StockData stock={stockData} search={searchBar} user={sessionUser} />
+          </div>
+          <div className="watchlist-div">
+            <Watchlist />
+          </div>
         </div>
       </div>
     );
