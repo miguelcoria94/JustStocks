@@ -7,7 +7,7 @@ function StockChart({ graphData }) {
 
   if (graphData) {
     let graphEntriesNumber = Object.entries(Object.entries(graphData)[1][1]);
-    graphEntriesNumber.slice(0, 50).forEach((el) => 
+    graphEntriesNumber.forEach((el) => 
       chartData.push(Object.entries(el)[1][1])
     )
   }

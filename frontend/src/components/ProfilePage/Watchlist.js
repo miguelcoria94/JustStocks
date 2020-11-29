@@ -73,7 +73,7 @@ function Watchlist() {
               <ResponsiveContainer>
                 <LineChart
                   height={100}
-                  data={graphdata.slice(idx * 100, ((100) * (idx + 1)))}
+                  data={graphdata.slice((idx) * 100, ((100) * (idx + 1))).reverse()}
                   margin={{ top: 20, right: 0, left: 0, bottom: 10 }}
                 >
                   <Tooltip
