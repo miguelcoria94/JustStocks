@@ -2,7 +2,7 @@
     padding: 40px;
     background-color: #F7F7F7;
     width: 88%;
-    height: auto;
+    height: 80%;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -100,7 +100,6 @@
 }
 
 .stock-data-main-div{
-    height: 100%;
 }
 
 .search-result-div {
@@ -120,12 +119,13 @@
 
 .main-content {
     display: flex;
+    height: 50%;
 }
 
 .watchlist-div {
     margin-top: 20px;
     width: 50%;
-    height: 500px;
+    height: 535px;
     padding: 20px;
     overflow: scroll;
 
@@ -138,7 +138,6 @@
 .main-stock-div {
     margin-top: 20px;
     width: 50%;
-    height: 100%;
 }
 
 
@@ -185,7 +184,7 @@
     border-top: none;
     background: rgb(255, 255, 255) !important;
     width: auto;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     overflow: scroll;
     border-top-right-radius: none;
