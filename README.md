@@ -22,9 +22,9 @@ JustStocks is a stock tracking webapp inspired by RobinHood. As a logged out use
 
 <h1 align="center">
   Database Schema
-</h1>
-
+  
 ![db pic](https://github.com/miguelcoria94/picsforjs/blob/main/Untitled.png)
+  </h1>
 
 <h1 align="center">
   Watchlist
