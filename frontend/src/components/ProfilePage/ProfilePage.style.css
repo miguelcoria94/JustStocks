@@ -60,9 +60,9 @@
 .remove-button {
     border: none;
     background-color: #8d3d45;
+    padding: 10px;
     color: white;
     border-radius: 5px;
-    padding: 15px;
     font-weight: 800;
 }
 
@@ -97,9 +97,6 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
-}
-
-.stock-data-main-div{
 }
 
 .search-result-div {

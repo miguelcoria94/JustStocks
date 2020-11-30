@@ -18,10 +18,19 @@ module.exports = (sequelize, DataTypes) => {
     static async getStockSymbol(stockId) {
       const stock = await Stock.findOne({
         where: {
-            id: stockId,
+          id: stockId,
         },
       });
       return stock
+    }
+
+    static async findAStock({ symbol }) {
+      const stock = await Stock.findOne({
+        where: {
+          symbol: symbol.toLowerCase()
+        }
+      });
+      return stock.id;
     }
 
     static associate(models) {

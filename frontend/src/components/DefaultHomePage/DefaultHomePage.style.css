@@ -36,6 +36,17 @@
     padding: 20px;
 }
 
+.demobtnform {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.demo-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .card {
     color: white;
     font-size: 1rem;

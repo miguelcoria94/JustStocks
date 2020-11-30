@@ -1,21 +1,13 @@
 import React from "react";
 import {
   LineChart,
-  Legend,
   Line,
-  CartesianGrid,
-  XAxis,
   YAxis,
   ResponsiveContainer,
-  AreaChart,
   Tooltip,
-  ReferenceLine,
-  Area,
 } from "recharts";
 import { useSelector } from "react-redux";
 import "./ProfilePage.style.css";
-import { useDispatch } from "react-redux";
-import * as profileActions from "../../store/profile";
 
 
 function Watchlist() {
@@ -46,7 +38,6 @@ function Watchlist() {
         }
     }
 
-    let myAttr;
     let graphdata = []
 
 
@@ -70,16 +61,13 @@ function Watchlist() {
           return "chart";
         }
     }
-    
-
-    console.log("me", graphdata);
 
     return (
       <div>
-          <h1> YOUR WATCHLIST </h1>
+          <h1> MY WATCHLIST </h1>
         {filteredSymbols.map((symbol, idx) => (
             <div>
-            <h3 key={idx}>{`$${symbol.toUpperCase()}`}</h3>
+            <h3 key={idx}>{`$${symbol.toUpperCase()}`} - 100 DAY CHART</h3>
             <div
               className="graph-container"
               style={{ width: "200", height: 200, backgroundColor: "none" }}

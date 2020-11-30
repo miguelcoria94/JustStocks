@@ -3,6 +3,7 @@ const { check } = require("express-validator");
 const asyncHandler = require("express-async-handler");
 const fetch = require("node-fetch");
 const { Stock, WatchList } = require("../../db/models");
+const stock = require("../../db/models/stock");
 
 const apiKey = "7B9VRQ2X6FX1KB7N";
 
@@ -41,9 +42,20 @@ router.post("/", asyncHandler(async (req, res, next) => {
       return apiResponse
     })
   );
+ const firstStockData = await fetch(
+   `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockSymbols[0]}&apikey=${apiKey}`
+ )
+   .then((response) => response.json())
+   .then((result) => {
+     return result;
+   })
+   .catch((error) => {
+     console.error("Error:", error);
+   });
 
   return res.json({
-    stockData
+    stockData,
+    firstStockData
   })
 }))
 
@@ -82,9 +94,11 @@ router.post("/search-stock",
         console.error("Error:", error);
       });
     
+    
     return res.json({
-      stockData, stockChartData
-    })
+      stockData,
+      stockChartData
+    });
   }));
 
   router.post(
@@ -99,8 +113,6 @@ router.post("/search-stock",
         .then((result) => {
           return result.bestMatches;
         })
-      
-      console.log(bestMatches)
 
       return res.json({
         bestMatches,
@@ -109,8 +121,18 @@ router.post("/search-stock",
   );
 
 router.post("/add-stock", asyncHandler(async (req, res, next) => {
-  const { symbol } = req.body
-  console.log(symbol)
-  }))
+  const { symbol, id } = req.body
+  const stockToFind = await Stock.findAStock({ symbol })
+  return await WatchList.addStock(id, stockToFind)
+}))
+  
+router.post(
+  "/remove-stock",
+  asyncHandler(async (req, res, next) => {
+    const { symbol, id } = req.body;
+    const stockToFind = await Stock.findAStock({ symbol });
+    return await WatchList.removeStock(id, stockToFind);
+  })
+);
 
 module.exports = router;

@@ -43,6 +43,7 @@ h1{
     color: #1F8859;
 }
 
+
 .registerform {
     height: 80%;
     display: flex;
@@ -74,6 +75,7 @@ h1{
 }
 
 .registerbtn {
+    cursor: pointer;
     background-color: #1d5236;
     padding: 10px;
     border:none;

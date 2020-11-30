@@ -30,6 +30,13 @@ function DefaultHomePage() {
         "Confirm Password field must be the same as the Password field",
       ]);
     };
+  
+  const handleDemoSubmit = (e) => {
+    e.preventDefault();
+    return dispatch(
+      sessionActions.loginDemo({ credential: "demo", password: "password" })
+    );
+  }
 
     return (
       <div className="HomeDefault_container">
@@ -105,6 +112,11 @@ function DefaultHomePage() {
                 </button>
               </div>
             </div>
+          </form>
+          <form className="demo-form" onSubmit={handleDemoSubmit}>
+            <button className="registerbtn demobtnform" type="submit">
+              Continue as a demo user
+            </button>
           </form>
           <span>
             Already a member?{" "}
