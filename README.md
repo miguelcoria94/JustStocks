@@ -6,4 +6,8 @@
 
 <h4 align="center">JustStocks is a web app that allows user to create an account to track and manage there watchlist</h4>
 
+<h1 align="center">
+  Visit JustStocks
+</h1>
+
 A live version of our application can be found [here](https://stockup94.herokuapp.com/).
