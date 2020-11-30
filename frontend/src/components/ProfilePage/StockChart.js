@@ -66,7 +66,7 @@ function StockChart({ graphData }) {
       return "chart"
     }
   } catch {
-    console.log("oops");
+    return;
   }}
 
   return (
