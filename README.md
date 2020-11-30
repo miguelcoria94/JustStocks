@@ -4,7 +4,7 @@
   JustStocks Documentation
 </h1>
 
-<h4 align="center">JustStocks is a web app that allows user to create an account to track and manage there watchlist</h4>
+<h4 align="center">JustStocks is a web app that allows user to create an account to track and manage their stocks watchlist</h4>
 
 <h1 align="center">
   Visit JustStocks
