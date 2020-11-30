@@ -26,7 +26,7 @@ JustStocks is a stock tracking webapp inspired by RobinHood. As a logged out use
 ![db pic](https://github.com/miguelcoria94/picsforjs/blob/main/Untitled.png)
   </h1>
   
-  <p align="center">The database is pretty simple. There's a users table to store user details and stock table to store a stocks symbol. The wathclist is used to match a user id to a stock id to build a users personal watchlist</p>
+  <p align="center">The database is pretty simple. There's a users table to store user details and stock table to store a stocks symbol. The watchlist is used to match a user id to a stock id to build a users personal watchlist</p>
 
 <h1 align="center">
   Watchlist
@@ -186,4 +186,45 @@ router.post("/search-stock",
     });
   }));
 
+```
+
+<h1 align="center">
+  Add and Remove from watchlist
+</h1>
+
+![home login](https://github.com/miguelcoria94/picsforjs/blob/main/Screen%20Shot%202020-11-30%20at%209.21.52%20AM.png)
+
+A user can add and remove a stock to there watchlist using the add and remove button. 
+
+```js
+export const addStock = ({ symbol, id }) => async (dispatch) => {
+  return await fetch("api/profile/add-stock", {
+    method: "POST",
+    body: JSON.stringify({ symbol, id }),
+  })
+}
+
+export const removeStock = ({ symbol, id }) => async (dispatch) => {
+  return await fetch("api/profile/remove-stock", {
+    method: "POST",
+    body: JSON.stringify({ symbol, id }),
+  });
+};
+```
+
+```js
+router.post("/add-stock", asyncHandler(async (req, res, next) => {
+  const { symbol, id } = req.body
+  const stockToFind = await Stock.findAStock({ symbol })
+  return await WatchList.addStock(id, stockToFind)
+}))
+  
+router.post(
+  "/remove-stock",
+  asyncHandler(async (req, res, next) => {
+    const { symbol, id } = req.body;
+    const stockToFind = await Stock.findAStock({ symbol });
+    return await WatchList.removeStock(id, stockToFind);
+  })
+);
 ```
