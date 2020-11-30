@@ -5,7 +5,6 @@ const CURRENT_STOCK = "CURRENT_STOCK";
 const CURRENT_STOCKCHART = "CURRENT_STOCKCHART";
 const SET_WATCHLIST = "SET_WATCHLIST";
 const FIRST_STOCK = "FIRST_STOCK";
-const ADD_STOCK = "ADD_STOCK";
 
 
 const lookupStock = (symbol) => {

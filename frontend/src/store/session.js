@@ -34,6 +34,22 @@ export const login = ({ credential, password }) => async (dispatch) => {
   };
 };
 
+export const loginDemo = ({ credential, password }) => async (dispatch) => {
+  const res = await fetch("/api/session", {
+    method: "POST",
+    body: JSON.stringify({ credential, password }),
+  });
+
+  const { user } = res.data;
+
+  dispatch(setSession(user));
+
+  return {
+    type: LOGIN_USER,
+    payload: user,
+  };
+};
+
 export const restoreUser = () => async (dispatch) => {
   const res = await fetch("/api/session");
   dispatch(setSession(res.data.user));
