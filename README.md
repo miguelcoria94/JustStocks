@@ -23,10 +23,10 @@ JustStocks is a stock tracking webapp inspired by RobinHood. As a logged out use
 <h1 align="center">
   Database Schema
   
-  <p>The database is pretty simple. There's a users table to store user details and stock table to store a stocks symbol. The wathclist is used to match a user id to a stock id to build a users personal watchlist</p>
-  
 ![db pic](https://github.com/miguelcoria94/picsforjs/blob/main/Untitled.png)
   </h1>
+  
+  <p align="center">The database is pretty simple. There's a users table to store user details and stock table to store a stocks symbol. The wathclist is used to match a user id to a stock id to build a users personal watchlist</p>
 
 <h1 align="center">
   Watchlist
