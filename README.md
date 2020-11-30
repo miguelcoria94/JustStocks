@@ -112,3 +112,70 @@ router.post("/", asyncHandler(async (req, res, next) => {
 
 ![home login](https://github.com/miguelcoria94/picsforjs/blob/main/Screen%20Shot%202020-11-30%20at%209.01.31%20AM.png)
 
+Each time the user types a character into the searchbar input a fetch request is sent to the backend which send another fetch request to the alphavantage api with the user's input to fetch an array of the best matches. The matches are then rendered in an UL element. When a user clicks a LI element the stock symbol is used as the value to search for rendering that stock as the main chart stock. At the same time when a stock is being searched for that stock is being added to the database, so that it gives the user the ability to add and remove that stock from their watchlist.
+
+```js
+export const mainStock = ({ stock }) => async (dispatch) => {
+
+  const res = await fetch("/api/profile/search-stock", {
+    method: "POST",
+    body: JSON.stringify({stock}),
+  })
+
+  const { stockData, stockChartData } = res.data
+  
+  dispatch(currentStockGraph(stockChartData))
+  graphData(stockChartData)
+  dispatch(currentStock(stockData));
+
+
+  return {
+    type: CURRENT_STOCK,
+    payload: stockData,
+  };
+}
+```
+
+```js
+router.post("/search-stock",
+  asyncHandler(async (req, res, next) => {
+
+    const { stock } = req.body
+
+    try {
+      const newStock = await Stock.addStock(stock);
+    } catch {
+      console.log("stock already in DB")
+    }
+
+
+    const stockData = await fetch(
+      `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${apiKey}`,
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        return result
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+    const stockChartData = await fetch(
+      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=compact&apikey=${apiKey}`
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        return result;
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+    
+    return res.json({
+      stockData,
+      stockChartData
+    });
+  }));
+
+```
